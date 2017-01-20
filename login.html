@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录/注册</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      h1 {
+        text-align: center;
+        margin-top: 0px; 
+        color: #00cc66;
+      }
+
+      h4 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      body {
+        margin-top: 80px;
+        font-family:"Microsoft Yahei",微软雅黑,"Helvetica Neue",Arial,sans-serif;
+        background-image: url(image/login-background.jpg);
+        color: white;
+      }
+
+      .form-control-feedback {
+        right: 20px;
+        color: black;
+      }
+
+      .nav {
+        margin-bottom: 30px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>秀知识</h1>
+      <h4>Show your knowledge</h4>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#login" role="tab" data-toggle="tab">登录</a></li>
+            <li role="presentation"><a href="#register" role="tab" data-toggle="tab">注册</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <!--登录-->
+            <div role="tabpanel" class="tab-pane active" id="login">
+              <div class="col-md-12">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">        
+                    <div class="col-sm-12">
+                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="邮箱或用户名">
+                      <label for="inputEmail3" class="col-sm-2 control-label"></label>          
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+                      <label for="inputEmail3" class="col-sm-2 control-label"></label>           
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="验证码">      
+                    </div>
+                    <div class="col-sm-3">这里放验证码图片</div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-0 col-sm-6">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> 记住帐号
+                        </label>
+                        <a href="#">忘记密码</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-success btn-block">登录</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!--注册-->
+            <div role="tabpanel" class="tab-pane fade" id="register">
+              <div class="col-md-12">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">        
+                    <div class="col-sm-12">
+                      <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="邮箱">
+                      <label for="inputEmail3" class="col-sm-2 control-label"></label>          
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="用户名">
+                      <label for="inputEmail3" class="col-sm-2 control-label"></label>           
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+                      <label for="inputEmail3" class="col-sm-2 control-label"></label>           
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="验证码">      
+                    </div>
+                    <div class="col-sm-3">这里放验证码图片</div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <label>点击「注册」按钮，即代表你同意<a href="#">《秀知识协议》</a></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-success btn-block">注册</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
