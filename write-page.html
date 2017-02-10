@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>写文章 - 秀知识</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/write-page.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- 页面主要内容 -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 aside">
+          <a class="home-wrap" href="index-logined.html">
+            <span class="glyphicon glyphicon-home"></span>
+            <span>返回首页</span>
+          </a><!-- home-wrap end -->
+          <div class="new-notebook-btn">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+            <span>新建文集</span>
+          </div><!-- new-notebook-btn end-->
+          <div class="new-notebook-panel">
+            <input class="new-notebook-name" type="text" placeholder="请输入文集名...">
+            <a href="javascript:void(0)" class="glyphicon glyphicon-ok enter-btn"></a>
+            <a href="javascript:void(0)" class="glyphicon glyphicon-remove cancel-btn"></a>
+          </div><!-- new-notebook-panel -->
+          <ul class="nav nav-stacked notebook-list"> <!--glyphicon glyphicon-cog-->
+            <li class="one-notebook active">
+              <div class="notebook-name">
+                <span>日记本</span>              
+                <div class="dropdown edit-notebook">
+                  <span class="glyphicon glyphicon-cog" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                    <li data-toggle="modal" data-target=".bs-example-modal-sm"><a href="#" class="edit-notebook-name"><span class="glyphicon glyphicon-pencil" style="margin-right:10px;"></span>修改名称</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" class="edit-notebook-delete"><span class="glyphicon glyphicon-trashglyphicon glyphicon-trash" style="margin-right:10px;"></span>删除文集</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="one-notebook">
+              <div class="notebook-name">
+                <span>随笔</span>
+                <div class="dropdown edit-notebook">
+                  <span class="glyphicon glyphicon-cog" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                    <li data-toggle="modal" data-target=".bs-example-modal-sm"><a href="#" class="edit-notebook-name"><span class="glyphicon glyphicon-pencil" style="margin-right:10px;"></span>修改名称</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" class="edit-notebook-delete"><span class="glyphicon glyphicon-trashglyphicon glyphicon-trash" style="margin-right:10px;"></span>删除文集</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul><!-- notebook-list end-->
+          <div class="trash-bin"><!-- glyphicon glyphicon-trashglyphicon glyphicon-trash -->
+            <span class="glyphicon glyphicon-trashglyphicon glyphicon-trash"></span>
+            <span>回收站</span>
+          </div><!-- trash-bin end -->
+        </div><!-- aside end -->
+        <div class="col-md-3 middle">
+          <div class="new-article-btn">
+            <span class="glyphicon glyphicon-pencil"></span>
+            <span>新建文章</span>
+          </div><!-- new-article-btn end -->
+          <ul class="nav nav-stacked article-list">
+            <li class="one-article active">
+              <div class="row">
+                <div class="col-md-3 left">
+                  <img class="icon-file" src="icon/file-48px.png" alt="icon">
+                  <p class="char-count">字数：0</p>
+                </div>
+                <div class="col-md-7 article-title">
+                  无标题文章
+                </div>
+                <div class="dropdown col-md-2 edit-article right" style="height:53px;">
+                  <span class="glyphicon glyphicon-cog" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                    <li><a href="#" class="edit-article-name"><span class="glyphicon glyphicon-share-alt" style="margin-right:20px;"></span>直接发布</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" class="move-article"><span class="glyphicon glyphicon-folder-open" style="margin-right:20px;"></span>移动文章</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" class="edit-article-delete"><span class="glyphicon glyphicon-trashglyphicon glyphicon-trash" style="margin-right:20px;"></span>删除文章</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="one-article">
+              <div class="row">
+                <div class="col-md-3 left">
+                  <img class="icon-file" src="icon/file-48px.png" alt="icon">
+                  <p class="char-count">字数：0</p>
+                </div>
+                <div class="col-md-7 article-title">
+                  无标题文章
+                </div>
+                <div class="dropdown col-md-2 edit-article right" style="height:53px;">
+                  <span class="glyphicon glyphicon-cog" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                    <li><a href="#" class="edit-article-name"><span class="glyphicon glyphicon-share-alt" style="margin-right:20px;"></span>直接发布</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" class="move-article"><span class="glyphicon glyphicon-folder-open" style="margin-right:20px;"></span>移动文章</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" class="edit-article-delete"><span class="glyphicon glyphicon-trashglyphicon glyphicon-trash" style="margin-right:20px;"></span>删除文章</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul><!-- article-list end -->
+        </div><!-- glyphicon glyphicon-file -->
+        <div class="col-md-7 main">文章编辑区域</div>
+      </div>
+    </div>
+    <!-- 修改文集名称覆盖层 -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">修改名称</h4>
+          </div>
+          <div class="modal-body">
+            <input type="text" style="width:266px;" class="edit-name">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="enter-edit-name">保存</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/bootstrap.min.js"></script>
+
+    <script src="script/write-article-script.js"></script>
+  </body>
+</html>
