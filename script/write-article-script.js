@@ -1,6 +1,7 @@
 $(document).ready(function () {  
 ///////////////////////////////////////////////////变量定义///////////////////////////////////////////////
 	var newNotebookName = "";  //新建文集的名称
+	var tempName = "";  //原来文集的名称
 
 ///////////////////////////////////////////////////默认///////////////////////////////////////////////////
 	//新建文集的按钮动画
@@ -35,14 +36,17 @@ $(document).ready(function () {
 		$(this).parents('li')[1].remove();
 	});
 
-
+	//获取文集名称的标签
+	$('.edit-notebook').click(function(event) {
+		tempName = $(this).prev();  //获取文集名称的标签
+	});
 	//修改名称的【保存】按钮
 	$("#enter-edit-name").click(function(event) {
-		/*未完成。。。*/
+		//console.log(typeof $(".edit-name").val());
+		var newName = $(".edit-name").val();
+		tempName.text(newName);
 		$(".edit-name").val("");  //input清空
 	});
-
-
 //////////////////////////////////////////////////新建文集按钮///////////////////////////////////////////////////////
 /*记得把上面默认功能在拷贝一次添加到新建文集这个部分，新建的文集才有这些功能*/
 	//按 “勾” 新建新文集 并关闭新建面板
@@ -130,10 +134,10 @@ $(document).ready(function () {
 			$(this).parents('li')[1].remove();
 		});
 
-		//修改名称的【保存】按钮
-		$("#enter-edit-name").click(function(event) {
-			/*未完成。。。*/
-			$(".edit-name").val("");  //input清空
+		//获取文集名称的标签
+		$('.edit-notebook').click(function(event) {
+			tempName = $(this).prev();  //获取文集名称的标签
+
 		});
 	});
 

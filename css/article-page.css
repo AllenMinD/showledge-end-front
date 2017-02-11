@@ -140,6 +140,8 @@ textarea {
   margin-left: 20px;
   width: 680px;
   height: 80px;
+  border-radius: 6px;
+  outline: none;
 }
 
 .write-function-block {
