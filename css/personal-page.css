@@ -1,0 +1,421 @@
+body {
+font-family:"Microsoft Yahei",微软雅黑,"Helvetica Neue",Arial,sans-serif;
+}
+
+a, body {
+    color: #333;
+}
+
+a.link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #333;
+}
+a:active {
+    text-decoration: none;
+}
+
+.one-li:hover {
+    border-bottom: 3px solid #333;
+}
+
+.active {
+    border-bottom: 3px solid #333;
+}
+
+div {
+    display: block;
+}
+
+img.user-avatar {
+width: 35px;
+height: 35px;
+margin-top: -9px;
+margin-bottom: -8px;
+border: 1px solid #ddd;
+vertical-align: center;
+border-radius: 100px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: 75px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.person .row {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.person .main {
+    padding-right: 0;
+}
+
+.col-xs-16 {
+    width: 66.66667%;
+}
+
+.person .aside {
+    padding: 0;
+}
+.col-xs-offset-1 {
+    margin-left: 4.16667%;
+}
+.col-xs-7 {
+    width: 29.16667%;
+}
+
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24 {
+    float: left;
+}
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-20, .col-lg-21, .col-lg-22, .col-lg-23, .col-lg-24, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-20, .col-md-21, .col-md-22, .col-md-23, .col-md-24, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-13, .col-sm-14, .col-sm-15, .col-sm-16, .col-sm-17, .col-sm-18, .col-sm-19, .col-sm-20, .col-sm-21, .col-sm-22, .col-sm-23, .col-sm-24, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.person .main .main-top {
+    margin-bottom: 20px;
+}
+
+.avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 100px;
+	display: block;
+	cursor: pointer;
+}
+
+.person .main .main-top .avatar {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-left: -2px;
+}
+
+.person .main .main-top .title {
+    padding: 5px 0 0 100px;
+    color: #333;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.person .main .main-top .info ul {
+    font-size: 0;
+}
+
+.person .main .main-top .info ul li {
+    display: inline-block;
+}
+
+ul {
+    padding-left: 0;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+ul {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+}
+
+.person .main .main-top .info ul .meta-block {
+    font-size: 12px;
+    margin: 0 8px 6px 0;
+    padding: 0 8px 0 0;
+    border-right: 1px solid #f0f0f0;
+}
+
+.person .main .main-top .info ul a, .person .main .main-top .info ul div {
+    color: #969696;
+}
+
+.person .main .main-top .info {
+	padding-left: 100px;
+}
+
+.person .main .main-top .info ul {
+	padding-left: 0px;
+}
+
+li {
+    line-height: 20px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.person .main .main-top .info ul p {
+    margin-bottom: -3px;
+    font-size: 15px;
+    color: #333;
+}
+p {
+    margin: 0 0 10px;
+}
+
+.trigger-menu {
+    padding-left: 0; 
+    margin-bottom: 20px;
+    border-bottom: 3px solid #f0f0f0;
+    font-size: 0;
+    list-style: none;
+}
+
+.trigger-menu li {
+    position: relative;
+    display: inline-block;
+    padding: 8px 0;
+
+}
+
+.trigger-menu a {
+    padding: 13px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #969696;
+    line-height: 25px;
+}
+
+.trigger-menu .active a, .trigger-menu a:hover {
+    color: #646464;
+}
+
+.trigger-menu i {
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+.note-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.note-list li {
+    position: relative;
+    width: 100%;
+    margin: 0 0 17px;
+    padding: 0 2px 17px 0;
+    border-bottom: 1px solid #f0f0f0;
+    word-wrap: break-word;
+}
+
+.note-list .author {
+    margin-bottom: 14px;
+    font-size: 13px;
+}
+
+.note-list .author .avatar {
+    margin: 0 5px 0 0;
+}
+.note-list .author a {
+    color: #333;
+}
+
+.note-list .author .avatar, .note-list .author .name {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.note-list .author .name span {
+    display: inline-block;
+    padding-left: 3px;
+    color: #969696;
+}
+
+.note-list .title:visited {
+    color: #969696;
+}
+.note-list .title:hover {
+    text-decoration: underline;
+}
+
+.note-list .title {
+    margin: -7px 0 4px;
+    display: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.note-list .meta, .note-list .meta a{
+    padding-right: 0!important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #969696;
+}
+
+.note-list .author-restyle {
+    margin-bottom: 0;
+}
+
+
+.person .aside .profile-edit {
+    display: none;
+    margin-bottom: 20px;
+}
+
+form {
+    margin: 0 0 20px;
+}
+
+.person .aside .function-btn {
+    float: right;
+    font-size: 13px;
+    color: #969696;
+}
+
+.person .aside .function-btn i {
+    padding-right: 2px;
+}
+
+.person .aside .profile-edit textarea {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 125px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: hsla(0,0%,71%,.1);
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+}
+
+.person .aside .profile-edit .btn-hollow {
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.btn-hollow {
+    border: 1px solid #42c02e;
+    color: #42c02e;
+    border-radius: 10px;
+}
+.btn-delete, .btn-gray, .btn-hollow {
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 40px;
+    background: none;
+}
+
+.btn-hollow:hover {
+    color: #42c02e;
+}
+
+
+.person .aside .profile-edit a {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #969696;
+    line-height: 34px;
+    vertical-align: middle;
+}
+
+.person .aside .list li a {
+    display: inline-block;
+}
+.person .aside .user-dynamic a {
+    font-size: 14px;
+    color: #333;
+    line-height: 30px;
+}
+
+.person .aside .list {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    list-style: none;
+    border-bottom: 1px solid #f0f0f0;
+    clear: both;
+}
+
+
+.person .aside .user-dynamic a:hover {
+    color: #2f2f2f;
+}
+
+.person .aside .description .js-intro, .person .aside .new-collection-block .js-intro {
+    margin-bottom: 10px;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.person .aside .list li {
+    margin-bottom: 10px;
+}
+
+.person .aside .user-dynamic span {
+    vertical-align: middle;
+}
+
+.person .aside .title {
+    float: left;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #969696;
+}
+
+.person .aside .description, .person .aside .new-collection-block {
+    position: relative;
+    margin-bottom: 16px;
+    padding: 0 0 16px;
+    text-align: left;
+    font-size: 0;
+    border-bottom: 1px solid #f0f0f0;
+    clear: both;
+    word-break: break-word;
+}
+
+.person .aside .description a, .person .aside .new-collection-block a {
+    margin-right: 5px;
+}
+.person .aside .new-collection-btn {
+    font-size: 13px;
+    color: #42c02e;
+}

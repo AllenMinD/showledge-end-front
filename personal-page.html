@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" href="icon/s.ico">
+    <title>个人主页 - 秀知识</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/personal-page.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--顶部导航栏-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color:#00cc66">Showledge</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav" style="margin-left:68px">
+            <li ><a href="#">发现</a></li>
+            <li ><a href="#">消息</a></li>
+            <li><a href="#">下载APP</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="image/touxiang.jpg" alt="用户头像"> <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">我的主页</a></li>
+                <li><a href="#">消息</a></li>
+                <li><a href="#">设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#">退出</a></li>
+              </ul>
+            </li>
+            <li><a href="write-page.html">写文章</a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 主要内容 -->
+    <div class="container person">
+      <div class="row">
+        <div class="col-xs-16 main">
+          <div class="main-top">
+            <a href="#">
+              <img class="avatar" src="image/user-avatar2.jpg" alt="240">
+            </a>
+            <div class="title">
+              <a class="name" href="/u/6904e03a1cfe">allenmind</a>
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <div class="meta-block">
+                    <p>0</p>
+                    <a href="/users/6904e03a1cfe/following">
+                      榜样 
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="meta-block">
+                    <p>0</p>
+                    <a href="/users/6904e03a1cfe/followers">
+                      粉丝 
+                    </a>        
+                  </div>
+                </li>
+                <li>
+                  <div class="meta-block">
+                    <p>0</p>
+                    <a href="/users/6904e03a1cfe/followers">
+                      小组 
+                    </a>        
+                  </div>
+                </li>
+                <li>
+                  <div class="meta-block">
+                    <p>0</p>
+                    <a href="/u/6904e03a1cfe">
+                      文章 
+                    </a>        
+                    </div>
+                </li>               
+                <li>
+                  <div class="meta-block">
+                    <p>0</p>
+                    <div>字数</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="meta-block">
+                    <p>0</p>
+                    <a href="/u/6904e03a1cfe">
+                      知识地图
+                    </a>        
+                    </div>
+                </li> 
+                <li>
+                  <div class="meta-block">
+                    <p>0</p>
+                    <div>收获喜欢</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="outer-container">
+            <ul class="trigger-menu" data-pjax-container="#list-container">
+              <li class="one-li active">
+                <a href="#"><i class="glyphicon glyphicon-list-alt"></i> 文章</a>
+              </li>
+              <li class="one-li">
+                <a href="#"><i class="glyphicon glyphicon-map-marker"></i> 知识地图</a>
+              </li>
+              <li class="one-li">
+                <a href="#"><i class="glyphicon glyphicon-list"></i> 学习计划</a>
+              </li>
+              <li class="one-li">
+                <a href="#"><i class="glyphicon glyphicon-bell"></i> 动态</a>
+              </li>
+              <li class="one-li">
+                <a href="#"><i class="glyphicon glyphicon-comment"></i> 最新评论</a>
+              </li>
+              <li class="one-li">
+                <a href="#"><i class="glyphicon glyphicon-fire"></i> 热门</a>
+              </li>
+            </ul>
+            <div id="list-container">
+              <!-- 动态列表模块 -->
+              <!-- 发布了文章 -->
+              <ul class="note-list" infinite-scroll-url="/users/6904e03a1cfe/timeline"> 
+                <li class="" id="feed-98479580">
+                    <div class="content">
+                    <div class="author">
+                      <a class="avatar" href="/users/6904e03a1cfe">
+                        <img thumbnail="180x180" src="http://cdn-qn0.jianshu.io/assets/default_avatar/5-33d2da32c552b8be9a0548c7a4576607.jpg?imageMogr/thumbnail/180x180" alt="5">
+                      </a>      
+                      <div class="name">
+                        <a class="blue-link" href="/u/6904e03a1cfe">allenmind</a>
+                        <span data-type="share_note" data-datetime="2017-02-13T14:22:40+08:00"> 发表了文章 · 2月13 14:22</span>
+                      </div>
+                    </div>
+
+                    <a class="title" href="/p/e66eba87cc7d">123</a>
+                    <p class="abstract">1233211234567</p>
+
+                    <div class="meta">
+                      <a href="#"><i class="glyphicon glyphicon-eye-open"></i> 0</a>        
+                      <a href="#"><i class="glyphicon glyphicon-comment"></i> 0</a>      
+                      <span><i class="glyphicon glyphicon-heart"></i> 0</span>
+                    </div>
+                  </div>
+                </li>                
+                <!-- 加入了简书 -->
+                <li id="feed-91950054">
+                  <div class="content">
+                    <div class="author author-restyle">
+                      <a href="/u/6904e03a1cfe">
+                        <img class="avatar" thumbnail="180x180" src="image/user-avatar2.jpg" alt="5">
+                      </a>
+                      <div class="name">
+                        <a class="blue-link" href="/u/6904e03a1cfe">allenmind</a>
+                        <span data-type="join_jianshu" data-datetime="2017-01-22T20:57:39+08:00"> 加入了简书 · 1月22 20:57</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- main end -->
+
+        <div class="col-xs-7 col-xs-offset-1 aside">
+          <div class="title">个人介绍</div>
+          <a class="function-btn" data-action="start-edit-intro" href="javascript:void(0)"><i class="glyphicon glyphicon-pencil"></i>编辑</a>
+          <form class="profile-edit js-intro-form" data-type="json" id="edit_user_4464581" action="/users/6904e03a1cfe" accept-charset="UTF-8" data-remote="true" method="post">
+            <input name="utf8" type="hidden" value="✓">
+            <input type="hidden" name="_method" value="patch">
+            <textarea name="user[intro]" id="user_intro"></textarea>
+            <input type="submit" name="commit" value="保存" class="btn btn-hollow" data-action="save-edit-intro">
+            <a class="btn-cancel" data-action="cancel-edit-intro" href="javascript:void(null);">取消</a>
+          </form>  
+          <div class="description">
+            <div class="js-intro"></div>
+          </div>
+          <ul class="list user-dynamic">
+            <li>
+              <a href="/users/6904e03a1cfe/subscriptions"><i class="glyphicon glyphicon-th-large"></i> <span>我关注的专题/文集</span></a>    
+            </li>
+            <li>
+              <a href="/users/6904e03a1cfe/liked_notes"><i class="glyphicon glyphicon-heart-empty"></i> <span>我喜欢的文章</span></a>    
+            </li>
+          </ul>
+          <!-- 专题和文集 -->
+          <div>
+            <div>
+              <!----> 
+              <div class="title">我创建的专题</div> 
+              <div class="new-collection-block">
+                <a href="/collections/new" class="new-collection-btn"><i class="glyphicon glyphicon-plus"></i><span>创建一个新专题</span></a>
+              </div>
+            </div> 
+            <!----> 
+            <!---->
+          </div>
+        </div><!-- aside end -->
+
+      </div><!-- row end -->
+    </div><!-- container end -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/bootstrap.min.js"></script>
+
+    <script src="script/personal-page.js"></script>
+  </body>
+</html>
