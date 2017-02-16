@@ -283,6 +283,7 @@ p {
 
 .note-list .meta, .note-list .meta a{
     padding-right: 0!important;
+    margin-right: 15px;
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
