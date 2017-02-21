@@ -63,3 +63,11 @@ li[role=presentation] > a{
   top: 30px;
   display: inline;
 }
+
+.alert {
+  display:none;
+  text-align:center;
+  position:absolute;
+  width:200px;
+  z-index:999;
+}
