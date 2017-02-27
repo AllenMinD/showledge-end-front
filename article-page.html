@@ -86,7 +86,8 @@
                   </span>
                   <!-- 用户关注按钮（设置为榜样） -->
                   <a class="btn btn-success btn-xs follow">
-                    +关注
+                    <span class="glyphicon glyphicon-plus" style="margin-right:0px;"></span>
+                    <span id="guanzhu">设为榜样</span>
                   </a>
                   <!-- 文章数据信息 -->
                   <div class="meta">
@@ -116,13 +117,10 @@
             </div><!-- article end -->
             <div class="meta-bottom">
               <div class="like">
-                <div>
-                  <span class="glyphicon glyphicon-heart-empty"></span>
-                  喜欢
-                </div>
-                <div class="like-count">
-                  100
-                </div>
+                <img src="icon/heart.png"></span>
+                <span>喜欢</span>
+                <span>|</span>
+                <span class="like-count">100</span>
               </div>
             </div><!-- meta-bottom end -->
             <div class="comments">
@@ -247,5 +245,7 @@
     <script src="jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dist/js/bootstrap.min.js"></script>
+
+    <script src="script/article-page.js"></script>
   </body>
 </html>
