@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>搜索 - 秀知识</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/search.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--顶部导航栏-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color:#00cc66">Showledge</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav" style="margin-left:68px">
+            <li ><a href="#">发现</a></li>
+            <li ><a href="#">消息</a></li>
+            <li><a href="#">下载APP</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="image/touxiang.jpg" alt="用户头像"> <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="personal-page.html">我的主页</a></li>
+                <li><a href="#">消息</a></li>
+                <li><a href="user-manager.html">设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#">退出</a></li>
+              </ul>
+            </li>
+            <li><a href="write-page.html">写文章</a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <p id="searh-title">
+            <img src="icon/search.png" alt="搜索">
+            <span>搜索结果</span>
+          </p>
+          <hr>
+          <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="active"><a href="#search-article" aria-controls="search-article" role="tab" data-toggle="tab">文章</a></li>
+              <li role="presentation"><a href="#search-user" aria-controls="search-user" role="tab" data-toggle="tab">用户</a></li>
+              <li role="presentation"><a href="#search-album" aria-controls="search-album" role="tab" data-toggle="tab">专题</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- 搜索文章 -->
+              <div role="tabpanel" class="tab-pane active" id="search-article">
+                <ul class="note-list list-unstyled" id="article-list">
+                  <li id="note-001" class="have-img">
+                    <a href="#"  target="_blank"><img class="wrap-img" src="image/wrap-img1.jpg" alt="缩略图"></a>
+                    <div class="content">
+                      <div class="author">
+                        <a href="#" target="_blank"><img class="avatar" src="image/touxiang.jpg" alt="用户头像"></a>
+                        <div class="name">
+                          <a href="#" class="user-name" target="_blank">张三</a>
+                        </div>
+                        <div class="time">
+                          前天 13:50
+                        </div>
+                      </div>
+                      <a href="article-page.html" class="title" target="_blank">张三今天踩大便了</a>
+                      <p class="abstact">这里放文章简介，张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了...</p>
+                      <div class="meta">
+                        <a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span><span class="watch-num">1000</span> </a>
+                        <a href="#" target="_blank"><span class="glyphicon glyphicon-comment"></span><span class="comment-num">999</span> </a>
+                        <a href="#" target="_blank"><span class="glyphicon glyphicon-heart"></span><span class="like-num">999</span></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li id="note-002" class="have-img">
+                    <a href="article-page.html"  target="_blank"><img class="wrap-img" src="image/wrap-img1.jpg" alt="缩略图"></a>
+                    <div class="content">
+                      <div class="author">
+                        <a href="#" target="_blank"><img class="avatar" src="image/touxiang.jpg" alt="用户头像"></a>
+                        <div class="name">
+                          <a href="#" class="user-name" target="_blank">张三</a>
+                        </div>
+                        <div class="time">
+                          前天 13:50
+                        </div>
+                      </div>
+                      <a href="article-page.html" class="title" target="_blank">张三今天踩大便了</a>
+                      <p class="abstact">这里放文章简介，张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了...</p>
+                      <div class="meta">
+                        <a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span><span class="watch-num">1000</span> </a>
+                        <a href="#" target="_blank"><span class="glyphicon glyphicon-comment"></span><span class="comment-num">999</span> </a>
+                        <a href="#" target="_blank"><span class="glyphicon glyphicon-heart"></span><span class="like-num">999</span></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>                
+              </div><!-- search-article end -->
+              <div role="tabpanel" class="tab-pane" id="search-user">
+                <ul class="note-list list-unstyled">
+                  <li id="note-001" class="my-idol-list">
+                    <a href="#"><img class="idol-avatar" src="image/idol-avatar.jpg" alt="用户的头像"></a>
+                    <div class="idol-content">
+                      <a href="#">秋风</a>
+                      <div class="info">关注大无线开发（前端、Native、NodeJS等）</div>
+                      <div class="idol-meta">
+                        <span>26篇文章</span>
+                        <span>|</span>
+                        <span>4个文集</span>
+                        <span>|</span>
+                        <span>40234人的学习榜样</span>
+                      </div>
+                      <button class="btn btn-success watch-idol"><span class="glyphicon glyphicon-plus"></span>设为榜样</button>
+                    </div>
+                  </li>
+                  <li id="note-002" class="my-idol-list">
+                    <a href="#"><img class="idol-avatar" src="image/idol-avatar2.jpg" alt="用户的头像"></a>
+                    <div class="idol-content">
+                      <a href="#">张秋怡</a>
+                      <div class="info">@ alinode 团队</div>
+                      <div class="idol-meta">
+                        <span>48篇文章</span>
+                        <span>|</span>
+                        <span>10个文集</span>
+                        <span>|</span>
+                        <span>1110234人的学习榜样</span>
+                      </div>
+                      <button class="btn btn-success watch-idol"><span class="glyphicon glyphicon-plus"></span>设为榜样</button>
+                    </div>
+                  </li>
+                </ul>                
+              </div><!-- search-user end -->
+
+              <div role="tabpanel" class="tab-pane" id="search-album">
+                <ul class="note-list list-unstyled">
+                  <li id="note-001" class="album-list">
+                    <a href="#"><img class="album-img" src="image/今日看点.png" alt="文集图片"></a>
+                    <div class="album-content">
+                      <a href="#">今日看点</a>
+                      <div class="list-meta">
+                        <a href="#" class="author">作者名字</a>
+                        <span>收录了100000篇文章</span>
+                        <span>,</span>
+                        <span>234567人关注</span>
+                      </div>
+                      <button class="btn btn-success watch-album"><span class="glyphicon glyphicon-plus"></span>关注</button>
+                    </div>
+                  </li>
+                  <li id="note-002" class="album-list">
+                   <a href="#"><img class="album-img" src="image/今日看点.png" alt="文集图片"></a>
+                    <div class="album-content">
+                      <a href="#">今日看点</a>
+                      <div class="list-meta">
+                        <a href="#" class="author">作者名字</a>
+                        <span>收录了100000篇文章</span>
+                        <span>,</span>
+                        <span>234567人关注</span>
+                      </div>
+                      <button class="btn btn-success watch-album"><span class="glyphicon glyphicon-plus"></span>关注</button>
+                    </div>
+                  </li>
+                </ul>                
+              </div><!-- search-album end -->
+            </div>
+          </div>  
+              
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/bootstrap.min.js"></script>
+
+    <script src="script/search.js"></script>
+  </body>
+</html>
