@@ -183,7 +183,7 @@ a.cancel {
   padding: 5px 0 5px 20px;
 }
 
-.sub-comment-list  a {
+.sub-comment-list  a.name {
   color: #0099FF;
 }
 
@@ -198,4 +198,12 @@ a.cancel {
 
 .more-comment {
   margin-top: 30px;
+}
+
+a.add-comment-btn:hover {
+  color: #333;
+}
+
+.new-comment-sub {
+  display: none;
 }

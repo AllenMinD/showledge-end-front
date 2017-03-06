@@ -11,4 +11,16 @@ $(document).ready(function() {
 			"color": "white"
 		});
 	});
+
+	$(".more-comment").click(function(event) {
+		$(this).next(".new-comment-sub").toggle();
+	});
+
+	$(".delete-comment").click(function(event) {
+		$(this).parents(".comment").remove();
+	});
+
+	$(".delete-comment-sub").click(function(event) {
+		$(this).parents(".sub-comment").remove();
+	});
 });
