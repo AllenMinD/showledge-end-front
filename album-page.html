@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" href="icon/s.ico">
+    <title>编辑专题 - 秀知识</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/album-page.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--顶部导航栏-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color:#00cc66">Showledge</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav" style="margin-left:68px">
+            <li ><a href="#">发现</a></li>
+            <li ><a href="#">消息</a></li>
+            <li><a href="#">下载APP</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="image/touxiang.jpg" alt="用户头像"> <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="personal-page.html">我的主页</a></li>
+                <li><a href="#">消息</a></li>
+                <li><a href="user-manager.html">设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#">退出</a></li>
+              </ul>
+            </li>
+            <li><a href="write-page.html">写文章</a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+          <!-- main -->
+          <div class="col-md-9 main">
+            <!-- 专题头部模块 -->
+            <div class="main-top">
+              <a class="album-avatar" href="#">
+                <img src="image/album-pic.jpg" alt="专辑封面">
+              </a>
+
+              <button type="button" id="follow-btn"><span class="glyphicon glyphicon-plus"></span> <span>关注</span></button>
+              <button type="button" id="contribute-btn" data-toggle="modal" data-target="#tougao"><span>投稿</span></button>
+              <!-- 投稿模态框 -->
+              <div class="modal fade" id="tougao" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" style="font-weight:bold;margin-bottom:10px;">给该专题投稿</h4>
+                      <a id="create-note" href="write-page.html">写一篇新文章</a>
+                    </div>
+                    <div class="modal-body">
+                      <ul class="my-note-list" style="list-style:none;padding-left:0;">
+                        <li id="my-note-001">
+                          <span>我的文章1</span>
+                          <button class="contribute-btn">投稿</button>
+                          <hr>
+                        </li>
+                        <li id="my-note-002">
+                          <span>我的文章2</span>
+                          <button class="contribute-btn">投稿</button>
+                          <hr>
+                        </li>
+                      </ul>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+              <div class="title">
+                <a href="#">奇思妙想</a>
+              </div>
+              <div class="info">
+                收录了7102篇文章 · 573503人关注
+              </div>
+            </div><!-- main-top end -->
+            
+            <!-- 内容导航栏 -->
+            <ul class="nav nav-tabs nav-pills trigger-menu" role="tablist">
+              <li role="presentation" class="active"><a href="#new-comment" aria-controls="new-comment" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-comment"></span> <span>最新评论</span></a></li>
+              <li role="presentation"><a href="#new-collections" aria-controls="new-collections" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-list-alt"></span> <span>最新收录</span></a></li>
+              <li role="presentation"><a href="#hot-collections" aria-controls="hot-collections" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-fire"></span> <span>热门</span></a></li>
+            </ul><!-- trigger-menu end -->
+
+            <!-- 导航栏对应的内容 -->
+            <div class="tab-content">
+              <!-- 最新评论 -->
+              <div role="tabpanel" class="tab-pane fade in active" id="new-comment">
+                  <!--  文章列表 -->
+                  <div class="list-container">
+                    <ul class="note-list">
+                      <li id="note-001" class="have-img">
+                        <a href="#"  target="_blank"><img class="wrap-img" src="image/56ef6766322cc_1024.jpg" alt="缩略图"></a>
+                        <div class="content">
+                          <div class="author">
+                            <a href="#" target="_blank"><img class="avatar" src="image/touxiang.jpg" alt="用户头像"></a>
+                            <div class="name">
+                              <a href="#" class="user-name" target="_blank">张三</a>
+                            </div>
+                            <div class="time">
+                              前天 13:50
+                            </div>
+                          </div>
+                          <a href="article-page.html" class="note-title" target="_blank">张三今天踩大便了</a>
+                          <p class="abstact">这里放文章简介，张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了...</p>
+                          <div class="meta">
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> <span class="watch-num">1000</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-comment"></span> <span class="comment-num">999</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-heart"></span> <span class="like-num">999</span></a>
+                          </div>
+                        </div>
+                      </li> <!-- note-001 end -->
+                      
+                      <hr>
+
+                      <li id="note-002" class="have-img">
+                        <a href="#"  target="_blank"><img class="wrap-img" src="image/article-pic.jpg" alt="缩略图"></a>
+                        <div class="content">
+                          <div class="author">
+                            <a href="#" target="_blank"><img class="avatar" src="image/user-avatar2.jpg" alt="用户头像"></a>
+                            <div class="name">
+                              <a href="#" class="user-name" target="_blank">李四</a>
+                            </div>
+                            <div class="time">
+                              前天 13:50
+                            </div>
+                          </div>
+                          <a href="article-page.html" class="note-title" target="_blank">张三今天踩大便了</a>
+                          <p class="abstact">哦嘿嘿嘿，哦嘿，哦嘿，哦嘿嘿嘿黑黑. 啊啊啊啊啊啊额额额额额擦擦 擦擦才academic 大师傅的萨芬士大夫阿萨德发送到发射点发啊斯蒂芬啊斯蒂芬阿斯蒂芬广注册vzxc</p>
+                          <div class="meta">
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> <span class="watch-num">1000</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-comment"></span> <span class="comment-num">999</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-heart"></span> <span class="like-num">999</span></a>
+                          </div>
+                        </div>
+                      </li> <!-- note-002 end -->
+
+                      <hr>
+
+                    </ul>
+                  </div>
+              </div><!-- 最新评论 end-->
+
+              <!-- 最新收录 -->
+              <div role="tabpanel" class="tab-pane fade" id="new-collections">
+                <!--  文章列表 -->
+                  <div class="list-container">
+                    <ul class="note-list">
+                      <li id="note-003" class="have-img">
+                        <a href="#"  target="_blank"><img class="wrap-img" src="image/今日看点.png" alt="缩略图"></a>
+                        <div class="content">
+                          <div class="author">
+                            <a href="#" target="_blank"><img class="avatar" src="image/idol-avatar2.jpg" alt="用户头像"></a>
+                            <div class="name">
+                              <a href="#" class="user-name" target="_blank">张三</a>
+                            </div>
+                            <div class="time">
+                              前天 13:50
+                            </div>
+                          </div>
+                          <a href="article-page.html" class="note-title" target="_blank">张三今天踩大便了</a>
+                          <p class="abstact">这里放文章简介，张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了...</p>
+                          <div class="meta">
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> <span class="watch-num">1000</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-comment"></span> <span class="comment-num">999</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-heart"></span> <span class="like-num">999</span></a>
+                          </div>
+                        </div>
+                      </li> <!-- note-003 end -->
+                      
+                      <hr>
+
+                      <li id="note-004" class="have-img">
+                        <a href="#"  target="_blank"><img class="wrap-img" src="image/idol-avatar.jpg" alt="缩略图"></a>
+                        <div class="content">
+                          <div class="author">
+                            <a href="#" target="_blank"><img class="avatar" src="image/user-avatar2.jpg" alt="用户头像"></a>
+                            <div class="name">
+                              <a href="#" class="user-name" target="_blank">李四</a>
+                            </div>
+                            <div class="time">
+                              前天 13:50
+                            </div>
+                          </div>
+                          <a href="article-page.html" class="note-title" target="_blank">张三今天踩大便了</a>
+                          <p class="abstact">哦嘿嘿嘿，哦嘿，哦嘿，哦嘿嘿嘿黑黑. 啊啊啊啊啊啊额额额额额擦擦 擦擦才academic 大师傅的萨芬士大夫阿萨德发送到发射点发啊斯蒂芬啊斯蒂芬阿斯蒂芬广注册vzxc</p>
+                          <div class="meta">
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> <span class="watch-num">1000</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-comment"></span> <span class="comment-num">999</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-heart"></span> <span class="like-num">999</span></a>
+                          </div>
+                        </div>
+                      </li> <!-- note-004 end -->
+
+                      <hr>
+
+                    </ul>
+                  </div>
+              </div><!-- 最新收录 end -->
+
+              <!-- 热门 -->
+              <div role="tabpanel" class="tab-pane fade" id="hot-collections">
+                <!--  文章列表 -->
+                  <div class="list-container">
+                    <ul class="note-list">
+                      <li id="note-005" class="have-img">
+                        <a href="#"  target="_blank"><img class="wrap-img" src="image/今日看点.png" alt="缩略图"></a>
+                        <div class="content">
+                          <div class="author">
+                            <a href="#" target="_blank"><img class="avatar" src="image/idol-avatar2.jpg" alt="用户头像"></a>
+                            <div class="name">
+                              <a href="#" class="user-name" target="_blank">张三</a>
+                            </div>
+                            <div class="time">
+                              前天 13:50
+                            </div>
+                          </div>
+                          <a href="article-page.html" class="note-title" target="_blank">asdf了</a>
+                          <p class="abstact">这里放文章简介，张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了张三今天踩大便了...</p>
+                          <div class="meta">
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> <span class="watch-num">1000</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-comment"></span> <span class="comment-num">999</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-heart"></span> <span class="like-num">999</span></a>
+                          </div>
+                        </div>
+                      </li> <!-- note-005 end -->
+                      
+                      <hr>
+
+                      <li id="note-006" class="have-img">
+                        <a href="#"  target="_blank"><img class="wrap-img" src="image/idol-avatar.jpg" alt="缩略图"></a>
+                        <div class="content">
+                          <div class="author">
+                            <a href="#" target="_blank"><img class="avatar" src="image/user-avatar2.jpg" alt="用户头像"></a>
+                            <div class="name">
+                              <a href="#" class="user-name" target="_blank">王四</a>
+                            </div>
+                            <div class="time">
+                              前天 13:50
+                            </div>
+                          </div>
+                          <a href="article-page.html" class="note-title" target="_blank">啊斯蒂芬</a>
+                          <p class="abstact">哦嘿嘿嘿，哦嘿，哦嘿，哦嘿嘿嘿黑黑. 啊啊啊啊啊啊额额额额额擦擦 擦擦才academic 大师傅的萨芬士大夫阿萨德发送到发射点发啊斯蒂芬啊斯蒂芬阿斯蒂芬广注册vzxc</p>
+                          <div class="meta">
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> <span class="watch-num">1000</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-comment"></span> <span class="comment-num">999</span> </a>
+                            <a href="#" target="_blank"><span class="glyphicon glyphicon-heart"></span> <span class="like-num">999</span></a>
+                          </div>
+                        </div>
+                      </li> <!-- note-006 end -->
+
+                      <hr>
+
+                    </ul>
+                  </div>                
+              </div><!-- 热门 end -->
+            </div>
+
+          </div><!-- main end -->
+
+          <!-- aside -->
+          <div class="col-md-3 aside">
+            <!-- 专题公告 -->
+            <div class="announcement">
+              <p>专题公告</p>
+              <div class="announce-content">
+                欢迎来到不可能的世界。
+
+                投稿须知： 
+                1.本专题收录各种类型的幻想故事、脑洞大开的文章（包括摄影以及手绘作品），不怕离奇，只需逻辑自洽能够自圆其说即可。白天我们穿着西服、套裙在地球上兢兢业业，夜晚我们穿上魔法衣前往另一个世界，那里只有少数人，TA们都睁着好奇的眼睛。 
+                2.内容须为原创，不得抄袭。 
+                3.字数要求：八百字以上，一万字以下。 
+                4.文章排版整洁，段落分明，无明显错别字。
+                5.文章內不得有任何推广信息。包括但不限于公众号、微博、微信，更不得在通过投稿后再修改文...
+              </div>
+              <!-- 详细内容btn -->
+              <button id="announce-detail-btn" data-toggle="modal" data-target="#announce-detail"><span>详细内容</span> <span class="glyphicon glyphicon-chevron-right"></span></button>
+
+              <!-- 详细内容模态框 -->
+              <!-- Modal -->
+              <div class="modal fade" id="announce-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">公告详细内容</h4>
+                    </div>
+                    <div class="modal-body">
+                      欢迎来到不可能的世界。
+
+                      投稿须知： 
+                      1.本专题收录各种类型的幻想故事、脑洞大开的文章（包括摄影以及手绘作品），不怕离奇，只需逻辑自洽能够自圆其说即可。白天我们穿着西服、套裙在地球上兢兢业业，夜晚我们穿上魔法衣前往另一个世界，那里只有少数人，TA们都睁着好奇的眼睛。 
+                      2.内容须为原创，不得抄袭。 
+                      3.字数要求：八百字以上，一万字以下。 
+                      4.文章排版整洁，段落分明，无明显错别字。
+                      5.文章內不得有任何推广信息。包括但不限于公众号、微博、微信，更不得在通过投稿后再修改文章加入推广信息。你可以将这些推广以及个人信息放在个人主页介绍里。 
+                      6.优秀短篇，主编将会手动将其推荐至首页，更有机会成为简书签约作者。
+
+                      专题主编：专三千 http://www.jianshu.com/u/d6370e15aaf9 
+                      目前简书针对优质作者及爱好者，开设了官方微信群，希望加入请加主编个人微信zeng6964288，主编会将你加入到【简书-奇思妙想】官方微信群，分享内容，结交文友，一起幻想。添加微信时备注[简书ID]。
+
+                      微信添加简书大妈（jianshu_dama），进入简书丰富多彩的专题社群！
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- 专题公告 end -->
+
+            <hr>
+            
+            <!-- 管理员列表 -->
+            <div class="manager-list">
+              <p>管理员</p>
+              <ul class="managers" style="list-style:none;padding-left:0;">
+                <li id="ma-001">
+                  <a href="#" target="_blank"><img class="avatar" src="image/touxiang.jpg" alt="用户头像"></a>
+                  <div class="name">
+                    <a href="personal-page.html" class="manager-name" target="_blank">比尔</a>
+                  </div>
+                  <span>创建者</span>
+                </li>
+                <li id="ma-002">
+                  <a href="#" target="_blank"><img class="avatar" src="image/idol-avatar2.jpg" alt="用户头像"></a>
+                  <div class="name">
+                    <a href="personal-page.html" class="manager-name" target="_blank">扎克伯格</a>
+                  </div>
+                </li>
+                <li id="ma-003">
+                  <a href="#" target="_blank"><img class="avatar" src="image/user-avatar2.jpg" alt="用户头像"></a>
+                  <div class="name">
+                    <a href="personal-page.html" class="manager-name" target="_blank">戴夫</a>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- manager-list -->
+
+            <hr>
+
+            <!-- 关注的人 -->
+            <div class="watch-user">
+              <p data-toggle="modal" data-target="#myModal">关注的人(<span>4231234</span>)</p>
+              <!-- 模态框 -->
+              <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" style="font-weight:bold;">关注的人(<span>4231234</span>)</h4>
+                    </div>
+                    <div class="modal-body">
+                      <ul style="list-style:none;padding-left:0;">
+                        <li id="watcher-001">
+                          <a href="#" target="_blank"><img class="avatar" src="image/user-avatar2.jpg" alt="用户头像"></a>
+                          <div class="name">
+                            <a href="personal-page.html" class="watcher-name" target="_blank">戴夫</a>
+                          </div>
+                          <hr>
+                        </li>
+                        <li id="watcher-002">
+                          <a href="#" target="_blank"><img class="avatar" src="image/今日看点.png" alt="用户头像"></a>
+                          <div class="name">
+                            <a href="personal-page.html" class="watcher-name" target="_blank">我滴乖乖</a>
+                          </div>
+                          <hr>
+                        </li>
+                        <li id="watcher-003">
+                          <a href="#" target="_blank"><img class="avatar" src="image/idol-avatar.jpg" alt="用户头像"></a>
+                          <div class="name">
+                            <a href="personal-page.html" class="watcher-name" target="_blank">garden</a>
+                          </div>
+                          <hr>
+                        </li>
+                      </ul>
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+            </div><!-- watch-user end -->
+
+            <hr>
+          </div><!-- aside -->
+        </div>
+
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/bootstrap.min.js"></script>
+
+    <script src="script/album-page.js"></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" href="icon/s.ico">
+    <title>编辑专题 - 秀知识</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/edit-ablum.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--顶部导航栏-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color:#00cc66">Showledge</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav" style="margin-left:68px">
+            <li ><a href="#">发现</a></li>
+            <li ><a href="#">消息</a></li>
+            <li><a href="#">下载APP</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="image/touxiang.jpg" alt="用户头像"> <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="personal-page.html">我的主页</a></li>
+                <li><a href="#">消息</a></li>
+                <li><a href="user-manager.html">设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#">退出</a></li>
+              </ul>
+            </li>
+            <li><a href="write-page.html">写文章</a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <!-- 标题 -->
+          <h3 style="font-weight:bold;margin-bottom:30px;">新建专题</h3>
+          
+          <!-- 表单 -->
+          <div class="input-album-pic">
+            <img id="example-pic" src="image/pic.png" alt="example-pic">
+            <div class="upfilebox">
+              <input type="file">
+              <label>上传封面图片</label>
+            </div>
+          </div>
+          
+          <hr>
+
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="album-name" class="col-sm-2 control-label">专辑名称</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="album-name" placeholder="填写专辑名称，不超过50字">
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+              <label for="album-discribe" class="col-sm-2 control-label">专辑描述</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="album-discribe" rows="5" placeholder="填写描述"></textarea>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+              <label for="manage-user" class="col-sm-2 control-label">其他管理员</label>
+              <div class="col-sm-7">
+                <input type="text" class="form-control" id="manage-user" placeholder="输入用户名">
+              </div>
+            </div>
+            
+            <hr>
+
+            <div class="form-group">
+              <label  class="col-sm-2 control-label">允许投稿</label>
+              <div class="col-sm-7">
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 允许
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 不允许
+                </label>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+              <label  class="col-sm-2 control-label">投稿是否需要审核</label>
+              <div class="col-sm-7">
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1"> 需要
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option2"> 不需要
+                </label>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-success btn-lg">创建专题</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
