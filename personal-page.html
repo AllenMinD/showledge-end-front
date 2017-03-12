@@ -212,9 +212,9 @@
           <div class="description">
             <div class="js-intro"></div>
           </div>
-          <ul class="list user-dynamic">
+          <ul class="list user-dynamic" style="padding-left:0;">
             <li>
-              <a href="like-page.html"><img src="icon/star.png" alt=""> <span>我关注的专题/文集</span></a>    
+              <a href="like-page.html"><img src="icon/star.png" alt="."> <span>我关注的专题/文集</span></a>    
             </li>
             <li>
               <a href="like-page.html"><img src="icon/heart.png" style="width:33px;" alt=""> <span>我喜欢的文章</span></a>    
@@ -222,15 +222,19 @@
           </ul>
           <!-- 专题和文集 -->
           <div>
-            <div>
-              <!----> 
-              <div class="title">我创建的专题</div> 
-              <div class="new-collection-block">
-                <a href="/collections/new" class="new-collection-btn"><i class="glyphicon glyphicon-plus"></i><span>创建一个新专题</span></a>
-              </div>
-            </div> 
-            <!----> 
-            <!---->
+            <div class="album-title" style="color:#969696;margin-bottom:10px;">我创建的专题</div> 
+              <a href="edit-album.html" class="new-collection-btn" target="_blank"><i class="glyphicon glyphicon-plus"></i><span>创建一个新专题</span></a>
+              <!-- 我的专辑列表 -->
+              <ul class="album-list">
+                <li id="my-album-001">
+                  <a href="album-page.html" target="_blank"><img class="album-pic" src="image/album-pic.jpg" alt="专辑缩略图"></a>
+                  <a class="album-name" href="album-page.html" target="_blank">奇思妙想</a>
+                </li>
+                <li id="my-album-002">
+                  <a href="album-page.html" target="_blank"><img class="album-pic" src="image/idol-avatar.jpg" alt="专辑缩略图"></a>
+                  <a class="album-name" href="album-page.html" target="_blank">bababa</a>
+                </li>
+              </ul>
           </div>
         </div><!-- aside end -->
 
