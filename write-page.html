@@ -64,7 +64,7 @@
                 </div>
               </div>
             </li>
-          </ul><!-- notebook-list end-->
+          </ul><!-- notebook-list end-->        
           <div class="trash-bin"><!-- glyphicon glyphicon-trashglyphicon glyphicon-trash -->
             <span class="glyphicon glyphicon-trashglyphicon glyphicon-trash"></span>
             <span>回收站</span>
@@ -84,6 +84,12 @@
                 </div>
                 <div class="col-md-7 article-title">
                   无标题文章
+                  <div class="tag-bar">
+                    <span class="glyphicon glyphicon-tag"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
                 <div class="dropdown col-md-2 edit-article right" style="height:53px;">
                   <span class="glyphicon glyphicon-cog" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
@@ -91,6 +97,8 @@
                     <li><a href="#" class="edit-article-name"><span class="glyphicon glyphicon-share-alt" style="margin-right:20px;"></span>直接发布</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="#" class="move-article"><span class="glyphicon glyphicon-folder-open" style="margin-right:20px;"></span>移动文章</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" class="edit-article-tag" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-tag" style="margin-right:20px;"></span>文章标签</a></li>                    
                     <li role="separator" class="divider"></li>
                     <li><a href="#" class="edit-article-delete"><span class="glyphicon glyphicon-trashglyphicon glyphicon-trash" style="margin-right:20px;"></span>删除文章</a></li>
                   </ul>
@@ -105,6 +113,12 @@
                 </div>
                 <div class="col-md-7 article-title">
                   无标题文章
+                  <div class="tag-bar" id="tag-1">
+                    <span class="glyphicon glyphicon-tag"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>                  
                 </div>
                 <div class="dropdown col-md-2 edit-article right" style="height:53px;">
                   <span class="glyphicon glyphicon-cog" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
@@ -112,6 +126,8 @@
                     <li><a href="#" class="edit-article-name"><span class="glyphicon glyphicon-share-alt" style="margin-right:20px;"></span>直接发布</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="#" class="move-article"><span class="glyphicon glyphicon-folder-open" style="margin-right:20px;"></span>移动文章</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" class="edit-article-tag" id="1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-tag" style="margin-right:20px;"></span>文章标签</a></li>                    
                     <li role="separator" class="divider"></li>
                     <li><a href="#" class="edit-article-delete"><span class="glyphicon glyphicon-trashglyphicon glyphicon-trash" style="margin-right:20px;"></span>删除文章</a></li>
                   </ul>
@@ -123,7 +139,49 @@
         <div class="col-md-7 main">文章编辑区域</div>
       </div>
     </div>
-    <!-- 修改文集名称覆盖层 -->
+    <!-- 修改文章标签模态框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">文章标签</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-inline">
+              <div class="form-group">
+                <select name="level-one" class="select form-control" id="select1"> 
+                  <option value="0">--一级分类--</option>
+                  <option value="计算机">计算机</option>
+                </select>
+              </div>
+
+              <div class="form-group" >
+                <select name="level-two" class="select form-control" id="select2">
+                  <option value="0">--二级分类--</option>
+                  <option value="前端开发">前端开发</option>
+                  <option value="后端开发">后端开发</option>
+                  <option value="移动开发">移动开发</option>
+                  <option value="数据库">数据库</option>
+                  <option value="运维/测试">运维/测试</option>
+                  <option value="UI设计">UI设计</option>
+                </select>
+              </div>
+
+              <div class="form-group" >
+                <select name="level-three" class="select form-control" id="select3">
+                  <option value="0">--三级分类--</option>
+                </select>
+              </div>              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="save-tag-btn" data-dismiss="modal">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>      
+    <!-- 修改文集名称模态框 -->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
       <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
@@ -148,5 +206,6 @@
     <script src="dist/js/bootstrap.min.js"></script>
 
     <script src="script/write-article-script.js"></script>
+
   </body>
 </html>

@@ -36,9 +36,9 @@ $(document).ready(function () {
 		$(this).parents('li')[1].remove();
 	});
 
-	//获取文集名称的标签
+	//获取文集名称
 	$('.edit-notebook').click(function(event) {
-		tempName = $(this).prev();  //获取文集名称的标签
+		tempName = $(this).prev();  //获取文集名称
 	});
 	//修改名称的【保存】按钮
 	$("#enter-edit-name").click(function(event) {
@@ -47,6 +47,94 @@ $(document).ready(function () {
 		tempName.text(newName);
 		$(".edit-name").val("");  //input清空
 	});
+
+	////////////////////////////修改标签事件/////////////////////////////////
+	/*按了模态框的保存按钮以后，根据获取select中的值，来更改这个文章的标签*/
+	var current;
+	$(".edit-article-tag").unbind('click').click(function(event) {
+		//这里的返回值是div.tag-bar。迟点用来获取当前文章的对象，方便之后修改当前文章的标签
+		current = $(this).parents(".dropdown").prev().children(".tag-bar");		
+	});
+	$("#save-tag-btn").unbind('click').click(function(event) {
+		current.children("span").eq(1).text($("#select1").val());
+		current.children("span").eq(2).text($("#select2").val());
+		current.children("span").eq(3).text($("#select3").val());
+		$("#select1").val("0");
+		$("#select2").val("0");
+		$("#select3").val("0");
+	});
+
+
+
+	////////////////////////////3个select的级联/////////////////////////////////////////////
+	$("select[name='level-one']").change(function() {   //*****第一层*****
+		var selected_value = $(this).val();
+		if (selected_value == "计算机") {
+
+			var font_end = ["HTML/CSS", "Javascript", "jQuery", "HTML5/CSS3", "Node.js", "AngularJS", "React", "Bootstrap", "Vue.js", "Sass/Less"];     
+		    var back_end = ["PHP", "Java", "Python", "C", "C++", "C#", "Ruby"];
+		    var mobile = ["Android", "iOS", "Unity3D", "Cocos2d-x"];
+		    var data_base = ["MySQL", "MongoDB", "Oracle", "SQL-Server"];
+		    var yun_wei = ["测试", "Linux"];
+		    var UI_Design = ["UI设计工具", "Photoshop", "Illustrator"];		    
+
+		    $("select[name='level-two']").change(function() {  //*****第二层*****
+
+				//被选中的option
+		     	var selected_value = $(this).val();
+		     	if(selected_value == "select"){
+			        $("select[name='level-three']").empty();
+
+			    } else if(selected_value == "前端开发") { //前端
+			        $("select[name='level-three']").empty();
+			        //循环添加
+			        for(var i = 0; i < font_end.length; i++) {
+			          var option = $("<option>").val(font_end[i]).text(font_end[i]);
+			              $("select[name='level-three']").append(option);
+			        }
+
+			    } else if(selected_value == "后端开发") { //后端
+			        $("select[name='level-three']").empty();
+			        //循环添加
+			        for(var i = 0; i < back_end.length; i++) {
+			          var option = $("<option>").val(back_end[i]).text(back_end[i]);
+			              $("select[name='level-three']").append(option);
+			        }
+
+			    } else if(selected_value == "移动开发") { //移动
+			        $("select[name='level-three']").empty();
+			        //循环添加
+			        for(var i = 0; i < mobile.length; i++) {
+			          var option = $("<option>").val(mobile[i]).text(mobile[i]);
+			              $("select[name='level-three']").append(option);
+			        }
+			    } else if(selected_value == "数据库") {
+			        $("select[name='level-three']").empty();
+			        //循环添加
+			        for(var i = 0; i < data_base.length; i++) {
+			          var option = $("<option>").val(data_base[i]).text(data_base[i]);
+			              $("select[name='level-three']").append(option);
+			        }
+			    } else if(selected_value == "运维/测试") {
+			        $("select[name='level-three']").empty();
+			        //循环添加
+			        for(var i = 0; i < yun_wei.length; i++) {
+			          var option = $("<option>").val(yun_wei[i]).text(yun_wei[i]);
+			              $("select[name='level-three']").append(option);
+			        }
+			    }  else if(selected_value == "UI设计") {
+			        $("select[name='level-three']").empty();
+			        //循环添加
+			        for(var i = 0; i < UI_Design.length; i++) {
+			          var option = $("<option>").val(UI_Design[i]).text(UI_Design[i]);
+			              $("select[name='level-three']").append(option);
+			        }
+			    }		    			    
+		 	});
+		}
+	});
+	////////////////////////////////////////////////////////////////////////////////////////
+
 //////////////////////////////////////////////////新建文集按钮///////////////////////////////////////////////////////
 /*记得把上面默认功能在拷贝一次添加到新建文集这个部分，新建的文集才有这些功能*/
 	//按 “勾” 新建新文集 并关闭新建面板
@@ -134,9 +222,9 @@ $(document).ready(function () {
 			$(this).parents('li')[1].remove();
 		});
 
-		//获取文集名称的标签
+		//获取文集名称
 		$('.edit-notebook').click(function(event) {
-			tempName = $(this).prev();  //获取文集名称的标签
+			tempName = $(this).prev();  //获取文集名称
 
 		});
 	});
@@ -211,7 +299,7 @@ $(document).ready(function () {
 		newLi_divider2.attr({
 			'role': 'separator',
 			'class': 'divider'
-		});
+		});	
 		var newLi_moveArticle = $("<li></li>");
 		newUl_dropdownMenu2.append(newLi_moveArticle);
 		var newA_moveArticle = $("<a></a>").text("移动文章");
@@ -232,6 +320,28 @@ $(document).ready(function () {
 			'role': 'separator',
 			'class': 'divider'
 		});
+		var newLi_edit_article_tag = $("<li></li>");
+		newUl_dropdownMenu2.append(newLi_edit_article_tag);
+		var newA_edit_article_tag = $("<a></a>").text("文章标签");
+		newLi_edit_article_tag.append(newA_edit_article_tag);
+		newA_edit_article_tag.attr({
+		  'href': '#',
+		  'class': 'edit-article-tag',
+		  'data-toggle': 'modal',
+		  'data-target': '#myModal'
+		});
+		var newSpan_icon_tag = $("<span></span>");
+		newA_edit_article_tag.prepend(newSpan_icon_tag);
+		newSpan_icon_tag.attr({
+		  'class': 'glyphicon glyphicon-tag',
+		  'style': 'margin-right:20px'
+		});		
+		var newLi_divider4 = $("<li></li>");
+		newUl_dropdownMenu2.append(newLi_divider4);
+		newLi_divider4.attr({
+			'role': 'separator',
+			'class': 'divider'
+		});	
 		var newLi_deleteArticle = $("<li></li>");
 		newUl_dropdownMenu2.append(newLi_deleteArticle);
 		var newA_deleteArticle = $("<a></a>").text("删除文章");
@@ -246,6 +356,11 @@ $(document).ready(function () {
 			'class': 'glyphicon glyphicon-trashglyphicon glyphicon-trash',
 			'style': 'margin-right:20px'
 		});
+
+		//文章的标签
+		var article_tag = $("<div class='tag-bar'><span class='glyphicon glyphicon-tag'></span><span></span><span></span><span></span></div>");
+		newDiv_middle.append(article_tag);
+
 
 		//按钮active的切换
 		$('.one-notebook').click(function (e) {  
@@ -264,6 +379,74 @@ $(document).ready(function () {
 		$('.edit-article-delete').click(function(event) {
 			$(this).parents('li')[1].remove();
 		});
-	});
+
+		/*按了模态框的保存按钮以后，根据获取select中的值，来更改这个文章的标签*/
+		var current1;
+		$(".edit-article-tag").unbind('click').click(function(event) {
+			//这里的返回值是div.tag-bar。迟点用来获取当前文章的对象，方便之后修改当前文章的标签		
+		});
+		$("#save-tag-btn").unbind('click').click(function(event) {
+			current1.children("span").eq(1).text($("#select1").val());
+			current1.children("span").eq(2).text($("#select2").val());
+			current1.children("span").eq(3).text($("#select3").val());
+			$("#select1").val("0");
+			$("#select2").val("0");
+			$("#select3").val("0");
+		});
+
+
+	});/*新建文章事件 end*/
 
 });	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    function changeProvince() {
+      var slecctS = document.querySelectorAll(".select");
+      var countrys = new Array();
+      countrys["0"] = ["--请选择所在省份和地区--"];
+      countrys["北京市"] = ["朝阳区", "东城区", "西城区", "海淀区", "宣武区", "丰台区"];
+      countrys["上海市"] = ["宝山区", "长宁区", "闵行区", "杨浦区","黄浦区","虹口区","静安区"];
+      countrys["广州省"] = ["广州市", "珠海市", "汕头市", "揭阳市", "潮州市", "湛江市"];
+      countrys["深圳市"] = ["福田区", "南山区", "宝安区", "龙岗区", "盐田区", "罗湖区"];
+      countrys["重庆市"] = ["万州区", "渝中区", "大渡口区", "江北区", "沙坪坝区", "渝北区"];
+      countrys["天津市"] = ["和平区", "河东区", "河西区", "南开区", "红桥区", "武清区"];
+      var value = slecctS[0].value;
+      //option 集合可返回包含 <select> 元素中所有 <option> 的一个数组。
+      //注意： 数组中的每个元素对应一个 <option> 标签 - 由 0 起始。 
+      slecctS[1].options.length = 0;
+      var option;
+      for(i = 0; i < countrys[value].length; i++) {
+        //new Option("文本","值",true,true)
+        //后面两个true分别表示默认被选中和有效!
+
+        option = new Option(countrys[value][i], countrys[value][i]);
+        slecctS[1].options.add(option);
+        slecctS[1].options.selected=countrys[value][0];
+      }
+      if(slecctS[0].value == "0") {
+        slecctS[1].disabled = true;
+      }
+      else {
+        slecctS[1].disabled = false;
+      } 
+    }
+*/
