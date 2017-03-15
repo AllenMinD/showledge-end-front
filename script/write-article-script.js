@@ -384,6 +384,7 @@ $(document).ready(function () {
 		var current1;
 		$(".edit-article-tag").unbind('click').click(function(event) {
 			//这里的返回值是div.tag-bar。迟点用来获取当前文章的对象，方便之后修改当前文章的标签		
+			current1 = $(this).parents(".dropdown").prev().children(".tag-bar");		
 		});
 		$("#save-tag-btn").unbind('click').click(function(event) {
 			current1.children("span").eq(1).text($("#select1").val());
