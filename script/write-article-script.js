@@ -71,12 +71,13 @@ $(document).ready(function () {
 		var selected_value = $(this).val();
 		if (selected_value == "计算机") {
 
-			var font_end = ["HTML/CSS", "Javascript", "jQuery", "HTML5/CSS3", "Node.js", "AngularJS", "React", "Bootstrap", "Vue.js", "Sass/Less"];     
-		    var back_end = ["PHP", "Java", "Python", "C", "C++", "C#", "Ruby"];
-		    var mobile = ["Android", "iOS", "Unity3D", "Cocos2d-x"];
-		    var data_base = ["MySQL", "MongoDB", "Oracle", "SQL-Server"];
-		    var yun_wei = ["测试", "Linux"];
-		    var UI_Design = ["UI设计工具", "Photoshop", "Illustrator"];		    
+			var font_end = ["HTML", "CSS", "Javascript", "HTML5", "CSS3", "Typescript", "前端安全", "项目实战", "jQuery", "ExtJS", "AngularJS", "ReactJS", "Bootstrap", "React Native", "Backbone", "Three.js", "MooTools", "Compass", "Canvas", "SVG", "WebGL", "Cocos2d-js", "CreateJS", "Flash", "Unreal", "Egret", "Phaser"];     
+		    var back_end = ["Python基础", "web2py", "Django", "Flask", "GUI", "数据挖掘与分析", "PHP基础", "YII", "ThinkPHP", "Laravel", "WordPress", "Phalcon", "Apache", "Facebook Hack", "Node.js基础", "express", "Meteor", "Hexo", "C#", "ASP.Net MVC", "Entity Framework", "WPF", "JSP", "Maven", "Spring", "SpringMVC", "Struts2", "MyBatis", "Hibernate", "Lucene", "常用框架", "Ruby基础", "Ruby on Rails", "Grape", "Ruby进阶", "RubyMine", "Go基础", "Revel", "beego", "Erlang"];
+		    var mobile = ["Android", "iOS", "Unity3D", "Cocos", "SpriteKit 2D", "Unreal", "Cordova", "React Native"];
+		    var data_base = ["MySQL", "MongoDB", "Oracle", "SQL Server", "SQLite", "PostgreSQL", "DB2", "Cassandra", "Redis"];
+		    var basic_knowledge = ["C", "C++", "Objective-C", "Swift", "C#", "Java", "Perl", "Shell", "Qt", "Scala", "计算机组成原理", "网络工程", "Word", "Excel", "PowerPoint", "算法基础", "数据结构", "设计模式", "软件工程", "Git/Github", "SVN", "VI", "OpenCL", "Open XML", "OpenGL/GLES"];
+		    var big_data = ["OpenStack", "Docker", "CloudStack", "WindowsAzure", "IaaS", "Hadoop", "Storm", "Hive", "Flume", "Kafka", "Zookeeper", "Hbase", "Spark", "信息检索", "数据分析", "VMware", "云平台"];
+		    var smart_divice = ["C51", "ARM", "Keil", "Cortex-M", "Cortex-A", "AVR", "RTOS", "Android Wear", "Apple Watchkit", "Arduino", "树莓派", "mbed", "Gokit", "LeMaker Guitar", "无线wife", "移动通信", "蓝牙", "NFC", "传感器", "语音识别", "人脸识别", "手势识别"];		    
 
 		    $("select[name='level-two']").change(function() {  //*****第二层*****
 
@@ -115,21 +116,28 @@ $(document).ready(function () {
 			          var option = $("<option>").val(data_base[i]).text(data_base[i]);
 			              $("select[name='level-three']").append(option);
 			        }
-			    } else if(selected_value == "运维/测试") {
+			    } else if(selected_value == "基础知识") {
 			        $("select[name='level-three']").empty();
 			        //循环添加
-			        for(var i = 0; i < yun_wei.length; i++) {
-			          var option = $("<option>").val(yun_wei[i]).text(yun_wei[i]);
+			        for(var i = 0; i < basic_knowledge.length; i++) {
+			          var option = $("<option>").val(basic_knowledge[i]).text(basic_knowledge[i]);
 			              $("select[name='level-three']").append(option);
 			        }
-			    }  else if(selected_value == "UI设计") {
+			    }  else if(selected_value == "云计算/大数据") {
 			        $("select[name='level-three']").empty();
 			        //循环添加
-			        for(var i = 0; i < UI_Design.length; i++) {
-			          var option = $("<option>").val(UI_Design[i]).text(UI_Design[i]);
+			        for(var i = 0; i < big_data.length; i++) {
+			          var option = $("<option>").val(big_data[i]).text(big_data[i]);
 			              $("select[name='level-three']").append(option);
 			        }
-			    }		    			    
+			    }  else if(selected_value == "智能硬件/物联网") {
+			        $("select[name='level-three']").empty();
+			        //循环添加
+			        for(var i = 0; i < smart_divice.length; i++) {
+			          var option = $("<option>").val(smart_divice[i]).text(smart_divice[i]);
+			              $("select[name='level-three']").append(option);
+			        }
+			    }	    			    
 		 	});
 		}
 	});

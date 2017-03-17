@@ -65,179 +65,193 @@
       </div><!-- /.container-fluid -->
     </nav>
     <!-- 主要内容 -->
-    <div class="container person">
+    <div class="container-fluid person">
       <div class="row">
-        <div class="col-xs-16 main">
-          <div class="main-top">
-            <a href="#">
-              <img class="avatar" src="image/user-avatar2.jpg" alt="240">
-            </a>
-            <div class="title">
-              <a class="name" href="/u/6904e03a1cfe">allenmind</a>
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8 main">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="main-top">
+                <a href="#">
+                  <img class="avatar" src="image/user-avatar2.jpg" alt="240">
+                </a>
+                <div class="title">
+                  <a class="name" href="/u/6904e03a1cfe">allenmind</a>
+                </div>
+                <div class="info">
+                  <ul>
+                    <li>
+                      <div class="meta-block">
+                        <p>0</p>
+                        <a href="/users/6904e03a1cfe/following">
+                          榜样 
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="meta-block">
+                        <p>0</p>
+                        <a href="/users/6904e03a1cfe/followers">
+                          粉丝 
+                        </a>        
+                      </div>
+                    </li>
+                    <li>
+                      <div class="meta-block">
+                        <p>0</p>
+                        <a href="/users/6904e03a1cfe/followers">
+                          小组 
+                        </a>        
+                      </div>
+                    </li>
+                    <li>
+                      <div class="meta-block">
+                        <p>0</p>
+                        <a href="/u/6904e03a1cfe">
+                          文章 
+                        </a>        
+                        </div>
+                    </li>               
+                    <li>
+                      <div class="meta-block">
+                        <p>0</p>
+                        <div>字数</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="meta-block">
+                        <p>0</p>
+                        <a href="/u/6904e03a1cfe">
+                          知识地图
+                        </a>        
+                        </div>
+                    </li> 
+                    <li>
+                      <div class="meta-block">
+                        <p>0</p>
+                        <div>收获喜欢</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="outer-container">
+                <!-- 新.标签导航 -->
+                <ul class="nav nav-tabs trigger-menu" role="tablist">
+                  <li role="presentation" class="active"><a href="#my-article" aria-controls="my-article" role="tab" data-toggle="tab"><img src="icon/article.png" alt="icon" class="sub-nav-icon">文章</a></li>
+                  <li role="presentation"><a href="#my-mindmap" aria-controls="my-mindmap" role="tab" data-toggle="tab"><img src="icon/nav-map.png" alt="icon" class="sub-nav-icon">知识地图</a></li>
+                  <li role="presentation"><a href="#my-profile" aria-controls="my-profile" role="tab" data-toggle="tab"><img src="icon/id-card.png" alt="icon" class="sub-nav-icon">简历</a></li>
+                </ul> 
+
+                <!-- 各个标签对应的内容 -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane in fade active" id="my-article">
+                    <div id="list-container">
+                      <!-- 动态列表模块 -->
+                      <!-- 发布了文章 -->
+                      <ul class="note-list" infinite-scroll-url="/users/6904e03a1cfe/timeline"> 
+                        <li class="" id="feed-98479580">
+                            <div class="content">
+                            <div class="author">
+                              <a class="avatar" href="/users/6904e03a1cfe">
+                                <img thumbnail="180x180" src="http://cdn-qn0.jianshu.io/assets/default_avatar/5-33d2da32c552b8be9a0548c7a4576607.jpg?imageMogr/thumbnail/180x180" alt="5">
+                              </a>      
+                              <div class="name">
+                                <a class="blue-link" href="/u/6904e03a1cfe">allenmind</a>
+                                <span data-type="share_note" data-datetime="2017-02-13T14:22:40+08:00"> 发表了文章 · 2月13 14:22</span>
+                              </div>
+                            </div>
+
+                            <a class="title" href="/p/e66eba87cc7d">123</a>
+                            <p class="abstract">1233211234567</p>
+
+                            <div class="meta">
+                              <a href="#"><i class="glyphicon glyphicon-eye-open"></i> 0</a>        
+                              <a href="#"><i class="glyphicon glyphicon-comment"></i> 0</a>      
+                              <span><i class="glyphicon glyphicon-heart"></i> 0</span>
+                            </div>
+                          </div>
+                        </li>                
+                      </ul>
+                    </div>                
+                  </div><!-- my-article end -->
+                  <div role="tabpanel" class="tab-pane fade" id="my-mindmap">
+                    <ul class="mindmap-list">
+                      <li id="mindmap-001">
+                        <img class="mindmap-img" src="icon/map.png" alt="icon">
+                        <div class="mindmap-content">
+                          <a href="#" class="mindmap-title">Javascript语法</a>
+                          <p class="mindmap-info">这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。</p>
+
+                          <div class="meta" style="color:#969696;">
+                            <span><i class="glyphicon glyphicon-eye-open"></i> 0</span>      
+                            <span><i class="glyphicon glyphicon-comment"></i> 0</span>     
+                            <span><i class="glyphicon glyphicon-heart"></i> 0</span>
+                          </div>
+                        </div>                       
+                      </li>
+                      <li id="mindmap-002">
+                        <img class="mindmap-img" src="icon/map.png" alt="icon">
+                        <div class="mindmap-content">
+                          <a href="#" class="mindmap-title">HTML/CSS语法</a>
+                          <p class="mindmap-info">这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。</p>
+
+                          <div class="meta" style="color:#969696;">
+                            <span><i class="glyphicon glyphicon-eye-open"></i> 0</span>      
+                            <span><i class="glyphicon glyphicon-comment"></i> 0</span>     
+                            <span><i class="glyphicon glyphicon-heart"></i> 0</span>
+                          </div>
+                        </div>                       
+                      </li>                      
+                    </ul>
+                  </div><!-- my-mindmap end -->
+                  <div role="tabpanel" class="tab-pane fade" id="my-profile">3</div><!-- my-profile end -->
+                </div>                                
+              </div>
             </div>
-            <div class="info">
-              <ul>
+            <div class="col-md-3 aside">
+              <div class="title">个人介绍</div>
+              <a class="function-btn" data-action="start-edit-intro" href="javascript:void(0)"><i class="glyphicon glyphicon-pencil"></i>编辑</a>
+              <form class="profile-edit js-intro-form" data-type="json" id="edit_user_4464581" action="/users/6904e03a1cfe" accept-charset="UTF-8" data-remote="true" method="post">
+                <input name="utf8" type="hidden" value="✓">
+                <input type="hidden" name="_method" value="patch">
+                <textarea name="user[intro]" id="user_intro"></textarea>
+                <input type="submit" name="commit" value="保存" class="btn btn-hollow" data-action="save-edit-intro">
+                <a class="btn-cancel" data-action="cancel-edit-intro" href="javascript:void(null);">取消</a>
+              </form>  
+              <div class="description">
+                <div class="js-intro"></div>
+              </div>
+              <ul class="list user-dynamic" style="padding-left:0;">
                 <li>
-                  <div class="meta-block">
-                    <p>0</p>
-                    <a href="/users/6904e03a1cfe/following">
-                      榜样 
-                    </a>
-                  </div>
+                  <a href="like-page.html"><img src="icon/star.png" alt="."> <span>我关注的专题/文集</span></a>    
                 </li>
                 <li>
-                  <div class="meta-block">
-                    <p>0</p>
-                    <a href="/users/6904e03a1cfe/followers">
-                      粉丝 
-                    </a>        
-                  </div>
-                </li>
-                <li>
-                  <div class="meta-block">
-                    <p>0</p>
-                    <a href="/users/6904e03a1cfe/followers">
-                      小组 
-                    </a>        
-                  </div>
-                </li>
-                <li>
-                  <div class="meta-block">
-                    <p>0</p>
-                    <a href="/u/6904e03a1cfe">
-                      文章 
-                    </a>        
-                    </div>
-                </li>               
-                <li>
-                  <div class="meta-block">
-                    <p>0</p>
-                    <div>字数</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="meta-block">
-                    <p>0</p>
-                    <a href="/u/6904e03a1cfe">
-                      知识地图
-                    </a>        
-                    </div>
-                </li> 
-                <li>
-                  <div class="meta-block">
-                    <p>0</p>
-                    <div>收获喜欢</div>
-                  </div>
+                  <a href="like-page.html"><img src="icon/heart.png" style="width:33px;" alt=""> <span>我喜欢的文章</span></a>    
                 </li>
               </ul>
-            </div>
-          </div>
-
-          <div id="outer-container">
-            <ul class="trigger-menu" data-pjax-container="#list-container">
-              <li class="one-li active">
-                <a href="#"><i class="glyphicon glyphicon-list-alt"></i> 文章</a>
-              </li>
-              <li class="one-li">
-                <a href="#"><i class="glyphicon glyphicon-map-marker"></i> 知识地图</a>
-              </li>
-              <li class="one-li">
-                <a href="#"><i class="glyphicon glyphicon-list"></i> 学习计划</a>
-              </li>
-              <li class="one-li">
-                <a href="#"><i class="glyphicon glyphicon-bell"></i> 动态</a>
-              </li>
-              <li class="one-li">
-                <a href="#"><i class="glyphicon glyphicon-comment"></i> 最新评论</a>
-              </li>
-              <li class="one-li">
-                <a href="#"><i class="glyphicon glyphicon-fire"></i> 热门</a>
-              </li>
-            </ul>
-            <div id="list-container">
-              <!-- 动态列表模块 -->
-              <!-- 发布了文章 -->
-              <ul class="note-list" infinite-scroll-url="/users/6904e03a1cfe/timeline"> 
-                <li class="" id="feed-98479580">
-                    <div class="content">
-                    <div class="author">
-                      <a class="avatar" href="/users/6904e03a1cfe">
-                        <img thumbnail="180x180" src="http://cdn-qn0.jianshu.io/assets/default_avatar/5-33d2da32c552b8be9a0548c7a4576607.jpg?imageMogr/thumbnail/180x180" alt="5">
-                      </a>      
-                      <div class="name">
-                        <a class="blue-link" href="/u/6904e03a1cfe">allenmind</a>
-                        <span data-type="share_note" data-datetime="2017-02-13T14:22:40+08:00"> 发表了文章 · 2月13 14:22</span>
-                      </div>
-                    </div>
-
-                    <a class="title" href="/p/e66eba87cc7d">123</a>
-                    <p class="abstract">1233211234567</p>
-
-                    <div class="meta">
-                      <a href="#"><i class="glyphicon glyphicon-eye-open"></i> 0</a>        
-                      <a href="#"><i class="glyphicon glyphicon-comment"></i> 0</a>      
-                      <span><i class="glyphicon glyphicon-heart"></i> 0</span>
-                    </div>
-                  </div>
-                </li>                
-                <!-- 加入了简书 -->
-                <li id="feed-91950054">
-                  <div class="content">
-                    <div class="author author-restyle">
-                      <a href="/u/6904e03a1cfe">
-                        <img class="avatar" thumbnail="180x180" src="image/user-avatar2.jpg" alt="5">
-                      </a>
-                      <div class="name">
-                        <a class="blue-link" href="/u/6904e03a1cfe">allenmind</a>
-                        <span data-type="join_jianshu" data-datetime="2017-01-22T20:57:39+08:00"> 加入了简书 · 1月22 20:57</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+              <!-- 专题和文集 -->
+              <div>
+                <div class="album-title" style="color:#969696;margin-bottom:10px;">我创建的专题</div> 
+                  <a href="edit-album.html" class="new-collection-btn" target="_blank"><i class="glyphicon glyphicon-plus"></i><span>创建一个新专题</span></a>
+                  <!-- 我的专辑列表 -->
+                  <ul class="album-list">
+                    <li id="my-album-001">
+                      <a href="album-page.html" target="_blank"><img class="album-pic" src="image/album-pic.jpg" alt="专辑缩略图"></a>
+                      <a class="album-name" href="album-page.html" target="_blank">奇思妙想</a>
+                    </li>
+                    <li id="my-album-002">
+                      <a href="album-page.html" target="_blank"><img class="album-pic" src="image/idol-avatar.jpg" alt="专辑缩略图"></a>
+                      <a class="album-name" href="album-page.html" target="_blank">bababa</a>
+                    </li>
+                  </ul>
+              </div>
+            </div><!-- aside end -->            
           </div>
         </div><!-- main end -->
 
-        <div class="col-xs-7 col-xs-offset-1 aside">
-          <div class="title">个人介绍</div>
-          <a class="function-btn" data-action="start-edit-intro" href="javascript:void(0)"><i class="glyphicon glyphicon-pencil"></i>编辑</a>
-          <form class="profile-edit js-intro-form" data-type="json" id="edit_user_4464581" action="/users/6904e03a1cfe" accept-charset="UTF-8" data-remote="true" method="post">
-            <input name="utf8" type="hidden" value="✓">
-            <input type="hidden" name="_method" value="patch">
-            <textarea name="user[intro]" id="user_intro"></textarea>
-            <input type="submit" name="commit" value="保存" class="btn btn-hollow" data-action="save-edit-intro">
-            <a class="btn-cancel" data-action="cancel-edit-intro" href="javascript:void(null);">取消</a>
-          </form>  
-          <div class="description">
-            <div class="js-intro"></div>
-          </div>
-          <ul class="list user-dynamic" style="padding-left:0;">
-            <li>
-              <a href="like-page.html"><img src="icon/star.png" alt="."> <span>我关注的专题/文集</span></a>    
-            </li>
-            <li>
-              <a href="like-page.html"><img src="icon/heart.png" style="width:33px;" alt=""> <span>我喜欢的文章</span></a>    
-            </li>
-          </ul>
-          <!-- 专题和文集 -->
-          <div>
-            <div class="album-title" style="color:#969696;margin-bottom:10px;">我创建的专题</div> 
-              <a href="edit-album.html" class="new-collection-btn" target="_blank"><i class="glyphicon glyphicon-plus"></i><span>创建一个新专题</span></a>
-              <!-- 我的专辑列表 -->
-              <ul class="album-list">
-                <li id="my-album-001">
-                  <a href="album-page.html" target="_blank"><img class="album-pic" src="image/album-pic.jpg" alt="专辑缩略图"></a>
-                  <a class="album-name" href="album-page.html" target="_blank">奇思妙想</a>
-                </li>
-                <li id="my-album-002">
-                  <a href="album-page.html" target="_blank"><img class="album-pic" src="image/idol-avatar.jpg" alt="专辑缩略图"></a>
-                  <a class="album-name" href="album-page.html" target="_blank">bababa</a>
-                </li>
-              </ul>
-          </div>
-        </div><!-- aside end -->
-
+        <div class="col-md-2"></div>
       </div><!-- row end -->
     </div><!-- container end -->
 
