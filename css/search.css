@@ -47,6 +47,10 @@ ul.nav[role=tablist] {
   margin-bottom: 30px;
 }
 
+.navbar-icon {
+    padding-right: 10px;
+}
+
 .wrap-img {
     position: absolute;
     top: 50%;

@@ -91,7 +91,9 @@ ol, ul {
     margin-bottom: 10px;
 }
 
-
+.navbar-icon {
+    padding-right: 10px;
+}
 
 .person .main .main-top .info ul .meta-block {
     font-size: 12px;
@@ -406,4 +408,48 @@ ul.mindmap-list > li {
 
 .sub-nav-icon {
     margin-right: 10px;
+}
+
+/*profile-box*/
+.profile-box {
+    
+}
+
+.profile-box-pic {
+    border: 1px solid #ddd;
+    width: 94px;
+    float: left;
+}
+
+.profile-detail {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    height: 127px;
+    width: 530px;
+}
+
+.profile-title {
+    font-size: 20px;
+    color: #2f2f2f;
+    font-weight: bold;
+}
+
+.profile-title:visited {
+    color: #2f2f2f;
+}
+
+.profile-abstract {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.profile-abstract > span {
+    display: block;
+}
+
+#more-profile-detail {
+    position: absolute;
+    bottom: 0;
+    color: #969696;
 }

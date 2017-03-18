@@ -43,6 +43,11 @@ img.user-avatar {
   border-radius: 100px;
 }
 
+.navbar-icon {
+    padding-right: 10px;
+}
+
+
 .upfilebox {
   display: inline-block;
   position: relative;
