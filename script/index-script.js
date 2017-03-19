@@ -1,4 +1,5 @@
-window.onload = function(){
+$(document).ready(function() {
+
 	var moreBtn = document.getElementById("more-btn");
 	//模拟后台传来的json
 	//id、缩略图、用户头像、用户名字、发布时间、文章标题、文章类容、阅读量、评论、喜欢
@@ -155,7 +156,25 @@ window.onload = function(){
 
 		}
 	};
-};
+
+	//  关注按钮的切换
+	$(".follow-btn").click(function(event) {
+		if ($(this).text() == "关注") {
+			$(this).text("已关注");
+
+			$(this).css({
+				"color": '#969696',
+			});
+		} else if ($(this).text() == "已关注") {
+			$(this).html("<span class='glyphicon glyphicon-plus'></span><span>关注</span>");
+
+			$(this).css({
+				"color": '#42c02e',
+			});
+		}
+	});
+
+});
 
 /*
 //  检测是否具备了滾条加载数据块的条件
@@ -171,3 +190,4 @@ function checkScrollSlice() {
 	return (lastLiHeight<scrollTop+winHeight)?true:false;
 }
 */
+

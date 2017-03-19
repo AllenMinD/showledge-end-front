@@ -20,9 +20,5 @@ $(document).ready(function() {
 			});
 		}
 	});
-
-
-	//  公告栏的toggle
-	
-	
+		
 });

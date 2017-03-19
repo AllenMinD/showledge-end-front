@@ -10,172 +10,14 @@
     <!-- Bootstrap -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/index.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-      body {
-        font-family:"Microsoft Yahei",微软雅黑,"Helvetica Neue",Arial,sans-serif;
-      }
-      
-      a:link {
-        color: #969696;
-      }
-      a:visited {
-        color: #969696;
-      }
-      a:hover {
-        color: #969696;
-        text-decoration: underline;
-      }
-      a:active  {
-        outline: 0;
-      }
-      a {
-        cursor: pointer;
-        background-color: transparent;
-      }
-      
-      .index .main {
-        padding-right: 0;
-      }
-
-      .aside {
-        text-align: left;
-        line-height: 25px;
-        padding-left: 50px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      .container {
-        margin-top: 75px;
-      }
-      .list-container {
-        margin-top: 30px;
-      }
-      
-      .wrap-img {
-          position: absolute;
-          top: 50%;
-          margin-top: -68px;
-          right: 0;
-          width: 150px;
-          height: 120px;
-          border-radius: 4px
-      }
-      
-      .note-list  li{
-          position: relative;
-          width: 100%;
-          margin: 0 0 17px;
-          padding: 0 2px 17px 0;
-          border-bottom: 1px solid #f0f0f0;
-          word-wrap: break-word;
-      }
-      .note-list .author .avatar, .note-list .author .name,.note-list .author .time {
-          display: inline-block;
-          vertical-align: middle;
-      }
-      .note-list .content {
-        padding-right: 170px;
-      }
-      .note-list .author {
-          margin-bottom: 14px;
-          font-size: 13px;
-      }
-      .note-list .author .time {
-        padding-left: 5px;
-        color: #969696;
-      }
-      .note-list .author a {
-          color: #333;
-      }
-      .note-list .author .avatar {
-        margin: 0 5px 0 0;
-        width: 32px;
-        height: 32px;
-        display: inline;
-        cursor: pointer;
-      }
-      img.avatar {
-        width: 32px;
-        height: 32px;
-        border: 1px solid #ddd;
-        vertical-align: center;
-        border-radius: 50%;
-      }
-      
-      a.title {
-        margin: -7px 0 4px;
-        display: inherit;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.5;
-      }
-      
-      a.title:link {
-        color: #969696;
-      }
-      a.title:visited {
-        color: #333;
-      }
-      a.title:hover {
-        color: #2f2f2f;
-        text-decoration: underline;
-      }
-      
-      p.abstact {
-        height: 72px;
-        overflow: hidden;
-      }
-
-      .meta a {
-        margin-right: 10px;
-      }
-      .meta a span {
-        margin-right: 3px;
-      }
-      
-      .aside-btn:hover {
-        background-color: #CCCCFF;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      
-      .aside-icon {
-        margin-right: 8px;
-      }
-
-      .aside a:link, .aside a:visited  {
-        color: #333;
-        text-decoration: none;
-      }
-
-      .aside a:hover {
-        text-decoration: none;
-      }
-
-      .more {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
-        margin-bottom: 50px;
-        height: 50px;
-        text-align: center;
-        padding-top: 13px;
-        font-size: 15px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-      }
-      .more:hover {
-        background-color: #333;
-        color: white;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
     <!--顶部导航栏-->
@@ -326,20 +168,213 @@
             </div>
           </div>
           <div class="col-md-3 aside">
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn write-article"><span class="glyphicon glyphicon-pencil aside-icon"></span>热门文章</div></a>
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn make-mindmap"><span class="glyphicon glyphicon-th aside-icon"></span>热门知识地图</div></a>
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn make-plan"><span class="glyphicon glyphicon-thumbs-up aside-icon"></span>热门学习榜样</div></a>
+            <!-- 侧栏按钮 -->
+            <div class="aside-btn">
+              <ul class="btn-list">
+                <li>
+                  <a href="write-page.html" target="_blank"><img src="icon/article.png" alt="icon"><span>撰写文章</span></a>
+                </li>
+                <li>
+                  <a href="edit-mindmap.html" target="_blank"><img src="icon/nav-map.png" alt="icon"><span>编制地图</span></a>
+                </li>
+                <li>
+                  <a href="personal-page.html" target="_blank"><img src="icon/me.png" alt="icon"><span>我的主页</span></a>
+                </li>
+                <li>
+                  <a href="like-page.html" target="_blank"><img src="icon/gift_32px.png" alt="icon"><span>我的收藏</span></a>
+                </li>
+                <li>
+                  <a href="resume-page.html" target="_blank"><img src="icon/id-card.png" alt="icon"><span>我的简历</span></a>
+                </li>
+                <li>
+                  <a href="user-manager.html" target="_blank"><img src="icon/setting_32px.png" alt="icon"><span>个人设置</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <hr>
+
+            <!-- 热门专题 -->
+            <div class="recommend-album">
+              <div class="block-title">
+                <span>热门专题</span>
+              </div>
+              <ul class="album-list">
+                <li>
+                  <a href="album-page.html" target="_blank">
+                    <img src="image/album-pic.jpg" class="reco-album-pic" alt="album-pic">
+                    <span class="reco-album-name">奇思妙想</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="album-page.html" target="_blank">
+                    <img src="image/touxiang.jpg" class="reco-album-pic" alt="album-pic">
+                    <span class="reco-album-name">中世纪艺术</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="album-page.html" target="_blank">
+                    <img src="image/今日看点.png" class="reco-album-pic" alt="album-pic">
+                    <span class="reco-album-name">今日看点</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="album-page.html" target="_blank">
+                    <img src="image/今日看点.png" class="reco-album-pic" alt="album-pic">
+                    <span class="reco-album-name">今日看点</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="album-page.html" target="_blank">
+                    <img src="image/今日看点.png" class="reco-album-pic" alt="album-pic">
+                    <span class="reco-album-name">今日看点</span>
+                  </a>
+                </li>
+              </ul>
+              <button class="btn btn-default more-recommend-album" data-toggle="modal" data-target="#more-reco-album">更多推荐 > </button>
+
+              <!-- more-recommend-album 的模态框 -->
+              <div class="modal fade" id="more-reco-album" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">热门专题</h4>
+                    </div>
+                    <div class="modal-body">
+                      <ul class="writer-list">
+                        <li>
+                          <a href="album-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="user-title" class="reco-album-pic-sub"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="album-page.html" target="_blank" class="reco-writer-name">奇思妙想</a>
+                          <p>1545篇投稿 · 40k关注</p>
+                        </li>
+                        <li>
+                          <a href="album-page.html" target="_blank"><img src="image/album-pic.jpg" alt="user-title" class="reco-album-pic-sub"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="album-page.html" target="_blank" class="reco-writer-name">奇思妙想</a>
+                          <p>1545篇投稿 · 40k关注</p>
+                        </li>
+                        <li>
+                          <a href="album-page.html" target="_blank"><img src="image/touxiang.jpg" alt="user-title" class="reco-album-pic-sub"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="album-page.html" target="_blank" class="reco-writer-name">奇思妙想</a>
+                          <p>1545篇投稿 · 40k关注</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                  </div>
+                </div>
+              </div> <!--模态框 end-->              
+            </div><!-- recommend-album end -->
+
             <hr/>
-            <!--
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn my-article"><span class="glyphicon glyphicon-file aside-icon"></span>我的文章</div></a>
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn my-mindmap"><span class="glyphicon glyphicon-map-marker aside-icon"></span>我的知识地图</div></a>
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn my-plan"><span class="glyphicon glyphicon-list aside-icon"></span>我的计划</div></a>
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn my-favourite"><span class="glyphicon glyphicon-heart aside-icon"></span>我的收藏</div></a>
-            <hr/>
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn my-watch"><span class="glyphicon glyphicon-thumbs-up aside-icon"></span>学习榜样</div></a>
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn my-friend"><span class="glyphicon glyphicon-user aside-icon"></span>学习伙伴</div></a>
-            <a href="http://www.baidu.com" target="_blank"><div class="aside-btn my-team"><span class="glyphicon glyphicon-tags aside-icon"></span>学习小组</div></a>
-          -->
+
+            <!-- 领域大神 -->
+            <div class="recommend-writer">
+              <div class="block-title">
+                <span>领域大神</span>
+              </div>
+
+              <ul class="writer-list">
+                <li>
+                  <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="user-title" class="reco-writer-avatar"></a>
+                  <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                  <a href="personal-page.html" target="_blank" class="reco-writer-name">奥利奥</a>
+                  <p>30k粉丝 · 535个赞</p>
+                </li>
+                <li>
+                  <a href="personal-page.html" target="_blank"><img src="image/今日看点.png" alt="user-title" class="reco-writer-avatar"></a>
+                  <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                  <a href="personal-page.html" target="_blank" class="reco-writer-name">我是不是很帅</a>
+                  <p>442k粉丝 · 23个赞</p>
+                </li>
+                <li>
+                  <a href="personal-page.html" target="_blank"><img src="image/idol-avatar2.jpg" alt="user-title" class="reco-writer-avatar"></a>
+                  <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                  <a href="personal-page.html" target="_blank" class="reco-writer-name">fuc_123</a>
+                  <p>20k粉丝 · 16个赞</p>
+                </li>
+                <li>
+                  <a href="personal-page.html" target="_blank"><img src="image/pic.png" alt="user-title" class="reco-writer-avatar"></a>
+                  <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                  <a href="personal-page.html" target="_blank" class="reco-writer-name">趣多多</a>
+                  <p>465k粉丝 · 4K个赞</p>
+                </li>
+                <li>
+                  <a href="personal-page.html" target="_blank"><img src="image/touxiang.jpg" alt="user-title" class="reco-writer-avatar"></a>
+                  <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                  <a href="personal-page.html" target="_blank" class="reco-writer-name">德芙</a>
+                  <p>234k粉丝 · 31K个赞</p>
+                </li>
+                <li>
+                  <a href="personal-page.html" target="_blank"><img src="image/idol-avatar.jpg" alt="user-title" class="reco-writer-avatar"></a>
+                  <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                  <a href="personal-page.html" target="_blank" class="reco-writer-name">比尔盖茨</a>
+                  <p>330k粉丝 · 344.3K个赞</p>
+                </li>
+              </ul>
+              <button class="btn btn-default more-recommend-writer" data-toggle="modal" data-target="#more-reco-wrtier">更多推荐 > </button>
+
+              <!-- more-recommend-writer 的模态框 -->
+              <div class="modal fade" id="more-reco-wrtier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">领域大神</h4>
+                    </div>
+                    <div class="modal-body">
+                      <ul class="writer-list">
+                        <li>
+                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="user-title" class="reco-writer-avatar"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="personal-page.html" target="_blank" class="reco-writer-name">奥利奥</a>
+                          <p>30k粉丝 · 535个赞</p>
+                        </li>
+                        <li>
+                          <a href="personal-page.html" target="_blank"><img src="image/今日看点.png" alt="user-title" class="reco-writer-avatar"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="personal-page.html" target="_blank" class="reco-writer-name">我是不是很帅</a>
+                          <p>442k粉丝 · 23个赞</p>
+                        </li>
+                        <li>
+                          <a href="personal-page.html" target="_blank"><img src="image/idol-avatar2.jpg" alt="user-title" class="reco-writer-avatar"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="personal-page.html" target="_blank" class="reco-writer-name">fuc_123</a>
+                          <p>20k粉丝 · 16个赞</p>
+                        </li>
+                        <li>
+                          <a href="personal-page.html" target="_blank"><img src="image/pic.png" alt="user-title" class="reco-writer-avatar"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="personal-page.html" target="_blank" class="reco-writer-name">趣多多</a>
+                          <p>465k粉丝 · 4K个赞</p>
+                        </li>
+                        <li>
+                          <a href="personal-page.html" target="_blank"><img src="image/touxiang.jpg" alt="user-title" class="reco-writer-avatar"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="personal-page.html" target="_blank" class="reco-writer-name">德芙</a>
+                          <p>234k粉丝 · 31K个赞</p>
+                        </li>
+                        <li>
+                          <a href="personal-page.html" target="_blank"><img src="image/idol-avatar.jpg" alt="user-title" class="reco-writer-avatar"></a>
+                          <a class="follow-btn"><span class="glyphicon glyphicon-plus"></span>关注</a>
+                          <a href="personal-page.html" target="_blank" class="reco-writer-name">比尔盖茨</a>
+                          <p>330k粉丝 · 344.3K个赞</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div><!-- recommend-writer end -->
+            
           </div>
           <div class="col-md-1"></div>
         </div>
