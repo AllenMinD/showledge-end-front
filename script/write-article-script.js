@@ -2,6 +2,8 @@ $(document).ready(function () {
 ///////////////////////////////////////////////////变量定义///////////////////////////////////////////////
 	var newNotebookName = "";  //新建文集的名称
 	var tempName = "";  //原来文集的名称
+	var current_article = $(".active");
+	var current_edit_tag_btn = $(".active").find(".edit-article-tag");  //存当前选中的文章的【文章标签按钮】的jq对象
 
 ///////////////////////////////////////////////////默认///////////////////////////////////////////////////
 	//新建文集的按钮动画
@@ -25,7 +27,9 @@ $(document).ready(function () {
 	$('.one-article').click(function (e) {  
 		e.preventDefault();  
 		$('.one-article').removeClass('active');  
-		$(this).addClass('active');    
+		$(this).addClass('active');
+		current_article = $(this);
+		current_edit_tag_btn = $(this).find(".edit-article-tag");  //存当前选中的文章的【文章标签按钮】的jq对象
 	});
 	//删除文集按钮
 	$('.edit-notebook-delete').click(function(event) {
@@ -141,7 +145,25 @@ $(document).ready(function () {
 		 	});
 		}
 	});
-	////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////////
+
+	//  判断用户是否有填写标签，如果有则保存成功，如果没有则弹出模态框让其选择
+	$("#test-btn").unbind('click').click(function(event) {
+		if(current_article.find(".tag-bar").children("span").eq(1).text() == ""
+			|| current_article.find(".tag-bar").children("span").eq(1).text() == "0" 
+			|| current_article.find(".tag-bar").children("span").eq(2).text() == "" 
+			|| current_article.find(".tag-bar").children("span").eq(3).text() == "")
+
+			current_edit_tag_btn.trigger('click');  //自动执行点击事件：点击【文章标签按钮】
+		else {
+			$('.alert').slideDown();
+			var Timer = setTimeout(function(){
+				$('.alert').slideUp();
+			}, 2000);
+		}
+	});
+	
+
 
 //////////////////////////////////////////////////新建文集按钮///////////////////////////////////////////////////////
 /*记得把上面默认功能在拷贝一次添加到新建文集这个部分，新建的文集才有这些功能*/
@@ -369,18 +391,22 @@ $(document).ready(function () {
 		var article_tag = $("<div class='tag-bar'><span class='glyphicon glyphicon-tag'></span><span></span><span></span><span></span></div>");
 		newDiv_middle.append(article_tag);
 
-
 		//按钮active的切换
 		$('.one-notebook').click(function (e) {  
 			e.preventDefault();  
 			$('.one-notebook').removeClass('active');  
 			$(this).addClass('active');    
 		});
+
+		var current_article_1 = $(".active");
+		var current_edit_tag_btn_1 = $(".active").find(".edit-article-tag");  //存当前选中的文章的【文章标签按钮】的jq对象		
 		//按钮active的切换
 		$('.one-article').click(function (e) {  
 			e.preventDefault();  
 			$('.one-article').removeClass('active');  
-			$(this).addClass('active');    
+			$(this).addClass('active');
+			current_article_1 = $(this);
+			current_edit_tag_btn_1 = $(this).find(".edit-article-tag");  //存当前选中的文章的【文章标签按钮】的jq对象    
 		});
 
 		//删除文章按钮
@@ -403,6 +429,21 @@ $(document).ready(function () {
 			$("#select3").val("0");
 		});
 
+		//  判断用户是否有填写标签，如果有则保存成功，如果没有则弹出模态框让其选择
+		$("#test-btn").unbind('click').click(function(event) {
+			if(current_article_1.find(".tag-bar").children("span").eq(1).text() == ""
+				|| current_article_1.find(".tag-bar").children("span").eq(1).text() == "0"  
+				|| current_article_1.find(".tag-bar").children("span").eq(2).text() == "" 
+				|| current_article_1.find(".tag-bar").children("span").eq(3).text() == "")
+
+				current_edit_tag_btn_1.trigger('click');  //自动执行点击事件：点击【文章标签按钮】
+			else {
+				$('.alert').slideDown();
+				var Timer = setTimeout(function(){
+					$('.alert').slideUp();
+				}, 2000);
+			}
+		});
 
 	});/*新建文章事件 end*/
 

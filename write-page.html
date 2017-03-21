@@ -20,8 +20,9 @@
     <![endif]-->
   </head>
   <body>
+
     <!-- 页面主要内容 -->
-    <div class="container-fluid">
+    <div class="container-fluid">      
       <div class="row">
         <div class="col-md-2 aside">
           <a class="home-wrap" href="index-logined.html">
@@ -136,7 +137,18 @@
             </li>
           </ul><!-- article-list end -->
         </div><!-- glyphicon glyphicon-file -->
-        <div class="col-md-7 main">文章编辑区域</div>
+        <div class="col-md-7 main">
+          <!-- 警告框 --> 
+          <div class="alert alert-success" role="alert">
+            保存成功
+          </div><!-- 警告框 end -->          
+          文章编辑区域
+          
+          <!--***********************这里是测试***********************-->
+          <br>
+          <button class="btn btn-default" id="test-btn">保存文章</button>
+
+        </div>
       </div>
     </div>
     <!-- 修改文章标签模态框 -->
