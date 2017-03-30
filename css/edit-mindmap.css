@@ -101,3 +101,7 @@ body {
   width:200px;
   z-index:999;
 }
+
+input {
+  color: black;
+}
