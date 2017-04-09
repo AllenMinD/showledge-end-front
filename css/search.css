@@ -204,3 +204,20 @@ p.abstact {
   font-size: 24px;
 
 }
+
+
+/*“搜索结果”下面的按钮样式*/
+.nav-pills>li {
+  font-size: 16px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+  color: #00cc66;
+  background-color: white;
+  border-top: 2px solid #00cc66; 
+}
+
+.searchFail {
+  display: none;
+  font-size: 16px;
+}
