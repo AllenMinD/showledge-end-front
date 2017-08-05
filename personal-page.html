@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="Shortcut Icon" href="icon/s.ico">
     <title>个人主页 - 秀知识</title>
 
     <!-- Bootstrap -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/personal-page.css" rel="stylesheet">
+    <!-- top-bar.css -->
+    <link href="css/general-style.css" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,258 +22,565 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <!--顶部导航栏-->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <body id="personal-page">
+    <!--顶部导航条 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- 响应式 当窗口很小时，会缩小成一个“汉堡”按钮 -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color:#00cc66">Showledge</a>
+          <a class="navbar-brand" href="#">秀知识</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav" style="margin-left:68px">
-            <li ><a href="#">发现</a></li>
-            <li ><a href="#">消息</a></li>
-            <li><a href="#">下载APP</a></li>
+          <ul class="nav navbar-nav">
+            <li><a href="index-login.html"><span class="fa fa-home fa-fw"></span>主页</a></li>
+            <li><a href="#"><span class="fa fa-wechat fa-fw"></span>小程序</a></li>
           </ul>
-          <form class="navbar-form navbar-left" role="search">
+          <form class="navbar-form navbar-left">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="大家今天都学了什么？">
             </div>
             <button type="submit" class="btn btn-default">搜索</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
+            <!-- 登录注册按钮 -->
+            <li>
+              <a style="padding:8px 18px 7px 18px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#"><img src="icon/user.png" alt="icon" style="margin-left:5px;">我的主页</a></li>
+                <li><a href="#"><img src="icon/message.png" alt="icon">消息</a></li>
+                <li><a href="#"><img src="icon/setting.png" alt="icon">设置</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><img src="icon/power.png" alt="icon">退出帐号</a></li>
+              </ul>              
+            </li>
+            <!--
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="image/touxiang.jpg" alt="用户头像"> <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="personal-page.html"><img class="navbar-icon" src="icon/navbar-icon/user.png" alt="icon">我的主页</a></li>
-                <li><a href="#"><img class="navbar-icon" src="icon/navbar-icon/message.png" alt="icon">消息</a></li>
-                <li><a href="user-manager.html"><img class="navbar-icon" src="icon/navbar-icon/setting.png" alt="icon">设置</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><img class="navbar-icon" src="icon/navbar-icon/power.png" alt="icon">退出</a></li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
               </ul>
             </li>
-            <li><a href="write-page.html">写文章</a></li>
-
+            -->
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <!-- 主要内容 -->
-    <div class="container-fluid person">
+
+    <!-- 顶部背景图 -->
+    <div id="profile-top-cover">
+      <!-- 用户头像 -->
+      <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-bg" class="avatar-bg"></a>
+    </div>
+
+    <!-- 顶部切换栏 -->
+    <div id="profile-top-navbar">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#study-act" aria-controls="act" role="tab" data-toggle="tab">学习动态<span>111</span></a></li>
+        <li role="presentation"><a href="#study-note" aria-controls="study-note" role="tab" data-toggle="tab">学习笔记<span>12</span></a></li>
+        <li role="presentation"><a href="#study-map" aria-controls="study-map" role="tab" data-toggle="tab">知识地图<span>44</span></a></li>
+        <li role="presentation"><a href="#study-idol" aria-controls="study-idol" role="tab" data-toggle="tab">学习榜样<span>233</span></a></li>
+        <li role="presentation"><a href="#study-watcher" aria-controls="study-watcher" role="tab" data-toggle="tab">关注者<span>3</span></a></li>
+        <li role="presentation"><a href="#collection" aria-controls="collection" role="tab" data-toggle="tab">收藏库<span>23</span></a></li>
+        <li id="edit-profile-btn"><button class="btn btn-green"><a href="setting-page.html" target="_blank">修改个人资料</a></button></li>
+      </ul>  
+    </div>
+    <!-- 个人主页 #personal-page -->
+    <div class="container-fluid main-content">      
       <div class="row">
-        <div class="col-md-2"></div>
-
-        <div class="col-md-8 main">
+        <div class="col-md-1 blank"></div>
+        <div class="col-md-10 main">
           <div class="row">
-            <div class="col-md-9">
-              <div class="main-top">
-                <a href="#">
-                  <img class="avatar" src="image/user-avatar2.jpg" alt="240">
-                </a>
-                <div class="title">
-                  <a class="name" href="/u/6904e03a1cfe">allenmind</a>
-                </div>
-                <div class="info">
-                  <ul>
-                    <li>
-                      <div class="meta-block">
-                        <p>0</p>
-                        <a href="/users/6904e03a1cfe/following">
-                          榜样 
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="meta-block">
-                        <p>0</p>
-                        <a href="/users/6904e03a1cfe/followers">
-                          粉丝 
-                        </a>        
-                      </div>
-                    </li>
-                    <li>
-                      <div class="meta-block">
-                        <p>0</p>
-                        <a href="/users/6904e03a1cfe/followers">
-                          小组 
-                        </a>        
-                      </div>
-                    </li>
-                    <li>
-                      <div class="meta-block">
-                        <p>0</p>
-                        <a href="/u/6904e03a1cfe">
-                          文章 
-                        </a>        
-                        </div>
-                    </li>               
-                    <li>
-                      <div class="meta-block">
-                        <p>0</p>
-                        <div>字数</div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="meta-block">
-                        <p>0</p>
-                        <a href="/u/6904e03a1cfe">
-                          知识地图
-                        </a>        
-                        </div>
-                    </li> 
-                    <li>
-                      <div class="meta-block">
-                        <p>0</p>
-                        <div>收获喜欢</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div id="outer-container">
-                <!-- 新.标签导航 -->
-                <ul class="nav nav-tabs trigger-menu" role="tablist">
-                  <li role="presentation" class="active"><a href="#my-article" aria-controls="my-article" role="tab" data-toggle="tab"><img src="icon/article.png" alt="icon" class="sub-nav-icon">文章</a></li>
-                  <li role="presentation"><a href="#my-mindmap" aria-controls="my-mindmap" role="tab" data-toggle="tab"><img src="icon/nav-map.png" alt="icon" class="sub-nav-icon">知识地图</a></li>
-                  <li role="presentation"><a href="#my-profile" aria-controls="my-profile" role="tab" data-toggle="tab"><img src="icon/id-card.png" alt="icon" class="sub-nav-icon">知识简历</a></li>
-                </ul> 
+            <!-- 个人资料 -->
+            <div class="col-md-3 user-profile">
+              <a href="user.html" class="user-name">嘉顿饼干</a>
+              <p class="user-summary">这里是用户的简介。嘉顿饼干：全名嘉顿家庭什饼干。我的英文名是：famliy assorted biscuits。我的净含量是1.38kg。</p>
+              <div id="user-address"><span class="fa fa-map-marker fa-fw"></span>惠州</div>
+              <div id="user-graduation"><span class="fa fa-graduation-cap fa-fw"></span>惠州学院</div>
+              <div id="user-join-date"><span class="fa fa-calendar fa-fw"></span>加入于 <span>2017.07.11</span></div>
+              <a href="resume-page.html" id="user-resume-btn" target="_blank"><button class="btn btn-green">个人知识简历</button></a>
+            </div>
 
-                <!-- 各个标签对应的内容 -->
-                <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane in fade active" id="my-article">
-                    <div id="list-container">
-                      <!-- 动态列表模块 -->
-                      <!-- 发布了文章 -->
-                      <ul class="note-list" infinite-scroll-url="/users/6904e03a1cfe/timeline"> 
-                        <li class="" id="feed-98479580">
-                            <div class="content">
-                            <div class="author">
-                              <a class="avatar" href="/users/6904e03a1cfe">
-                                <img thumbnail="180x180" src="http://cdn-qn0.jianshu.io/assets/default_avatar/5-33d2da32c552b8be9a0548c7a4576607.jpg?imageMogr/thumbnail/180x180" alt="5">
-                              </a>      
-                              <div class="name">
-                                <a class="blue-link" href="/u/6904e03a1cfe">allenmind</a>
-                                <span data-type="share_note" data-datetime="2017-02-13T14:22:40+08:00"> 发表了文章 · 2月13 14:22</span>
-                              </div>
-                            </div>
-
-                            <a class="title" href="/p/e66eba87cc7d">123</a>
-                            <p class="abstract">1233211234567</p>
-
-                            <div class="meta">
-                              <a href="#"><i class="glyphicon glyphicon-eye-open"></i> 0</a>        
-                              <a href="#"><i class="glyphicon glyphicon-comment"></i> 0</a>      
-                              <span><i class="glyphicon glyphicon-heart"></i> 0</span>
-                            </div>
-                          </div>
-                        </li>                
-                      </ul>
-                    </div>                
-                  </div><!-- my-article end -->
-                  <div role="tabpanel" class="tab-pane fade" id="my-mindmap">
-                    <ul class="mindmap-list">
-                      <li id="mindmap-001">
-                        <img class="mindmap-img" src="icon/map.png" alt="icon">
-                        <div class="mindmap-content">
-                          <a href="#" class="mindmap-title">Javascript语法</a>
-                          <p class="mindmap-info">这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。</p>
-
-                          <div class="meta" style="color:#969696;">
-                            <span><i class="glyphicon glyphicon-eye-open"></i> 0</span>          
-                            <span><i class="glyphicon glyphicon-heart"></i> 0</span>
-                          </div>
-                        </div>                       
-                      </li>
-                      <li id="mindmap-002">
-                        <img class="mindmap-img" src="icon/map.png" alt="icon">
-                        <div class="mindmap-content">
-                          <a href="#" class="mindmap-title">HTML/CSS语法</a>
-                          <p class="mindmap-info">这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。这里主要填写知识地图的【说明】。</p>
-
-                          <div class="meta" style="color:#969696;">
-                            <span><i class="glyphicon glyphicon-eye-open"></i> 0</span>                                     
-                            <span><i class="glyphicon glyphicon-heart"></i> 0</span>
-                          </div>
-                        </div>                       
-                      </li>                      
-                    </ul>
-                  </div><!-- my-mindmap end -->
-                  <div role="tabpanel" class="tab-pane fade" id="my-profile">
-                    <div class="profile-box">
-                      <div class="profile-box-pic"><img src="icon/jianli1.png" alt="icon"></div>
-                      <div class="profile-detail">
-                        <a href="resume-page.html" target="_blank" class="profile-title">Allenmind的个人知识简历</a>
-                        <div class="profile-abstract">
-                          <span>个人信息：奥利奥/男/1997.02</span>
-                          <span>联系方式：13794535095</span>
-                          <span>联系邮箱：aoliao@126.com</span>
-                        </div>
-                        <a href="resume-page.html" target="_blank" id="more-profile-detail">完整简历 > </a>
+            <!-- 动态、笔记、地图、关注等 -->
+            <div class="col-md-6 tab-content" style="padding-left:0;padding-right:0;">
+              <div role="tabpanel" class="tab-pane active" id="study-act">
+                 <ul>
+                  <li class="box" id="my-act-001">
+                    <div class="user-info">
+                      <div class="user-avatar">
+                        <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                        <a href="user.html" class="user-name">嘉顿饼干</a>
+                        <span> - </span>
+                        <span class="user-act-time">2017.7.1 20:30:30</span>
+                      </div>
+                      <div class="user-mood">
+                        <span>心情</span>
+                        <span>激动人心的</span>
                       </div>
                     </div>
-                  </div><!-- my-profile end -->
-                </div>                                
+                    <div class="user-act">
+                      今天看了《python学习手册》第一章，学会了python的基本语法。原来python这门语言的语法真心不难，非常适合编程新手入门。强烈建议高校把第一门编程语言改成python。c语言从某种意义上来说对新手不太友好(比如指针(─.─|||))
+                    </div>
+                    <div class="user-library">
+                      <div class="xxzl">
+                        <span>学习资料</span>
+                        <a href="#">《python学习手册》</a>
+                        <a href="http://www.imooc.com/course/list?c=python">慕课网python教程</a>
+                      </div> 
+                      <div class="xxbj">
+                        <span>学习笔记</span>
+                        <a href="#" class="user-note-entrance">我的pyhton学习笔记</a>
+                      </div>              
+                    </div>
+                    <div class="act-info">
+                      <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <span>124</span>
+                      </div>
+                      <div class="like-count">
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <span>543</span>
+                      </div>
+                      <div class="share-count">
+                        <span class="glyphicon glyphicon-share"></span>
+                        <span>665</span>
+                      </div>                      
+                    </div>
+                  </li>
+                  <li class="box" id="my-act-002">
+                    <div class="user-info">
+                      <div class="user-avatar">
+                        <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                        <a href="user.html" class="user-name">嘉顿饼干</a>
+                        <span> - </span>
+                        <span class="user-act-time">2017.7.3 20:30:30</span>
+                      </div>
+                      <div class="user-mood">
+                        <span>心情</span>
+                        <span>无奈的</span>
+                      </div>
+                    </div>
+                    <div class="user-act">
+                      今天本来想学习二叉搜索树的编码的，但是发觉很难懂啊，研究了一天都啥进展，明天继续努力！
+                    </div>
+                    <div class="user-library">
+                      <div class="xxzl">
+                        <span>学习资料</span>
+                        <a href="#">《算法导论》</a>
+                      </div> 
+                      <div class="xxbj">
+                        <span>学习笔记</span>
+                        <span>无</span>   
+                      </div>              
+                    </div>
+                    <div class="act-info">
+                      <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <span>124</span>
+                      </div>
+                      <div class="like-count">
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <span>543</span>
+                      </div>
+                      <div class="share-count">
+                        <span class="glyphicon glyphicon-share"></span>
+                        <span>665</span>
+                      </div>                      
+                    </div>
+                  </li>
+                </ul>               
               </div>
+              <div role="tabpanel" class="tab-pane" id="study-note">
+                <ul>
+                  <li class="box" id="my-note-001">
+                    <div class="user-info">
+                      <div class="user-avatar">
+                        <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                        <a href="user.html" class="user-name">嘉顿饼干</a>
+                        <span> - </span>
+                        <span class="user-act-time">2017.7.3 20:30:30</span>
+                      </div>
+                    </div>  
+                    <a href="note-page.html" target="_blank" class="note-title-sm">Today I Learn</a>
+                    <p class="note-content">
+                      This week, Washington state became the fifth state in the country to provide paid family and medical leave to workers – and it’s one of the best plans yet. Employees will get 12 weeks of paid family leave when they have a baby and 12 weeks of medical leave to care for themselves or sick family members. 
+                    </p>
+                    <a href="note-page.html" target="_blank" class="more-detail-btn">详细内容 > </a>
+                    <div class="act-info">
+                      <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <span>124</span>
+                      </div>
+                      <div class="like-count">
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <span>543</span>
+                      </div>
+                      <div class="collection-count">
+                          <span class="fa fa-bookmark"></span>
+                          <span>665</span>
+                        </div> 
+                      <div class="share-count">
+                        <span class="glyphicon glyphicon-share"></span>
+                        <span>665</span>
+                      </div>                      
+                    </div>                      
+                  </li>
+                  <li class="box" id="my-note-002">
+                     <div class="user-info">
+                      <div class="user-avatar">
+                        <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                        <a href="user.html" class="user-name">嘉顿饼干</a>
+                        <span> - </span>
+                        <span class="user-act-time">2017.7.3 20:30:30</span>
+                      </div>
+                    </div>  
+                    <a href="note-page.html" target="_blank" class="note-title-sm">我只是一个测试标题</a>
+                    <p class="note-content">
+                      我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章 
+                    </p>
+                    <a href="note-page.html" target="_blank" class="more-detail-btn">详细内容 > </a>
+                    <div class="act-info">
+                      <div class="comments-count"  data-toggle="modal" data-target="#comment-modal">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <span>124</span>
+                      </div>
+                      <div class="like-count">
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <span>543</span>
+                      </div>
+                      <div class="collection-count">
+                          <span class="fa fa-bookmark"></span>
+                          <span>665</span>
+                        </div> 
+                      <div class="share-count">
+                        <span class="glyphicon glyphicon-share"></span>
+                        <span>665</span>
+                      </div>                      
+                    </div>                                          
+                  </li>
+                </ul>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="study-map">
+                <ul>
+                    <li class="box" id="my-map-001">
+                      <div class="user-info">
+                        <div class="user-avatar">
+                          <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                          <a href="user.html" class="user-name">嘉顿饼干</a>
+                          <span> - </span>
+                          <span class="user-act-time">2017.7.3 20:30:30</span>
+                        </div>
+                      </div>
+                      <a href="map-page.html" target="_blank" class="map-title-sm">python学习重点知识谱图</a>
+                      <div class="map-keyword">
+                        <span><span class="fa fa-tags fa-fw"></span>关键词</span>
+                        <a href="#" class="keyword">后端</a>
+                        <a href="#" class="keyword">python</a>
+                        <a href="#" class="keyword">爬虫</a>
+                        <a href="#" class="keyword">数据分析</a>
+                        <span>...</span>
+                      </div>
+                      <div class="act-info">
+                        <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                          <span class="glyphicon glyphicon-comment"></span>
+                          <span>124</span>
+                        </div>
+                        <div class="like-count">
+                          <span class="glyphicon glyphicon-heart"></span>
+                          <span>543</span>
+                        </div>
+                        <div class="collection-count">
+                          <span class="fa fa-bookmark"></span>
+                          <span>665</span>
+                        </div>                      
+                      </div>
+                    </li>
+                    <li class="box" id="my-map-002">
+                      <div class="user-info">
+                        <div class="user-avatar">
+                          <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                          <a href="user.html" class="user-name">嘉顿饼干</a>
+                          <span> - </span>
+                          <span class="user-act-time">2017.7.3 20:30:30</span>
+                        </div>
+                      </div>
+                      <a href="map-page.html" target="_blank" class="map-title-sm">前端知识谱图</a>
+                      <div class="map-keyword">
+                        <span><span class="fa fa-tags fa-fw"></span>关键词</span>
+                        <a href="#" class="keyword">前端</a>
+                        <a href="#" class="keyword">html</a>
+                        <a href="#" class="keyword">css</a>
+                        <a href="#" class="keyword">javascript</a>
+                        <span>...</span>
+                      </div>
+                      <div class="act-info">
+                        <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                          <span class="glyphicon glyphicon-comment"></span>
+                          <span>124</span>
+                        </div>
+                        <div class="like-count">
+                          <span class="glyphicon glyphicon-heart"></span>
+                          <span>543</span>
+                        </div>
+                        <div class="collection-count">
+                          <span class="fa fa-bookmark"></span>
+                          <span>665</span>
+                        </div>                      
+                      </div>
+                    </li>                    
+                </ul>  
+              </div>
+              <div role="tabpanel" class="tab-pane" id="study-idol">
+                <ul>
+                  <li class="box" id="idol-001">
+                    <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                    <a href="user.html" class="user-name">奥利奥</a>
+                    <p class="user-summary">扭一扭、舔一舔、泡一泡。嗯~</p>
+                    <a class="follow-btn not-follow">已关注</a>
+                  </li>
+                  <li class="box" id="idol-002">
+                    <a href="user.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                    <a href="user.html" class="user-name">飞翔的粑粑</a>
+                    <p class="user-summary">萌新程序员~努力学习中！</p>
+                    <a class="follow-btn not-follow">已关注</a>
+                  </li>
+                  <li class="box" id="idol-003">
+                    <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                    <a href="user.html" class="user-name">脆脆鲨</a>
+                    <p class="user-summary">Make the world a better place~</p>
+                    <a class="follow-btn not-follow">已关注</a>
+                  </li>                  
+                </ul>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="study-watcher">
+                <ul>
+                  <li class="box" id="watcher-001">
+                    <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                    <a href="user.html" class="user-name">奥利奥</a>
+                    <p class="user-summary">扭一扭、舔一舔、泡一泡。嗯~</p>
+                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
+                  </li>
+                  <li class="box" id="watcher-002">
+                    <a href="user.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                    <a href="user.html" class="user-name">飞翔的粑粑</a>
+                    <p class="user-summary">萌新程序员~努力学习中！</p>
+                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
+                  </li>
+                  <li class="box" id="iwatcher-003">
+                    <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                    <a href="user.html" class="user-name">脆脆鲨</a>
+                    <p class="user-summary">Make the world a better place~</p>
+                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
+                  </li>                  
+                </ul>
+              </div>  
+              <div role="tabpanel" class="tab-pane" id="collection">
+                <ul>
+                  <li class="box" id="collection-001">
+                    <button class="btn collection-btn btn-success btn-danger">取消收藏</button>
+                    <div class="user-info">
+                      <div class="user-avatar">
+                        <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                        <a href="user.html" class="user-name">嘉顿饼干</a>
+                        <span> - </span>
+                        <span class="user-act-time">2017.7.3 20:30:30</span>
+                      </div>
+                    </div>
+                    <a href="map-page.html" target="_blank" class="map-title-sm">前端知识谱图</a>
+                    <div class="map-keyword">
+                      <span><span class="fa fa-tags fa-fw"></span>关键词</span>
+                      <a href="#" class="keyword">前端</a>
+                      <a href="#" class="keyword">html</a>
+                      <a href="#" class="keyword">css</a>
+                      <a href="#" class="keyword">javascript</a>
+                      <span>...</span>
+                    </div>
+                    <div class="act-info">
+                      <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <span>124</span>
+                      </div>
+                      <div class="like-count">
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <span>543</span>
+                      </div>
+                      <div class="share-count">
+                        <span class="fa fa-bookmark"></span>
+                        <span>665</span>
+                      </div>                      
+                    </div>
+                  </li>
+                  <li class="box" id="collection-002">
+                    <button class="btn collection-btn btn-success btn-danger">取消收藏</button>
+                    <div class="user-info">
+                      <div class="user-avatar">
+                        <a href="user.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                        <a href="user.html" class="user-name">飞翔的便便</a>
+                        <span> - </span>
+                        <span class="user-act-time">2017.7.3 20:30:30</span>
+                      </div>
+                    </div>
+                    <a href="note-page.html" target="_blank" class="note-title-sm">Today I Learn</a>
+                    <p class="note-content">
+                      This week, Washington state became the fifth state in the country to provide paid family and medical leave to workers – and it’s one of the best plans yet. Employees will get 12 weeks of paid family leave when they have a baby and 12 weeks of medical leave to care for themselves or sick family members. 
+                    </p>
+                    <a href="note-page.html" target="_blank" class="more-detail-btn">详细内容 > </a>
+                    <div class="act-info">
+                      <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <span>124</span>
+                      </div>
+                      <div class="like-count">
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <span>543</span>
+                      </div>
+                      <div class="share-count">
+                        <span class="glyphicon glyphicon-share"></span>
+                        <span>665</span>
+                      </div>                      
+                    </div>                      
+                  </li>                  
+                </ul>
+              </div>                            
             </div>
-            <div class="col-md-3 aside">
-              <div class="title">个人介绍</div>
-              <a class="function-btn" data-action="start-edit-intro" href="javascript:void(0)"><i class="glyphicon glyphicon-pencil"></i>编辑</a>
-              <form class="profile-edit js-intro-form" data-type="json" id="edit_user_4464581" action="/users/6904e03a1cfe" accept-charset="UTF-8" data-remote="true" method="post">
-                <input name="utf8" type="hidden" value="✓">
-                <input type="hidden" name="_method" value="patch">
-                <textarea name="user[intro]" id="user_intro"></textarea>
-                <input type="submit" name="commit" value="保存" class="btn btn-hollow" data-action="save-edit-intro">
-                <a class="btn-cancel" data-action="cancel-edit-intro" href="javascript:void(null);">取消</a>
-              </form>  
-              <div class="description">
-                <div class="js-intro"></div>
-              </div>
-              <ul class="list user-dynamic" style="padding-left:0;">
-                <li>
-                  <a href="like-page.html"><img src="icon/star.png" alt="."> <span>我关注的专题/文集</span></a>    
-                </li>
-                <li>
-                  <a href="like-page.html"><img src="icon/heart.png" style="width:33px;" alt=""> <span>我喜欢的文章</span></a>    
-                </li>
-              </ul>
-              <!-- 专题和文集 -->
-              <div>
-                <div class="album-title" style="color:#969696;margin-bottom:10px;">我创建的专题</div> 
-                  <a href="edit-album.html" class="new-collection-btn" target="_blank"><i class="glyphicon glyphicon-plus"></i><span>创建一个新专题</span></a>
-                  <!-- 我的专辑列表 -->
-                  <ul class="album-list">
-                    <li id="my-album-001">
-                      <a href="album-page.html" target="_blank"><img class="album-pic" src="image/album-pic.jpg" alt="专辑缩略图"></a>
-                      <a class="album-name" href="album-page.html" target="_blank">奇思妙想</a>
-                    </li>
-                    <li id="my-album-002">
-                      <a href="album-page.html" target="_blank"><img class="album-pic" src="image/idol-avatar.jpg" alt="专辑缩略图"></a>
-                      <a class="album-name" href="album-page.html" target="_blank">bababa</a>
-                    </li>
-                  </ul>
-              </div>
-            </div><!-- aside end -->            
-          </div>
-        </div><!-- main end -->
 
-        <div class="col-md-2"></div>
-      </div><!-- row end -->
-    </div><!-- container end -->
+            <div class="col-md-3" id="right-reco">
+              <div class="box reco-xb">
+                <span>推荐关注</span>
+                <ul class="xb-list">
+                  <li>
+                    <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-ssm" class="avatar-ssm"></a>
+                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
+                    <a href="personal-page.html" target="_blank" class="reco-user-name">奥利奥</a>
+                    <p>30k粉丝</p>
+                  </li>
+                  <li>
+                    <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-ssm" class="avatar-ssm"></a>
+                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
+                    <a href="personal-page.html" target="_blank" class="reco-user-name">奥利奥</a>
+                    <p>30k粉丝</p>
+                  </li>
+                  <li>
+                    <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-ssm" class="avatar-ssm"></a>
+                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
+                    <a href="personal-page.html" target="_blank" class="reco-user-name">奥利奥</a>
+                    <p>30k粉丝</p>
+                  </li>                                     
+                </ul>
+                <button class="btn btn-default more-recommend-writer" style="margin-left:108px;"><a href="intro-user-page.html" target="_blank" style="text-decoration:none;">更多推荐 ></a> </button> 
+              </div>
+              <!-- 页脚 -->
+              <div class="box page-footer">
+                Copyright © 2017, showledge.cn
+              </div>
+            </div><!-- 右边推荐栏end -->
+          </div>
+        </div>
+        <div class="col-md-1 blank"></div>
+      </div>
+    </div>
+
+    <!-- 评论窗口模态框 -->
+    <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">评论<span>(10)</span></h4>
+          </div>
+          <div class="modal-body">
+            <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+            <textarea name="comment-box" id="comment-box" class="form-control" rows="4"></textarea>
+            <button class="btn btn-green comment-enter">评论</button>
+          </div>
+          <div class="modal-footer" style="text-align:left;">
+            <ul class="comment-list">
+              <li id="comment-001">
+                <div class="user-info">
+                  <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="user.html" class="user-name">飞翔的便便</a>
+                  <span> - </span>
+                  <span class="user-act-time">2017.7.3 20:30:30</span>
+                </div>
+                <p class="comment-content">
+                  加油！
+                </p>
+                <div class="comment-info">
+                  <span class="glyphicon glyphicon-thumbs-up">123</span>
+                </div>
+              </li>
+              <li id="comment-002">
+                <div class="user-info">
+                  <a href="user.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="user.html" class="user-name">飞翔的便便</a>
+                  <span> - </span>
+                  <span class="user-act-time">2017.7.3 20:30:30</span>
+                </div>
+                <p class="comment-content">
+                  加油！
+                </p>
+                <div class="comment-info">
+                  <span class="glyphicon glyphicon-thumbs-up">123</span>
+                </div>                
+              </li>
+              <li id="comment-003">
+                <div class="user-info">
+                  <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="user.html" class="user-name">飞翔的便便</a>
+                  <span> - </span>
+                  <span class="user-act-time">2017.7.3 20:30:30</span>
+                </div>
+                <p class="comment-content">
+                  加油！
+                </p>
+                <div class="comment-info">
+                  <span class="glyphicon glyphicon-thumbs-up">123</span>
+                </div>                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="dist/js/bootstrap.min.js"></script>
-
-    <script src="script/personal-page.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- 警告框js -->
+    <script src="js/alert.js"></script>
+    <!-- 页面右边推荐栏的关注按钮切换js -->
+    <script src="js/reco-follow-btn-toggle.js"></script>
+    <!-- counts-active.js -->
+    <script src="js/counts-active.js"></script>
+    <!-- 收藏按钮切换js -->
+    <script>
+      jQuery(document).ready(function($) {
+        $(".collection-btn").click(function(event) {
+          $(this).toggleClass("btn-danger");
+          if ($(this).attr("class") == "btn collection-btn btn-success btn-danger") 
+            $(this).text("取消收藏");   
+          else $(this).text("收藏");
+        });
+      });      
+    </script>
+    
+    <script>
+      $(function () { $("[data-toggle='tooltip']").tooltip(); });
+    </script>
   </body>
 </html>
+
+

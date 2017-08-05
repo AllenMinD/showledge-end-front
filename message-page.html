@@ -8,7 +8,14 @@
     <title>消息 - 秀知识</title>
 
     <!-- Bootstrap -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- top-bar.css -->
+    <link href="css/general-style.css" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
 
     <link rel="stylesheet" href="css/message-page.css">
 
@@ -19,122 +26,179 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="message-page">
     <!--顶部导航栏-->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- 响应式 当窗口很小时，会缩小成一个“汉堡”按钮 -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color:#00cc66">Showledge</a>
+          <a class="navbar-brand" href="#">秀知识</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav" style="margin-left:68px">
-            <li ><a href="#">发现</a></li>
-            <li ><a href="#">消息<span class="badge">12</span></a></li>
-            <li><a href="#">下载APP</a></li>
+          <ul class="nav navbar-nav">
+            <li><a href="index-login.html"><span class="fa fa-home fa-fw"></span>主页</a></li>
+            <li><a href="#"><span class="fa fa-wechat fa-fw"></span>小程序</a></li>
           </ul>
-          <form class="navbar-form navbar-left" role="search">
+          <form class="navbar-form navbar-left">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="大家今天都学了什么？">
             </div>
             <button type="submit" class="btn btn-default">搜索</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
+            <!-- 登录注册按钮 -->
+            <li>
+              <a style="padding:8px 18px 7px 18px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#"><img src="icon/user.png" alt="icon" style="margin-left:5px;">我的主页</a></li>
+                <li><a href="#"><img src="icon/message.png" alt="icon">消息</a></li>
+                <li><a href="#"><img src="icon/setting.png" alt="icon">设置</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><img src="icon/power.png" alt="icon">退出帐号</a></li>
+              </ul>              
+            </li>
+            <!--
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="user-avatar" src="image/touxiang.jpg" alt="用户头像"> <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="personal-page.html"><img class="navbar-icon" src="icon/navbar-icon/user.png" alt="icon">我的主页</a></li>
-                <li><a href="#"><img class="navbar-icon" src="icon/navbar-icon/message.png" alt="icon">消息</a></li>
-                <li><a href="user-manager.html"><img class="navbar-icon" src="icon/navbar-icon/setting.png" alt="icon">设置</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><img class="navbar-icon" src="icon/navbar-icon/power.png" alt="icon">退出</a></li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
               </ul>
             </li>
-            <li><a href="write-page.html">写文章</a></li>
-
+            -->
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid main-content">
       <div class="row">
-        <div class="col-md-2 blank"></div>
-        <div class="col-md-8">
+        <div class="col-md-3 blank"></div>
+        <div class="col-md-6">
           <div class="row">
-            <div class="col-md-4 aside">
+            <div class="col-md-3 aside">
               <div>
                 <!-- Nav tabs -->
-                <ul class="nav nav-stack" role="tablist">
-                  <li role="presentation" class="active"><a href="#new-comment-list" aria-controls="new-comment-list" role="tab" data-toggle="tab"><img src="icon/comment.png" style="margin-right:15px;" alt="icon">最新评论<span class="badge">10</span></a></li>
-                  <li role="presentation"><a href="#new-watch-list" aria-controls="new-watch-list" role="tab" data-toggle="tab"><img src="icon/watch.png" style="margin-left:6px;margin-right:10px;" alt="icon">关注<span class="badge">2</span></a></li>
+                <ul class="nav nav-stack nav-pills" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#letter-list" aria-controls="letter-list" role="tab" data-toggle="tab"><span class="fa fa-envelope-o fa-fw"></span>私信 <span class="badge">10</span></a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#notify-list" aria-controls="notify-list" role="tab" data-toggle="tab"><span class="fa fa-bell-o fa-fw"></span>通知 <span class="badge">2</span></a>
+                  </li>
                 </ul>
               </div>               
             </div>
 
-            <div class="col-md-8 main">
+            <div class="col-md-9 main">
               <!-- Tab panes fade-->
               <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="new-comment-list">
+                <div role="tabpanel" class="tab-pane fade in active" id="letter-list">
                   <ul>
-                    <li>
-                      <div>
-                        <a href="personal-page.html" target="_blank">用户1</a> 在 《 <a href="article-page.html" target="_blank">文章名字</a> 》对 <a href="personal-page.html" target="_blank">用户2</a><span id="writer">(作者)</span> 说：
-                      </div>
+                    <li class="box talk-to-you">
+                      <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                      <span class="to-you"><a href="user.html" class="user-name">飞翔的糖果</a> 对你说：</span>
+                      <button class="btn btn-green reply-btn">回复</button>
                       <p>你说的都对，但是我就是不认同你的说法!比如说，我们的业务之一是“二元期权交易”，所谓的二元期权，就是指判断商品未来价格的走势，并据此来获利。如果有人抛出硬币，让你对抛出的结果进行判断，你会觉得这是赌博，因为硬币的正反完全随机。但如果换一种形式，让人们对于黄金、白银、沥青等等期货价格未来的走向作出判断，并以此来下注，人们会产生一种幻觉，以为他们在做期货。对于公司来说，这种生意稳赚不赔，因为每一笔客户的“投资”，无论输赢，公司都会抽成。如果遇上客户手机好，一直赢的话，公司还可以用各种各样的手段作弊。总之，只要能一直骗取客户加入赌局，公司就可以一直赚钱。</p>
                       <p class="comment-time">2017年5月1日 11:35:54</p>
-                    </li>
-                    
-                    <hr>
-
-                    <li>
-                      <div>
-                        <a href="personal-page.html" target="_blank">用户1</a> 在 《 <a href="article-page.html" target="_blank">文章名字</a> 》对 <a href="personal-page.html" target="_blank">用户2</a> 说：
+                      <div class="reply-block">
+                        <textarea name='reply-comment-area' id='reply-comment-area' class='form-control' rows='4' placeholder='请写下你的回复~'></textarea>
+                        <div>
+                            <button class='btn btn-green send-reply-btn'>提交回复</button>
+                            <button class='btn cancel-reply-btn'>取消</button>
+                          </div>
                       </div>
+                    </li>
+                    <li class="box talk-to-you">
+                      <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                      <span class="to-you"><a href="user.html" class="user-name">飞翔的粑粑</a> 对你说：</span>
+                      <button class="btn btn-green reply-btn">回复</button>
                       <p>因而公司雇了不少人，到网上各处发布一些所谓的分析师文章，这些分析文章可以反复利用，因为鬼才知道黄金白银下一分钟或是第二天的价格走势。员工们需要做的就是，每天到网上各处注册账号，上传西装革履的头像，或者假冒成美女分析师，从文章库中随便找出一篇文章来，标题加上当前最新的热点，比如“王宝强婚变，黄金价格走向何方”之类，到处发布。在文章中，留下联系方式，坐等赌徒们上钩。 </p>
                       <p class="comment-time">2017年5月1日 11:35:54</p>
+                      <div class="reply-block">
+                        <textarea name='reply-comment-area' id='reply-comment-area' class='form-control' rows='4' placeholder='请写下你的回复~'></textarea>
+                        <div>
+                            <button class='btn btn-green send-reply-btn'>提交回复</button>
+                            <button class='btn cancel-reply-btn'>取消</button>
+                          </div>
+                      </div>
                     </li>
                   </ul>
-                </div><!-- new-comment-list end -->
+                </div><!-- letter-list end -->
 
-                <div role="tabpanel" class="tab-pane fade" id="new-watch-list">
+                <div role="tabpanel" class="tab-pane fade" id="notify-list">
                   <ul>
-                    <li>
-                      你的学习榜样 <a href="personal-page.html" target="_blank">奥利奥</a> 更新了 <a href="article-page.html" target="_blank">文章/知识地图/知识简历</a>
+                    <li class="box talk-to-you">
+                      <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                      <span class="to-you">
+                        <a href="personal-page.html" target="_blank">用户1</a> 在 《 <a href="article-page.html" target="_blank">笔记名字</a> 》评论道：
+                      </span> 
+                      <button class="btn btn-green reply-btn">回复</button> 
+                      <p>因而公司雇了不少人，到网上各处发布一些所谓的分析师文章，这些分析文章可以反复利用，因为鬼才知道黄金白银下一分钟或是第二天的价格走势。 </p>
+                      <p class="comment-time">2017年5月1日 11:35:54</p>
+                      <div class="reply-block">
+                        <textarea name='reply-comment-area' id='reply-comment-area' class='form-control' rows='4' placeholder='请写下你的回复~'></textarea>
+                        <div>
+                            <button class='btn btn-green send-reply-btn'>提交回复</button>
+                            <button class='btn cancel-reply-btn'>取消</button>
+                          </div>
+                      </div>
+                    </li>
+                    <li class="box">
+                      <p class="to-you">系统通知 : xxx功能今天上线啦~</p>
                       <p class="comment-time">2017年5月1日 11:35:54</p>
                     </li>
-                    
-                    <hr>
-
-                    <li>
-                      你说关注的专辑 《 <a href="album-page.html" target="_blank">奇思妙想</a> 》 更新了内容 《 <a href="article-page.html" target="_blank">巴赫：神奇的一天</a> 》
+                    <li class="box">
+                      <p class="to-you">
+                        <a href="personal-page.html" target="_blank">用户1</a> 赞了你的 《 <a href="article-page.html" target="_blank">笔记名字</a> 》
+                      </p>  
                       <p class="comment-time">2017年5月1日 11:35:54</p>
                     </li>
                   </ul>
-                </div><!-- new-watch-list -->
+                </div><!-- notify-list -->
 
               </div> 
             </div>
           </div>         
         </div>
-        <div class="col-md-2 blank"></div>
+        <div class="col-md-3 blank"></div>
       </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- 回复按钮切换 -->
+    <script>
+      jQuery(document).ready(function($) {
+        /*点击回复按钮*/
+        $(".reply-btn").click(function(event) {
+          $(this).parent().children(".reply-block").slideToggle();
+        });
+        /*点击取消按钮*/
+        $(".cancel-reply-btn").click(function(event) {
+          $(this).parents("li").children(".reply-block").slideToggle();
+        });
+        /*点击提交回复按钮*/
+        $(".send-reply-btn").click(function(event) {
+          $(this).parents("li").children(".reply-block").css('display', 'none');
+          alert("回复提交成功");
+        });
+      });
+    </script>
 
-    <script src="script/user-manager.js"></script>
   </body>
 </html>
 

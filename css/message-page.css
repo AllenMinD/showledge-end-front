@@ -1,122 +1,88 @@
-body {
-  font-family:"Microsoft Yahei",微软雅黑,"Helvetica Neue",Arial,sans-serif;
+/*消息页样式 #message-page*/
+.main {
+  padding: 0px;
 }
 
-a:link {
-  color: #969696;
-}
-a:visited {
-  color: #969696;
-}
-a:hover {
-  color: #969696;
-  text-decoration: underline;
-}
-a:active  {
-  outline: 0;
-}
-a {
-  cursor: pointer;
-  background-color: transparent;
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  width: 138px;
+  color: #fff;
+  background-color: #00cc66;
+  font-size: 18px;
 }
 
-ul {
-  list-style: none;
+#letter-list a,
+#notify-list a {
+  color: #00cc66;
 }
 
-.container-fluid > .row {
-  margin-top: 75px;
-}
-
-img.avatar {
-  width: 32px;
-  height: 32px;
-  border: 1px solid #ddd;
-  vertical-align: center;
-  border-radius: 50%;
-}
-
-img.user-avatar {
-  width: 35px;
-  height: 35px;
-  margin-top: -9px;
-  margin-bottom: -8px;
-  border: 1px solid #ddd;
-  vertical-align: center;
-  border-radius: 100px;
-}
-
-li[role=presentation] > a{
-  color: black;
+.to-you {
   font-size: 16px;
 }
 
-.navbar-icon {
-    padding-right: 10px;
+.talk-to-you > button{
+  float: right;
+  margin-top: 5px;
 }
 
-.badge {
-  margin-left: 10px;
+/*.reply-block*/
+.reply-block {
+  display: none;
+  margin: 20px;
 }
 
-/*-------*/
-#current-avatar {
-  margin-left: 20px;
-  width:120px;
-  height:120px;
-  border-radius:100px;
-  margin-bottom:20px;
+.reply-block > div {
+  height: 45px;
 }
 
-#current-avatar-input {
-  position: absolute;
-  left: 180px;
-  top: 30px;
-  display: inline;
+.reply-block > div > .cancel-reply-btn {
+  background-color: white;
+  color: #ababab;
 }
 
-.alert {
-  display:none;
-  text-align:center;
-  position:absolute;
-  width:200px;
-  z-index:999;
+.reply-block > div > .cancel-reply-btn,
+.reply-block > div > .send-reply-btn {
+  margin-top: 10px;
+  float: right;
 }
 
-/*new-comment-list*/
-#new-comment-list ul li a {
-  color: #00cc66;
-}
-
-#new-comment-list ul li p {
+/*letter-list*/
+#letter-list ul li p {
   padding-left: 30px;
   font-size: 14px;
-  color: #7f7f7f;
-  padding-top: 10px;
-}
-
-#writer {
-  font-weight: bold;
-}
-
-#new-comment-list ul li p.comment-time {
-  font-size: 12px;
   color: #2f2f2f;
+  padding-top: 10px;
+  line-height: 30px;
+}
+
+#letter-list ul li p.to-you {
+  font-size: 16px;
+}
+
+#letter-list ul li p.comment-time {
+  font-size: 12px;
+  color: #7f7f7f;
 } 
 
-/*new-watch-list*/
-#new-watch-list {
+/*notify-list*/
+#notify-list {
   font-size: 14px;
 }
 
-#new-watch-list ul li a {
-  color: #00cc66;
+#notify-list ul li p {
+  padding-left: 30px;
+  font-size: 14px;
+  color: #2f2f2f;
+  padding-top: 10px;
+  line-height: 30px;
 }
 
+#notify-list ul li p.to-you {
+  font-size: 16px;
+}
 
-
-#new-watch-list ul li p.comment-time {
+#notify-list ul li p.comment-time {
   font-size: 12px;
-  color: #2f2f2f;
-  padding-top: 15px;
+  color: #7f7f7f;
 } 

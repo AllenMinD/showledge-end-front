@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>学习笔记 - 秀知识</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- top-bar.css -->
+    <link href="css/general-style.css" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="note-page">
+    <!--顶部导航条 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- 响应式 当窗口很小时，会缩小成一个“汉堡”按钮 -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">秀知识</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index-login.html"><span class="fa fa-home fa-fw"></span>主页</a></li>
+            <li><a href="#"><span class="fa fa-wechat fa-fw"></span>小程序</a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="大家今天都学了什么？">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- 登录注册按钮 -->
+            <li>
+              <a style="padding:8px 18px 7px 18px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#"><img src="icon/user.png" alt="icon" style="margin-left:5px;">我的主页</a></li>
+                <li><a href="#"><img src="icon/message.png" alt="icon">消息</a></li>
+                <li><a href="#"><img src="icon/setting.png" alt="icon">设置</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><img src="icon/power.png" alt="icon">退出帐号</a></li>
+              </ul>              
+            </li>
+            <!--
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+            -->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- 更多推荐页 #intro-user-page -->
+    <div class="container main-content">
+      <div class="row">
+        <div class="col-md-2 blank"></div>
+        <div class="col-md-8 main">
+          <div class="row">
+            <div class="col-md-1 blank"></div>
+            <div class="col-md-10">
+              <div class="box" id="note-id-001">
+                <h2 class="note-title">我的第一篇python笔记</h2>
+                <div class="note-info">
+                  <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                  <a href="user.html" class="user-name">飞翔的粑粑</a>
+                  <a class="follow-btn"><span class="fa fa-plus-circle"></span>关注</a>
+                  <div class="note-count">
+                    <span class="note-date">2017.07.08 20:30</span>
+                    <span class="note-read-count">阅读量 <span>222</span></span>
+                    <span class="note-comment-count">评论数 <span>14</span></span>
+                    <span class="note-like-count">点赞数 <span>88</span></span>
+                    <span class="note-collect-count">收藏数 <span>88</span></span>
+                  </div>
+                </div>
+                <div class="note-category">
+                  <span><span class="fa fa-tags fa-fw"></span>分类</span>
+                  <a href="#" class="note-tag">后端</a>
+                  <a href="#" class="note-tag">python</a>
+                </div>
+                <div class="note-entity">
+                  <p>这是我的第一篇python笔记。主要记录python的常用语法以及容易坑人的地方。</p>
+                  <p>Python是著名的“龟叔”Guido van Rossum在1989年圣诞节期间，为了打发无聊的圣诞节而编写的一个编程语言。</p>
+                  <p>当你用一种语言开始作真正的软件开发时，你除了编写代码外，还需要很多基本的已经写好的现成的东西，来帮助你加快开发进度。比如说，要编写一个电子邮件客户端，如果先从最底层开始编写网络协议相关的代码，那估计一年半载也开发不出来。高级编程语言通常都会提供一个比较完善的基础代码库，让你能直接调用，比如，针对电子邮件协议的SMTP库，针对桌面环境的GUI库，在这些已有的代码库的基础上开发，一个电子邮件客户端几天就能开发出来。</p>
+                  <p>Python就为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称作“内置电池（batteries included）”。用Python开发，许多功能不必从零编写，直接使用现成的即可。除了内置的库外，Python还有大量的第三方库，也就是别人开发的，供你直接使用的东西。当然，如果你开发的代码通过很好的封装，也可以作为第三方库给别人使用。许多大型网站就是用Python开发的，例如YouTube、Instagram，还有国内的豆瓣。很多大公司，包括Google、Yahoo等，甚至NASA（美国航空航天局）都大量地使用Python。</p>
+                  <p>龟叔给Python的定位是“优雅”、“明确”、“简单”，所以Python程序看上去总是简单易懂，初学者学Python，不但入门容易，而且将来深入下去，可以编写那些非常非常复杂的程序。</p>
+                </div>
+                <hr>
+                <div class="note-like-and-collect-btn">
+                  <button class="btn btn-lg btn-green like-btn"><span class="fa fa-heart fa-fw"></span>点赞</button>
+                  <button class="btn btn-lg btn-green collect-btn"><span class="fa fa-bookmark fa-fw"></span>收藏</button>
+                </div>
+                <hr>
+                <div class="input-comment">
+                  <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                  <textarea name="input-comment-area" id="input-comment-area" class="form-control" rows="4" placeholder="你的评论写这里哦~"></textarea>
+                  <button class="btn btn-green send-comment-btn">提交评论</button>
+                </div>
+                <div class="comments-list">
+                  <div class="comments-list-count">
+                    <span>9条评论</span>
+                  </div>
+                  <hr>
+                  <ul>
+                    <li id="comment-001">
+                      <div class="comment-user">
+                        <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-ssm" class="avatar-ssm"></a> 
+                        <a href="user.html" class="user-name">奥利奥饼干</a>
+                        <div>
+                          <span>3楼</span>
+                          <span> · </span>
+                          <span>2017.01.06 12:40</span>
+                        </div>
+                      </div>
+                      <div class="comment-content">
+                        <p>作者总结的不错~</p>
+                      </div>
+                      <div class="comment-function-btn">
+                        <a class="good-btn"><span class="fa fa-thumbs-o-up fa-fw"></span>点赞</a>
+                        <a class="reply-btn"><span class="fa fa-comment fa-fw"></span>回复</a>
+                      </div>
+                      <div class="reply-comment">
+                        <ul>
+                          <li id="reply-commen-001">
+                            <p>
+                              <a href="user.html" class="user-name at-who">飞翔的粑粑</a>
+                              <span class="fa fa-caret-right fa-fw"></span>
+                              <a href="user.html" class="user-name">奥利奥饼干</a>
+                              <span class="fa fa-fw"></span>
+                              谢谢支持(回复正文)
+                            </p>
+                            <span>2017.01.06 14:40</span>
+                            <a class="reply-btn"><span class="fa fa-comment fa-fw"></span>回复</a>
+                          </li>
+                          <li id="reply-commen-002">
+                            <p>
+                              <a href="user.html" class="user-name at-who">饼干</a>
+                              <span class="fa fa-caret-right fa-fw"></span>
+                              <a href="user.html" class="user-name">飞翔的粑粑</a>
+                              <span class="fa fa-fw"></span>
+                              谢谢支持(回复正文)
+                            </p>
+                            <span>2017.01.06 14:40</span>
+                            <a class="reply-btn"><span class="fa fa-comment fa-fw"></span>回复</a>
+                          </li>
+                        </ul>
+                        <div class="reply-block">
+                          <textarea name='reply-comment-area' id='reply-comment-area' class='form-control' rows='4' placeholder='你的评论写这里哦~'></textarea>
+                          <div>
+                            <button class='btn btn-green send-reply-btn'>提交回复</button>
+                            <button class='btn cancel-reply-btn'>取消</button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div><!-- comment-list end -->
+              </div>              
+            </div>
+            <div class="col-md-1 blank"></div>
+          </div>
+        </div>
+        <div class="col-md-2 blank"></div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- 警告框js -->
+    <script src="js/alert.js"></script>
+    <!-- 关注按钮切换js -->
+    <script src="js/reco-follow-btn-toggle.js"></script>
+    <!-- note-page.js -->
+    <script src="js/note-page.js"></script>
+
+    <script>
+      $(function () { $("[data-toggle='tooltip']").tooltip(); });
+    </script>
+  </body>
+</html>
+
+
