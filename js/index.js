@@ -30,7 +30,7 @@ $(document).ready(function() {
   /* 学习动态 - 加载更多按钮 */
   $(".load-more-act").on('click', function(event) {
     event.preventDefault();
-    var $actList = $("#hot-act > ul");
+    var $actList = $(this).parent().children("ul");
     console.log($actList);
     $.ajax({
       url: 'http://www.easy-mock.com/mock/598723caa1d30433d856d66f/test-data/study-act',
@@ -111,7 +111,7 @@ $(document).ready(function() {
   /* 学习笔记 - 加载更多按钮 */
   $(".load-more-note").on('click', function(event) {
     event.preventDefault();
-    var $noteList = $("#hot-note > ul");
+    var $noteList = $(this).parent().children("ul");
     console.log($noteList);
     $.ajax({
       url: 'http://www.easy-mock.com/mock/598723caa1d30433d856d66f/test-data/study-note',
@@ -181,7 +181,7 @@ $(document).ready(function() {
   /* 知识地图 - 加载更多按钮 */
   $(".load-more-map").on('click', function(event) {
     event.preventDefault();
-    var $mapList = $("#hot-map > ul");
+    var $mapList = $(this).parent().children("ul");
     console.log($mapList);
     $.ajax({
       url: 'http://www.easy-mock.com/mock/598723caa1d30433d856d66f/test-data/study-map',

@@ -23,77 +23,11 @@
     <![endif]-->
   </head>
   <body id="topic-page">
-    <!--顶部导航条 -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- 响应式 当窗口很小时，会缩小成一个“汉堡”按钮 -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="topic-page.html">秀知识</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="index-login.html"><span class="fa fa-home fa-fw"></span>主页</a></li>
-            <li><a href="#"><span class="fa fa-wechat fa-fw"></span>小程序</a></li>
-          </ul>
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="大家今天都学了什么？">
-            </div>
-            <button type="submit" class="btn btn-default">搜索</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <!-- 登录注册按钮 -->
-            <li>
-              <a style="padding:8px 18px 7px 18px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#"><img src="icon/user.png" alt="icon" style="margin-left:5px;">我的主页</a></li>
-                <li><a href="#"><img src="icon/message.png" alt="icon">消息</a></li>
-                <li><a href="#"><img src="icon/setting.png" alt="icon">设置</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#"><img src="icon/power.png" alt="icon">退出帐号</a></li>
-              </ul>              
-            </li>
-            <!--
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-            -->
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
- 
     <!-- 专题页内容 -->
-    <div class="container-fluid main-content">
-      <div class="row">
-        <div class="col-md-1 blank"></div>
-        <div class="col-md-10 main">
-          <div class="row">
-            
-            <div class="col-md-3"></div>
-
+    <div class="container-fluid">
+        <div class="row">
             <!-- 中间主要内容栏 -->
-            <div class="col-md-6" id="middle-main">
-              <!-- 专题头部 -->
-              <div class="box topic-page-header">
-                <h3>专题 - <span class="topic-name">jQuery</span></h3>
-              </div>
-
+            <div class="col-md-12" id="middle-main">
               <!-- 标签页头 -->
                <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#hot-act" aria-controls="home" role="tab" data-toggle="tab">热门动态</a></li>
@@ -335,13 +269,7 @@
                 </div>
               </div>
             </div><!-- 中间主要内容栏end -->
-
-            <div class="col-md-3"></div>
-
-          </div>
         </div>
-        <div class="col-md-1 blank"></div>
-      </div>
     </div>
 
     <!-- 评论窗口模态框 -->
