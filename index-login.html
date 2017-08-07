@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">秀知识</a>
+          <a class="navbar-brand" href="index-login.html">秀知识</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,11 +54,11 @@
             <li>
               <a style="padding:8px 18px 7px 18px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#"><img src="icon/user.png" alt="icon" style="margin-left:5px;">我的主页</a></li>
-                <li><a href="#"><img src="icon/message.png" alt="icon">消息</a></li>
-                <li><a href="#"><img src="icon/setting.png" alt="icon">设置</a></li>
+                <li><a href="personal-page.html" target="_blank"><img src="icon/user.png" alt="icon" style="margin-left:5px;">我的主页</a></li>
+                <li><a href="message-page.html" target="_blank"><img src="icon/message.png" alt="icon">消息</a></li>
+                <li><a href="setting-page.html" target="_blank"><img src="icon/setting.png" alt="icon">设置</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#"><img src="icon/power.png" alt="icon">退出帐号</a></li>
+                <li><a href="index.html"><img src="icon/power.png" alt="icon">退出帐号</a></li>
               </ul>              
             </li>
             <!--
@@ -88,25 +88,25 @@
             <div class="col-md-3" id="left-sidebar">
               <!-- 用户资料卡 -->
               <div class="box user-dashboard">
-                <a href="user.html" class="user-dashboard-bg"></a>
+                <a href="personal-page.html" class="user-dashboard-bg" target="_blank"></a>
                 <div class="user-dashboard-profile-card">
-                  <a href="user.html" class="profile-card-avartar"><img src="image/user-avatar1.jpg" class="avatar-md" alt="用户头像-md"></a>
-                  <a href="user.html" class="profile-card-account">嘉顿饼干</a>
+                  <a href="personal-page.html" class="profile-card-avartar" target="_blank"><img src="image/user-avatar1.jpg" class="avatar-md" alt="用户头像-md"></a>
+                  <a href="personal-page.html" class="profile-card-account" target="_blank">嘉顿饼干</a>
                   <ul class="profile-card-state">
                     <li class="count-act">
-                      <a href="#">
+                      <a href="personal-page.html" target="_blank">
                         <span>学习动态</span>
                         <span>12</span>
                       </a>
                     </li>
                     <li class="count-watch-others">
-                      <a href="#">
+                      <a href="personal-page.html" target="_blank">
                         <span>关注榜样</span>
                         <span>112</span>
                       </a>                      
                     </li>
                     <li class="count-watched">
-                      <a href="#">
+                      <a href="personal-page.html" target="_blank">
                         <span>关注者</span>
                         <span>32</span>
                       </a>                      
@@ -118,16 +118,16 @@
               <div class="box function-btn-list">
                 <ul>
                   <li>
-                    <a href="#"><img src="icon/function-btn-1.png" alt="功能按钮icon"><span>学习笔记</span></a>
+                    <a href="edit-note-page.html" target="_blank"><img src="icon/function-btn-1.png" alt="功能按钮icon"><span>学习笔记</span></a>
                   </li>
                   <li>
-                    <a href="#"><img src="icon/function-btn-2.png" alt="功能按钮icon"><span>知识地图</span></a>
+                    <a href="edit-mindmap.html" target="_blank"><img src="icon/function-btn-2.png" alt="功能按钮icon"><span>知识地图</span></a>
                   </li>
                   <li>
-                    <a href="#"><img src="icon/function-btn-3.png" alt="功能按钮icon"><span>我的收藏</span></a>
+                    <a href="personal-page.html" target="_blank"><img src="icon/function-btn-3.png" alt="功能按钮icon"><span>我的收藏</span></a>
                   </li>
                   <li>
-                    <a href="#"><img src="icon/function-btn-4.png" alt="功能按钮icon"><span>我的简历</span></a>
+                    <a href="resume-page.html" target="_blank"><img src="icon/function-btn-4.png" alt="功能按钮icon"><span>我的简历</span></a>
                   </li>
                 </ul>
               </div>
@@ -145,7 +145,7 @@
             <div class="col-md-6" id="middle-main">
               <!-- 学习动态编辑框 -->
               <div class="box send-act-box">
-                <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-ssm" class="avatar-ssm"></a>
+                <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-ssm" class="avatar-ssm"></a>
                 <form>
                   <textarea name="input-act" id="input-act" class="form-control" rows="4" placeholder="把今天学到的东西写下来吧~"></textarea>
                 </form>
@@ -172,6 +172,9 @@
                 </div>
                 <div class="input-xxbj-form">
                   <label for="xxbj-form" id="xxbj-form">学习笔记</label>
+                  <div class="picked-note">
+                    
+                  </div>
                   <button class="btn btn-sm btn-green" data-toggle="modal" data-target="#pick-note-modal">从我的笔记中选择</button>
                 </div>
                 <button class="btn btn-green" id="send-act-btn">发布动态</button>
@@ -190,8 +193,8 @@
                     <li class="box" id="by-act-001">
                       <div class="user-info">
                         <div class="user-avatar">
-                          <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="user.html" class="user-name">飞翔的粑粑</a>
+                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的粑粑</a>
                           <span> - </span>
                           <span class="user-act-time">2017.7.1 20:30:30</span>
                         </div>
@@ -206,12 +209,12 @@
                       <div class="user-library">
                         <div class="xxzl">
                           <span>学习资料</span>
-                          <a href="#">《python学习手册》</a>
-                          <a href="http://www.imooc.com/course/list?c=python">慕课网python教程</a>
+                          <a href="https://www.amazon.cn/s?ie=UTF8&search-type=ss&index=books&field-keywords=python%D1%A7%CF%B0%CA%D6%B2%E1&tag=baiduiclickcn-23&ref=pz_ic_Book_1731_208" target="_blank">《python学习手册》</a>
+                          <a href="http://www.imooc.com/course/list?c=python" target="_blank">慕课网python教程</a>
                         </div> 
                         <div class="xxbj">
                           <span>学习笔记</span>
-                          <a href="#" class="user-note-entrance">我的pyhton学习笔记</a>
+                          <a href="note-page.html" class="user-note-entrance" target="_blank">我的pyhton学习笔记</a>
                         </div>              
                       </div>
                       <div class="act-info">
@@ -232,8 +235,8 @@
                     <li class="box" id="by-act-002">
                       <div class="user-info">
                         <div class="user-avatar">
-                          <a href="user.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="user.html" class="user-name">飞翔的便便</a>
+                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
                           <span> - </span>
                           <span class="user-act-time">2017.7.3 20:30:30</span>
                         </div>
@@ -248,7 +251,7 @@
                       <div class="user-library">
                         <div class="xxzl">
                           <span>学习资料</span>
-                          <a href="#">《算法导论》</a>
+                          <a href="https://www.amazon.cn/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-Thomas-H-Cormen/dp/B00AK7BYJY/ref=sr_1_1?s=books&ie=UTF8&qid=1502002841&sr=1-1&keywords=%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA" target="_blank">《算法导论》</a>
                         </div> 
                         <div class="xxbj">
                           <span>学习笔记</span>
@@ -271,14 +274,15 @@
                       </div>
                     </li>
                   </ul>
+                  <button class="btn btn-green load-more load-more-act">加载更多</button>               
                 </div>
                 <div role="tabpanel" class="tab-pane" id="by-note">
                   <ul>
                     <li class="box" id="by-note-001">
                       <div class="user-info">
                         <div class="user-avatar">
-                          <a href="user.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="user.html" class="user-name">飞翔的便便</a>
+                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
                           <span> - </span>
                           <span class="user-act-time">2017.7.3 20:30:30</span>
                         </div>
@@ -310,8 +314,8 @@
                     <li class="box" id="by-note-002">
                        <div class="user-info">
                         <div class="user-avatar">
-                          <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="user.html" class="user-name">飞翔的便便</a>
+                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
                           <span> - </span>
                           <span class="user-act-time">2017.7.3 20:30:30</span>
                         </div>
@@ -341,25 +345,26 @@
                       </div>                                         
                     </li>
                   </ul>
+                  <button class="btn btn-green load-more load-more-note">加载更多</button>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="by-map">
                   <ul>
                     <li class="box" id="by-map-001">
                       <div class="user-info">
                         <div class="user-avatar">
-                          <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="user.html" class="user-name">飞翔的便便</a>
+                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
                           <span> - </span>
                           <span class="user-act-time">2017.7.3 20:30:30</span>
                         </div>
                       </div>
-                      <a href="map-page.html" target="_blank" class="map-title-sm">python学习重点知识谱图</a>
+                      <a href="user-mindmap.html" target="_blank" class="map-title-sm">python学习重点知识谱图</a>
                       <div class="map-keyword">
                         <span><span class="fa fa-tags fa-fw"></span>关键词</span>
-                        <a href="#" class="keyword">后端</a>
-                        <a href="#" class="keyword">python</a>
-                        <a href="#" class="keyword">爬虫</a>
-                        <a href="#" class="keyword">数据分析</a>
+                        <a href="topic-page.html" class="keyword" target="_blank">前端</a>
+                        <a href="topic-page.html" class="keyword" target="_blank">html</a>
+                        <a href="topic-page.html" class="keyword" target="_blank">css</a>
+                        <a href="topic-page.html" class="keyword" target="_blank">javascript</a>
                         <span>...</span>
                       </div>
                       <div class="act-info">
@@ -380,19 +385,19 @@
                     <li class="box" id="by-map-002">
                       <div class="user-info">
                         <div class="user-avatar">
-                          <a href="user.html"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="user.html" class="user-name">嘉顿饼干</a>
+                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                          <a href="personal-page.html" class="user-name" target="_blank">嘉顿饼干</a>
                           <span> - </span>
                           <span class="user-act-time">2017.7.3 20:30:30</span>
                         </div>
                       </div>
-                      <a href="map-page.html" target="_blank" class="map-title-sm">前端知识谱图</a>
+                      <a href="user-mindmap.html" target="_blank" class="map-title-sm">前端知识谱图</a>
                       <div class="map-keyword">
                         <span><span class="fa fa-tags fa-fw"></span>关键词</span>
-                        <a href="#" class="keyword">前端</a>
-                        <a href="#" class="keyword">html</a>
-                        <a href="#" class="keyword">css</a>
-                        <a href="#" class="keyword">javascript</a>
+                        <a href="topic-page.html" class="keyword" target="_blank">前端</a>
+                        <a href="topic-page.html" class="keyword" target="_blank">html</a>
+                        <a href="topic-page.html" class="keyword" target="_blank">css</a>
+                        <a href="topic-page.html" class="keyword" target="_blank">javascript</a>
                         <span>...</span>
                       </div>
                       <div class="act-info">
@@ -410,7 +415,8 @@
                         </div>                      
                       </div>
                     </li>                    
-                  </ul>  
+                  </ul>
+                  <button class="btn btn-green load-more load-more-map">加载更多</button>  
                 </div>
               </div>
             </div><!-- 中间主要内容栏end -->
@@ -439,7 +445,7 @@
                     <p>30k粉丝</p>
                   </li>                                     
                 </ul>
-                <button class="btn btn-default more-recommend-writer" style="margin-left:108px;"><a href="intro-user-page.html" target="_blank" style="text-decoration:none;">更多推荐 ></a> </button> 
+                <button class="btn btn-default more-recommend-writer"><a href="intro-user-page.html" target="_blank" style="text-decoration:none;">更多推荐 ></a> </button> 
               </div>
               <!-- 页脚 -->
               <div class="box page-footer">
@@ -461,7 +467,7 @@
             <h4 class="modal-title" id="exampleModalLabel">评论<span>(10)</span></h4>
           </div>
           <div class="modal-body">
-            <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+            <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
             <textarea name="comment-box" id="comment-box" class="form-control" rows="4"></textarea>
             <button class="btn btn-green comment-enter">评论</button>
           </div>
@@ -469,8 +475,8 @@
             <ul class="comment-list">
               <li id="comment-001">
                 <div class="user-info">
-                  <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                  <a href="user.html" class="user-name">飞翔的便便</a>
+                  <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
                   <span> - </span>
                   <span class="user-act-time">2017.7.3 20:30:30</span>
                 </div>
@@ -483,8 +489,8 @@
               </li>
               <li id="comment-002">
                 <div class="user-info">
-                  <a href="user.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                  <a href="user.html" class="user-name">飞翔的便便</a>
+                  <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
                   <span> - </span>
                   <span class="user-act-time">2017.7.3 20:30:30</span>
                 </div>
@@ -497,8 +503,8 @@
               </li>
               <li id="comment-003">
                 <div class="user-info">
-                  <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                  <a href="user.html" class="user-name">飞翔的便便</a>
+                  <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
                   <span> - </span>
                   <span class="user-act-time">2017.7.3 20:30:30</span>
                 </div>
@@ -526,21 +532,29 @@
           <div class="modal-body">
             <ul>
               <li id="pick-note-001">
-                <a href="note-page.html">我的python笔记</a>
+                <a href="note-page.html" target="_blank">我的python笔记</a>
                 <button class="btn btn-warning btn-info btn-sm pick-btn">选择</button>
               </li>
               <li id="pick-note-002">
-                <a href="note-page.html">我的java笔记</a>
+                <a href="note-page.html" target="_blank">我的java笔记</a>
                 <button class="btn btn-warning btn-info btn-sm pick-btn">选择</button>
               </li>
               <li id="pick-note-003">
-                <a href="note-page.html">我的java笔记</a>
+                <a href="note-page.html" target="_blank">我的html笔记</a>
                 <button class="btn btn-warning btn-info btn-sm pick-btn">选择</button>
               </li>
+              <li id="pick-note-004">
+                <a href="note-page.html" target="_blank">我的jquery笔记</a>
+                <button class="btn btn-warning btn-info btn-sm pick-btn">选择</button>
+              </li>
+              <li id="pick-note-005">
+                <a href="note-page.html" target="_blank">我的vue笔记</a>
+                <button class="btn btn-warning btn-info btn-sm pick-btn">选择</button>
+              </li>                            
             </ul>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-green" data-dismiss="modal">选好了</button>
+            <button type="button" class="btn btn-green enter-pick" data-dismiss="modal">选好了</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

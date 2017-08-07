@@ -1,0 +1,75 @@
+新版秀知识界面重构
+
+参考网址：
+https://www.douban.com/note/424565808/
+http://v3.bootcss.com/components/#nav
+http://www.colorhexa.com/00cc66
+https://mp.weixin.qq.com/s/k-181vAda_QIQa4lDPbYDw
+
+
+http://g.yeeyan.org/
+http://www.jianshu.com/
+http://www.bootcss.com/p/icheck/#skin-polaris
+https://qdan.me/list/WVy8eh0aDwUT7KsT
+============================================================================
+重构开发周期计划：
+7.5~7.10（6天）：登录页、主页、文章编辑页、个人主页、专辑页、知识地图编辑页/浏览页
+
+7.11~7.14 （4天）：想新内容和知识地图的改进
+
+7.15~ ？；...
+
+
+
+首页/登陆后的首页 7.10
+
+推荐学霸页 7.10
+
+个人主页 7.11
+
+查阅笔记页 7.12
+
+编辑文章页/插件
+编辑地图页/插件
+ajax
+
+###################################################################################################
+细节：
+1.热门地图（榜样地图）、热门简历（榜样简历）、知识地图、学习榜样、关注者、收藏库 的box（index.html/index-login.html/personal-page.html）
+2.关注按钮的翻转效果（index.html/index-login.html/note-page.html）
+3.评论框 (index.html/index-login.html)
+4.点赞效果（index.html/index-login.html/note-page.html）
+5.编辑学习动态的“心情”、“学习资料”、“学习笔记” 的表单(index-login.html)
+6.分享（index.html/index-login.html/note-page.html）
+7.评论、回复（index.html/index-login.html/note-page.html）
+8.编辑文章页/插件
+9.编辑地图页/插件
+10.ajax
+
+还差页面：
+1.编辑笔记页
+2.编辑知识地图页
+3.查阅知识地图页
+4.搜索页
+5.消息页
+6.个人资料编辑页（设置页）
+
+
+============================================================================
+
+说明：
+
+1.框架：bootstrap  v3.3.7
+
+2.主体颜色：#00cc66
+
+3.css样式表安排：
+  1)把最一般的规则放在最前面（如主体样式、reset样式、链接、标题、其他元素）
+  2)处理更特殊的样式和辅助样式（表单、通知和错误、一致的条目）
+  3)处理布局和导航等结构性元素（标题、页脚、导航、布局、其他页面结构元素）
+  4)处理特定页面的相关组件（各个页面）
+  5)处理覆盖和例外情况
+  
+4.登录/注册页模仿 轻单网：https://qdan.me/
+
+5.在“发布学习动态”时，有一项功能为“学习资料”，类似 轻单网的创建轻单功能：贴链接

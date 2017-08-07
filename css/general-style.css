@@ -22,6 +22,8 @@
     12)用户名样式(.user-name)
     13)自定义表单样式：下绿线表单（.form-control-green-border）
     14)页面右侧推荐栏的关注按钮切换类（.follow-btn .not-follow）
+    15)更多推荐按钮 （.more-recommend-writer）
+    16)“加载更多（动态/笔记/地图）”按钮 (".load-more")
 
 3 - @3 group 局部样式：标题、页脚、导航、布局、其他页面结构元素
     1)顶部导航栏样式（.navbar）
@@ -33,6 +35,7 @@
     4）------------个人主页 personal-page.html ------------
     5）------------笔记阅读页 note-page.html ------------
     6）------------编辑笔记页 edit-note-page.html ------------
+    7）------------专题页 topic-page.html ------------
 
 
 5 - @5 group 处理覆盖和例外情况
@@ -210,6 +213,20 @@ a.follow-btn:hover {
   text-decoration: none;
 }
 
+.more-recommend-writer {
+  width: 100%;
+}
+
+.more-recommend-writer > a {
+  display: block;
+}
+
+/*“加载更多（动态/笔记/地图）”按钮 (".load-more")*/
+.load-more {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 /*@3 group 局部样式：标题、页脚、导航、布局、其他页面结构元素-----------------*/ 
 /*顶部导航栏样式*/
 /* 顶部导航栏的“登录注册按钮”css */
@@ -279,7 +296,7 @@ a.follow-btn:hover {
 /*左侧标签栏*/
 .cat {
   display: block;
-  width: 120px;
+  width: 95%;
   margin-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -390,7 +407,7 @@ a.follow-btn:hover {
   border: 1px solid #00cc66;
   background-color: #00cc66;
   color: white;
-  padding: 1px 5px 1px 5px;
+  padding: 1px 7px 4px 7px;
   border-radius: 10px;
 }
 
@@ -403,15 +420,16 @@ a.follow-btn:hover {
 
 /*登陆前 #right-reco右边推荐栏css*/
 #index-page #right-reco .reco-xb > span {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  padding: 20px;
+  padding: 12px;
 }
 
 #index-page #right-reco .xb-list {
-  margin-top: 5px;
-  padding-left: 20px;
-  padding-right: 30px;
+  width: 100%;
+  margin-top: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 #index-page #right-reco .xb-list > li {
@@ -421,21 +439,23 @@ a.follow-btn:hover {
   border-bottom: 1px solid #ddd;
 }
 
-#index-page #right-reco .xb-list > li > a.follow-btn {
-  padding: 3px 6px 3px 6px;
-}
-
 #index-page #right-reco .xb-list > li > a.reco-user-name {
   position: absolute;
-  left: 58px;
-  font-size: 16px;
+  left: 50px;
+  font-size: 15px;
   color: #00cc66;
 }
 
 #index-page #right-reco .xb-list > li > p {
   position: absolute;
-  left: 58px;
-  top: 35px; 
+  font-size: 12px;
+  left: 50px;
+  top: 30px; 
+}
+
+#index-page #right-reco .xb-list > li > a.follow-btn {
+  padding: 3px 6px 3px 6px;
+  font-size: 10px; 
 }
 
 /*#comment-modal 评论模态框css*/
@@ -585,7 +605,7 @@ a.user-dashboard-bg:active {
 .function-btn-list > ul > li > a > span {
   position: absolute;
   top: 10px;
-  right: 120px;
+  left: 30%; 
 }
 
 /*登录后的#middle-main中间栏css*/
@@ -691,12 +711,20 @@ a.user-dashboard-bg:active {
 
 .send-act-box .input-xxbj-form > label {
   font-size: 14px;
+  margin-right: 10px;
   font-weight: 100;
 }
 
 .send-act-box .input-xxbj-form > button {
   display: inline-block;
-  margin-left: 10px;
+}
+
+.picked-note {
+  display: inline-block;
+}
+
+.picked-note a {
+  color: #00cc66;
 }
 
 /*笔记选择窗口模态框  #pick-note-modal*/
@@ -728,9 +756,10 @@ a.user-dashboard-bg:active {
 }
 
 #index-login-page #right-reco .xb-list {
+  width: 100%;
   margin-top: 0px;
   padding-left: 12px;
-  padding-right: 16px;
+  padding-right: 12px;
 }
 
 #index-login-page #right-reco .xb-list > li {
@@ -1049,9 +1078,10 @@ a.user-dashboard-bg:active {
 }
 
 #personal-page #right-reco .xb-list {
+  width: 100%;
   margin-top: 0px;
   padding-left: 12px;
-  padding-right: 16px;
+  padding-right: 12px;
 }
 
 #personal-page #right-reco .xb-list > li {
@@ -1170,6 +1200,11 @@ a.user-dashboard-bg:active {
   color: #00cc66;
   background-color: #f3fff9;
   border: 1px solid #00cc66;
+}
+
+.note-like-and-collect-btn-active:focus,
+.note-like-and-collect-btn-active:active {
+  color: #00cc66;
 }
 
 /*输入评论区域*/
@@ -1348,6 +1383,15 @@ a.user-dashboard-bg:active {
   margin-top: 10px;
   width: 220px;
 }
+
+/*------------专题页 topic-page.html ------------*/
+/* 专题页面头部 .topic-page-header */
+.topic-page-header {
+  text-align: center;
+  border: 1px solid #00cc66;
+}
+
+
 /*@5 group 处理覆盖和例外情况-----------------*/
 /*点赞等按钮的激活状态（.green-count）（主要用于.like-count .collection-count等）*/
 .act-info > div.green-count {

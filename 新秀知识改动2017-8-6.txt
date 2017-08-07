@@ -1,0 +1,202 @@
+index.html
+	1. 左边分类栏改成浮动，而且可以点击 (完成)
+	2. 和index-login.html 保持一致性，只要右上角的用户状态不一样就可以 （完成）
+	
+edit-note-page.html
+	1. 这个交互不需要那么麻烦，不需要点“发布”，放在那里就可以了 
+	
+
+
+每个页面
+	1. 可以点击的地方（链接）都要加上 （完成）
+	2. 每页的每一个col宽度问题（在宽屏上看会被拉长），特别是index-login.html的左按钮边栏 （完成？）
+	3. 需要用到ajax的地方要加上ajax(index.html、index-login.html、personnal-page.html、intro-user-page.html、评论) （基本完成，评论的Ajax没加）
+	
+	
+new-album-page.html
+	做一个专题页 (完成)
+	
+	
+
+	
+edit-mindmap-page.html
+	1. 去掉这个页面
+	
+mindmap-page.html  (完成)
+	1. 加上收藏按钮  
+	2. 看看还有什么地方美化一下
+	
+	
+	
+	
+	
+数据格式：
+==================================================================================================
+学习动态：
+	动态Id			actId
+	用户头像		userAvatar
+	用户名	 		userName
+	发布时间		sendTime
+	心情			mood
+	动态内容		actContent
+	学习资料		xxzl (xxzlName, xxzlLink)
+	学习笔记		xxbj (xxbjName, xxbjLink)
+	评论数			commentNum
+	点赞数			likeNum
+	分享数			shareNum
+	
+{
+	"actId": "001",
+	
+	"userAvatar": "http://img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png",
+	
+	"userName": "汤姆",
+	
+	"sendTime": "2017.7.1 20:30:30",
+	
+	"mood": "糟糕的",
+	
+	"actContent": "今天看了《python学习手册》第一章，学会了python的基本语法。原来python这门语言的语法真心不难，非常适合编程新手入门。强烈建议高校把第一门编程语言改成python。c语言从某种意义上来说对新手不太友好(比如指针(─.─|||))",
+	
+	"xxzl": [
+		{"xxzlName": "《python学习手册》", "xxzlLink": "https://www.amazon.cn/s?ie=UTF8&search-type=ss&index=books&field-keywords=python%D1%A7%CF%B0%CA%D6%B2%E1&tag=baiduiclickcn-23&ref=pz_ic_Book_1731_208"},
+		{"xxzlName": "慕课网python教程", "xxzlLink": "http://www.imooc.com/course/list?c=python"}
+	],
+	
+	"xxbj": [
+		{"xxbjName": "我的pyhton学习笔记", "xxbjLink": "note-page.html"}
+	],
+	
+	"commentNum": "888",
+	
+	"likeNum": "777",
+	
+	"shareNum": "1111"
+}
+
+==================================================================================================
+学习笔记:
+	笔记Id			noteId
+	用户头像		userAvatar
+	用户名	 		userName
+	发布时间		sendTime
+	笔记标题		noteTitle
+	笔记摘录		noteAbstract
+	评论数			commentNum
+	点赞数			likeNum
+	收藏数			collectNum
+	分享数			shareNum
+	
+{
+	"noteId": "001",
+	
+	"userAvatar": "http://img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png",
+	
+	"userName": "杰瑞鼠吃cheese",
+	
+	"sendTime": "2017.7.1 20:30:30",
+	
+	"noteTitle": "Ajax基础知识总结",
+	
+	"noteAbstract": "我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章",
+	
+	"commentNum": "423",
+	
+	"likeNum": "777",
+	
+	"collectNum": "132",
+	
+	"shareNum": "11"
+}	
+
+==================================================================================================
+知识地图:
+	地图Id			mapId
+	用户头像		userAvatar
+	用户名	 		userName
+	发布时间		sendTime
+	地图标题		mapTitle
+	地图关键词		mapKeyword (keyword, link)
+	评论数			commentNum
+	点赞数			likeNum
+	收藏数			collectNum
+	
+{
+	"mapId": "001",
+	
+	"userAvatar": "http://img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png",
+	
+	"userName": "杰瑞鼠吃cheese",
+	
+	"sendTime": "2017.7.1 20:30:30",
+	
+	"mapTitle": "Ajax基础知识框架图",
+	
+	"mapKeyword": [
+		{"keyword": "后端", "link": "topic-page.html"},
+		{"keyword": "前端", "link": "topic-page.html"},
+		{"keyword": "java", "link": "topic-page.html"},
+		{"keyword": "ajax", "link": "topic-page.html"},
+	],
+	
+	"commentNum": "2",
+	
+	"likeNum": "737",
+	
+	"collectNum": "1002",
+}	
+
+==================================================================================================
+个人用户:
+	用户Id			userId
+	用户头像		userAvatar
+	用户名	 		userName
+	用户简介		userAbstract
+	关注状态		watch(0表示没关注，1表示有关注)
+	
+{
+	"userId": "001",
+	
+	"userAvatar": "http://img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png",
+	
+	"userName": "杰瑞鼠吃cheese",
+	
+	"userAbstract": "我爱汤姆猫~",
+	
+	"watch": "1"
+	
+}	
+
+==================================================================================================
+推荐用户:
+个人用户:
+	用户Id			userId
+	用户头像		userAvatar
+	用户名	 		userName
+	赞数			likeNum
+	学习动态数		actNum
+	关注者数		watcherNum
+	最近笔记		latestNotes
+	
+{
+	"userId": "001",
+	
+	"userAvatar": "http://img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png",
+	
+	"userName": "杰瑞鼠吃cheese",
+	
+	"userAbstract": "我爱汤姆猫~",
+	
+	"likeNum": "1234",
+	
+	"actNum": "513",
+	
+	"watcherNum": "166",
+	
+	"latestNotes": [
+		{"title": "拉格朗日浅谈", "link": "note-page.html"},
+		{"title": "回归函数探秘", "link": "note-page.html"},
+		{"title": "导数的用途", "link": "note-page.html"}
+	]
+	
+}	

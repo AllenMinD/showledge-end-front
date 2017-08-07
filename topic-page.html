@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>首页 - 秀知识</title>
+    <title>专题页 - 秀知识</title>
 
     <!-- Bootstrap -->
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <link href="css/general-style.css" rel="stylesheet">
 
     <!-- font-awesome -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,7 +22,7 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body id="index-page">
+  <body id="topic-page">
     <!--顶部导航条 -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -34,14 +34,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">秀知识</a>
+          <a class="navbar-brand" href="topic-page.html">秀知识</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="index-login.html"><span class="fa fa-home fa-fw"></span>主页</a></li>
-            <li><a href="#" target="_blank"><span class="fa fa-wechat fa-fw"></span>小程序</a></li>
+            <li><a href="#"><span class="fa fa-wechat fa-fw"></span>小程序</a></li>
           </ul>
           <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -52,9 +52,14 @@
           <ul class="nav navbar-nav navbar-right">
             <!-- 登录注册按钮 -->
             <li>
-              <form class="navbar-form">
-                <button type="button" id="sign-inup-btn" class="btn btn-primary" data-toggle="modal" data-target="#sign-inup-modal">登录 / 注册</button>
-              </form>
+              <a style="padding:8px 18px 7px 18px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#"><img src="icon/user.png" alt="icon" style="margin-left:5px;">我的主页</a></li>
+                <li><a href="#"><img src="icon/message.png" alt="icon">消息</a></li>
+                <li><a href="#"><img src="icon/setting.png" alt="icon">设置</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><img src="icon/power.png" alt="icon">退出帐号</a></li>
+              </ul>              
             </li>
             <!--
             <li class="dropdown">
@@ -72,129 +77,23 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
-    <!-- 登录 / 注册 模态框 -->
-    <div class="modal fade" id="sign-inup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <!-- 右上角关闭按钮 -->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h1>秀知识</h1>
-            <h4>Show your knowledge</h4>
-          </div>
-          <div class="modal-body">  
-            <!-- 登录/注册标签页按钮 -->
-            <ul class="nav nav-pills" role="tablist">
-              <li role="presentation" class="active"><a href="#signin" aria-controls="home" role="tab" data-toggle="tab">登录</a></li>
-              <li role="presentation"><a href="#signup" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
-            </ul>
-
-            <!-- 警告框 -->   
-            <div class="alert alert-success" role="alert">
-              保存成功
-            </div><!-- 警告框 end -->   
-                             
-            <!-- 登录/注册 标签页 -->
-            <div class="tab-content">
-              <!-- 登录标签页 -->
-              <div role="tabpanel" class="tab-pane fade in active" id="signin">
-                <!-- 登录表单 -->
-                <form class="form-horizontal" id="signin-form">
-                  <div class="form-group">
-                    <label for="inputEmail1" class="col-sm-2 control-label">邮箱</label>
-                    <div class="col-sm-9">
-                      <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword1" class="col-sm-2 control-label">密码</label>
-                    <div class="col-sm-9">
-                      <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputCheckNum" class="col-sm-2 control-label">验证码</label>
-                    <div class="col-sm-6">
-                      <input type="password" class="form-control" id="inputCheckNum" placeholder="验证码">      
-                    </div>
-                    <div class="col-sm-3">这里放验证码图片</div>
-                  </div>                  
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <div class="forget-password">
-                        <a href="javascript:;" target="_blank">忘记密码</a>
-                        <button type="button" id="signin-btn" class="btn btn-default btn-lg" style="font-size:16px;float:right;margin-right:50px;">登录</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <!-- 登录表单结束 -->
-              </div>
-              <!-- 注册标签页 -->
-              <div role="tabpanel" class="tab-pane fade" id="signup">
-                <!-- 注册表单 -->
-                <form class="form-horizontal" id="signup-form">
-                  <div class="form-group">
-                    <label for="inputEmail2" class="col-sm-2 control-label">注册邮箱</label>
-                    <div class="col-sm-9">
-                      <input type="emai2" class="form-control" id="inputEmail2" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword2" class="col-sm-2 control-label">登录密码</label>
-                    <div class="col-sm-9">
-                      <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
-                    <div class="col-sm-9">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                  </div>                  
-                  <div class="form-group">
-                    <label for="inputCheckNum2" class="col-sm-2 control-label">验证码</label>
-                    <div class="col-sm-6">
-                      <input type="password" class="form-control" id="inputCheckNum2" placeholder="验证码">      
-                    </div>
-                    <div class="col-sm-3">这里放验证码图片</div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <label>点击「注册」按钮，即代表你同意<a href="javascript:;" target="_blank">《秀知识协议》</a></label>
-                      <button type="button" id="signup-btn" class="btn btn-default btn-lg" style="font-size:16px;float:right;margin-right:50px;">注册</button>
-                    </div>
-                  </div>
-
-                </form>
-                <!-- 注册表单结束 -->                                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>        
-
-
-    <!-- 未登录 - 首页内容 -->
+ 
+    <!-- 专题页内容 -->
     <div class="container-fluid main-content">
       <div class="row">
         <div class="col-md-1 blank"></div>
         <div class="col-md-10 main">
           <div class="row">
-            <!-- 左边功能按钮栏 -->
-            <div class="col-md-3" id="left-sidebar">
-              <div class="box">
-                <a href="topic-page.html" target="_blank" style="text-decoration:none;"><button class="btn cat btn-green">前端</button></a>
-                <a href="topic-page.html" target="_blank" style="text-decoration:none;"><button class="btn cat btn-green">后端</button></a>
-                <a href="topic-page.html" target="_blank" style="text-decoration:none;"><button class="btn cat btn-green">java</button></a>
-                <a href="topic-page.html" target="_blank" style="text-decoration:none;"><button class="btn cat btn-green">html</button></a>
-              </div>
-            </div><!-- 左边功能按钮end -->
+            
+            <div class="col-md-3"></div>
 
             <!-- 中间主要内容栏 -->
             <div class="col-md-6" id="middle-main">
+              <!-- 专题头部 -->
+              <div class="box topic-page-header">
+                <h3>专题 - <span class="topic-name">jQuery</span></h3>
+              </div>
+
               <!-- 标签页头 -->
                <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#hot-act" aria-controls="home" role="tab" data-toggle="tab">热门动态</a></li>
@@ -290,7 +189,7 @@
                       </div>
                     </li>
                   </ul>
-                  <button class="btn btn-green load-more load-more-act">加载更多</button>
+                  <button class="btn btn-green load-more load-more-act">加载更多</button> 
                 </div>
                 <div role="tabpanel" class="tab-pane" id="hot-note">
                   <ul>
@@ -361,7 +260,7 @@
                       </div>                                         
                     </li>
                   </ul>
-                  <button class="btn btn-green load-more load-more-note">加载更多</button>
+                  <button class="btn btn-green load-more load-more-note">加载更多</button> 
                 </div>
                 <div role="tabpanel" class="tab-pane" id="hot-map">
                   <ul>
@@ -432,41 +331,13 @@
                       </div>
                     </li>                    
                   </ul>
-                  <button class="btn btn-green load-more load-more-map">加载更多</button>
+                  <button class="btn btn-green load-more load-more-map">加载更多</button> 
                 </div>
               </div>
             </div><!-- 中间主要内容栏end -->
 
-            <!-- 右边推荐栏 -->
-            <div class="col-md-3" id="right-reco">
-              <div class="box reco-xb">
-                <span>推荐关注</span>
-                <ul class="xb-list">
-                  <li>
-                    <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
-                    <a href="personal-page.html" target="_blank" class="reco-user-name">奥利奥</a>
-                    <p>30k粉丝</p>
-                  </li>
-                  <li>
-                    <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
-                    <a href="personal-page.html" target="_blank" class="reco-user-name">奥利奥</a>
-                    <p>30k粉丝</p>
-                  </li>
-                  <li>
-                    <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                    <a class="follow-btn"><span class='fa fa-plus-circle'></span>关注</a>
-                    <a href="personal-page.html" target="_blank" class="reco-user-name">奥利奥</a>
-                    <p>30k粉丝</p>
-                  </li>                                     
-                </ul>
-                <button class="btn btn-default more-recommend-writer"><a href="intro-user-page.html" target="_blank" style="text-decoration:none;">更多推荐 ></a> </button> 
-              </div>
-              <div class="box page-footer">
-                Copyright © 2017, showledge.cn
-              </div>            
-            </div><!-- 右边推荐栏end -->
+            <div class="col-md-3"></div>
+
           </div>
         </div>
         <div class="col-md-1 blank"></div>
@@ -482,7 +353,7 @@
             <h4 class="modal-title" id="exampleModalLabel">评论<span>(10)</span></h4>
           </div>
           <div class="modal-body">
-            <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+            <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
             <textarea name="comment-box" id="comment-box" class="form-control" rows="4"></textarea>
             <button class="btn btn-green comment-enter">评论</button>
           </div>
@@ -490,8 +361,8 @@
             <ul class="comment-list">
               <li id="comment-001">
                 <div class="user-info">
-                  <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                  <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
+                  <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="user.html" class="user-name">飞翔的便便</a>
                   <span> - </span>
                   <span class="user-act-time">2017.7.3 20:30:30</span>
                 </div>
@@ -504,8 +375,8 @@
               </li>
               <li id="comment-002">
                 <div class="user-info">
-                  <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                  <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
+                  <a href="user.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="user.html" class="user-name">飞翔的便便</a>
                   <span> - </span>
                   <span class="user-act-time">2017.7.3 20:30:30</span>
                 </div>
@@ -518,8 +389,8 @@
               </li>
               <li id="comment-003">
                 <div class="user-info">
-                  <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
-                  <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
+                  <a href="user.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="user.html" class="user-name">飞翔的便便</a>
                   <span> - </span>
                   <span class="user-act-time">2017.7.3 20:30:30</span>
                 </div>
@@ -542,13 +413,18 @@
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <!-- 警告框js -->
     <script src="js/alert.js"></script>
+    <!-- index-login.js -->
+    <script src="js/index-login.js"></script>
     <!-- 页面右边推荐栏的关注按钮切换js -->
     <script src="js/reco-follow-btn-toggle.js"></script>
-    <!-- index.js -->
-    <script src="js/index.js"></script>
     <!-- counts-active.js -->
     <script src="js/counts-active.js"></script>
-
+    <!-- topic-page.js -->
+    <script src="js/topic-page.js"></script>
+    
+    <script>
+      $(function () { $("[data-toggle='tooltip']").tooltip(); });
+    </script>
   </body>
 </html>
 

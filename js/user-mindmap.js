@@ -1,20 +1,24 @@
 $(document).ready(function($) {
-	//  “喜欢”按钮
-	$(".like").click(function(event) {
-		if ($(".like").css("color")=="rgb(0, 204, 102)")
-		{
-			$(".like").css({
-				"background-color": "#00CC33",
-				"color": "white"
-			});
-			$("#heart-icon").attr('class', 'glyphicon glyphicon-heart');
-		} else {
-			$(".like").css({
-				"background-color": "#3f3f3f",
-				"color": "#00cc66"
-			});
-			$("#heart-icon").attr('class', 'glyphicon glyphicon-heart-empty');
-		}
+  /* --------------点赞（收藏）笔记事件-------------- */
+  $(".like-btn").click(function(event) {
+    if ($(this).attr("class") == "btn btn-lg btn-green like-btn") {
+      $(this).addClass("note-like-and-collect-btn-active");
+      $(this).html("<span class='fa fa-heart fa-fw'></span>已点赞");
+    }
+    else {
+      $(this).removeClass("note-like-and-collect-btn-active");
+      $(this).html("<span class='fa fa-heart fa-fw'></span>点赞");
+    }
+  });
 
-	});		
+  $(".collect-btn").click(function(event) {
+    if ($(this).attr("class") == "btn btn-lg btn-green collect-btn") {
+      $(this).addClass("note-like-and-collect-btn-active");
+      $(this).html("<span class='fa fa-bookmark fa-fw'></span>已收藏");
+    }
+    else {
+      $(this).removeClass("note-like-and-collect-btn-active");
+      $(this).html("<span class='fa fa-bookmark fa-fw'></span>收藏");
+    }
+  });	
 });

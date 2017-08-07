@@ -55,23 +55,36 @@ body {
 
 #back > a {
   text-decoration: none;
+  display: block;
   color: #00cc66;
 }
 
-.like {
-  width: 180px;
-  height: 60px;
-  margin: auto;
-  padding: 15px 0 15px;
-  border: 2px solid #00CC33;
-  border-radius: 40px;
+/*背景色#00cc66的按钮*/
+.btn-green {
+  background-color: #00cc66;
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #f3fff9;
+  color: #00cc66;
+  border: 1px solid #00cc66;
+}
+
+/*地图的点赞收藏按钮*/
+.map-like-and-collect-btn {
   text-align: center;
-  font-size: 18px;
-  color: #00cc66;
 }
 
-.like:hover {
-  cursor: pointer;
+.map-like-and-collect-btn-active {
+  color: #00cc66;
+  background-color: #f3fff9;
+  border: 1px solid #00cc66;
+}
+
+.map-like-and-collect-btn-active:focus,
+.map-like-and-collect-btn-active:active {
+  color: #00cc66;
 }
 
 .intro {
