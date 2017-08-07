@@ -23,252 +23,320 @@
     <![endif]-->
   </head>
   <body id="topic-page">
-    <!-- 专题页内容 -->
-    <div class="container-fluid">
-        <div class="row">
-            <!-- 中间主要内容栏 -->
-            <div class="col-md-12" id="middle-main">
-              <!-- 标签页头 -->
-               <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#hot-act" aria-controls="home" role="tab" data-toggle="tab">热门动态</a></li>
-                <li role="presentation"><a href="#hot-note" aria-controls="profile" role="tab" data-toggle="tab">热门笔记</a></li>
-                <li role="presentation"><a href="#hot-map" aria-controls="messages" role="tab" data-toggle="tab">热门地图</a></li>
-              </ul>
+    <!--顶部导航条 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- 响应式 当窗口很小时，会缩小成一个“汉堡”按钮 -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index-login.html">秀知识</a>
+        </div>
 
-              <!-- 热门推荐 标签内容 -->
-              <div class="tab-content" id="hot-intro">
-                <div role="tabpanel" class="tab-pane active" id="hot-act">
-                  <ul>
-                    <li class="box" id="hot-act-001">
-                      <div class="user-info">
-                        <div class="user-avatar">
-                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的粑粑</a>
-                          <span> - </span>
-                          <span class="user-act-time">2017.7.1 20:30:30</span>
-                        </div>
-                        <div class="user-mood">
-                          <span>心情</span>
-                          <span>激动人心的</span>
-                        </div>
-                      </div>
-                      <div class="user-act">
-                        今天看了《python学习手册》第一章，学会了python的基本语法。原来python这门语言的语法真心不难，非常适合编程新手入门。强烈建议高校把第一门编程语言改成python。c语言从某种意义上来说对新手不太友好(比如指针(─.─|||))
-                      </div>
-                      <div class="user-library">
-                        <div class="xxzl">
-                          <span>学习资料</span>
-                          <a href="https://www.amazon.cn/s?ie=UTF8&search-type=ss&index=books&field-keywords=python%D1%A7%CF%B0%CA%D6%B2%E1&tag=baiduiclickcn-23&ref=pz_ic_Book_1731_208" target="_blank">《python学习手册》</a>
-                          <a href="http://www.imooc.com/course/list?c=python" target="_blank">慕课网python教程</a>
-                        </div> 
-                        <div class="xxbj">
-                          <span>学习笔记</span>
-                          <a href="note-page.html" class="user-note-entrance" target="_blank">我的pyhton学习笔记</a>
-                        </div>              
-                      </div>
-                      <div class="act-info">
-                        <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
-                          <span class="glyphicon glyphicon-comment"></span>
-                          <span>124</span>
-                        </div>
-                        <div class="like-count">
-                          <span class="glyphicon glyphicon-heart"></span>
-                          <span>543</span>
-                        </div>
-                        <div class="share-count">
-                          <span class="glyphicon glyphicon-share"></span>
-                          <span>665</span>
-                        </div>                      
-                      </div>
-                    </li>
-                    <li class="box" id="hot-act-002">
-                      <div class="user-info">
-                        <div class="user-avatar">
-                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
-                          <span> - </span>
-                          <span class="user-act-time">2017.7.3 20:30:30</span>
-                        </div>
-                        <div class="user-mood">
-                          <span>心情</span>
-                          <span>无奈的</span>
-                        </div>
-                      </div>
-                      <div class="user-act">
-                        今天本来想学习二叉搜索树的编码的，但是发觉很难懂啊，研究了一天都啥进展，明天继续努力！
-                      </div>
-                      <div class="user-library">
-                        <div class="xxzl">
-                          <span>学习资料</span>
-                          <a href="https://www.amazon.cn/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-Thomas-H-Cormen/dp/B00AK7BYJY/ref=sr_1_1?s=books&ie=UTF8&qid=1502002841&sr=1-1&keywords=%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA" target="_blank">《算法导论》</a>
-                        </div> 
-                        <div class="xxbj">
-                          <span>学习笔记</span>
-                          <span>无</span>   
-                        </div>              
-                      </div>
-                      <div class="act-info">
-                        <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
-                          <span class="glyphicon glyphicon-comment"></span>
-                          <span>124</span>
-                        </div>
-                        <div class="like-count">
-                          <span class="glyphicon glyphicon-heart"></span>
-                          <span>543</span>
-                        </div>
-                        <div class="share-count">
-                          <span class="glyphicon glyphicon-share"></span>
-                          <span>665</span>
-                        </div>                      
-                      </div>
-                    </li>
-                  </ul>
-                  <button class="btn btn-green load-more load-more-act">加载更多</button> 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index-login.html"><span class="fa fa-home fa-fw"></span>主页</a></li>
+            <li><a href="#"><span class="fa fa-wechat fa-fw"></span>小程序</a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="大家今天都学了什么？">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- 登录注册按钮 -->
+            <li>
+              <a style="padding:8px 18px 7px 18px" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="personal-page.html" target="_blank"><img src="icon/user.png" alt="icon" style="margin-left:5px;">我的主页</a></li>
+                <li><a href="message-page.html" target="_blank"><img src="icon/message.png" alt="icon">消息</a></li>
+                <li><a href="setting-page.html" target="_blank"><img src="icon/setting.png" alt="icon">设置</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="index.html"><img src="icon/power.png" alt="icon">退出帐号</a></li>
+              </ul>              
+            </li>
+            <!--
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+            -->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- 专题页内容 -->
+    <div class="container-fluid main-content">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-md-3"></div>
+              <!-- 中间主要内容栏 -->
+              <div class="col-md-6" id="middle-main">
+                <!-- 专题头部 -->
+                <div class="box topic-page-header">
+                  <h3> 专题 - <span>jQuery</span></h3>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="hot-note">
-                  <ul>
-                    <li class="box" id="hot-note-001">
-                      <div class="user-info">
-                        <div class="user-avatar">
-                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
-                          <span> - </span>
-                          <span class="user-act-time">2017.7.3 20:30:30</span>
+
+                <!-- 标签页头 -->
+                 <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#hot-act" aria-controls="home" role="tab" data-toggle="tab">热门动态</a></li>
+                  <li role="presentation"><a href="#hot-note" aria-controls="profile" role="tab" data-toggle="tab">热门笔记</a></li>
+                  <li role="presentation"><a href="#hot-map" aria-controls="messages" role="tab" data-toggle="tab">热门地图</a></li>
+                </ul>
+
+                <!-- 热门推荐 标签内容 -->
+                <div class="tab-content" id="hot-intro">
+                  <div role="tabpanel" class="tab-pane active" id="hot-act">
+                    <ul>
+                      <li class="box" id="hot-act-001">
+                        <div class="user-info">
+                          <div class="user-avatar">
+                            <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                            <a href="personal-page.html" class="user-name" target="_blank">飞翔的粑粑</a>
+                            <span> - </span>
+                            <span class="user-act-time">2017.7.1 20:30:30</span>
+                          </div>
+                          <div class="user-mood">
+                            <span>心情</span>
+                            <span>激动人心的</span>
+                          </div>
                         </div>
-                      </div>  
-                      <a href="note-page.html" target="_blank" class="note-title-sm">Today I Learn</a>
-                      <p class="note-content">
-                        This week, Washington state became the fifth state in the country to provide paid family and medical leave to workers – and it’s one of the best plans yet. Employees will get 12 weeks of paid family leave when they have a baby and 12 weeks of medical leave to care for themselves or sick family members. 
-                      </p>
-                      <a href="note-page.html" target="_blank" class="more-detail-btn">详细内容 > </a>
-                      <div class="act-info">
-                        <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
-                          <span class="glyphicon glyphicon-comment"></span>
-                          <span>124</span>
+                        <div class="user-act">
+                          今天看了《python学习手册》第一章，学会了python的基本语法。原来python这门语言的语法真心不难，非常适合编程新手入门。强烈建议高校把第一门编程语言改成python。c语言从某种意义上来说对新手不太友好(比如指针(─.─|||))
                         </div>
-                        <div class="like-count">
-                          <span class="glyphicon glyphicon-heart"></span>
-                          <span>543</span>
+                        <div class="user-library">
+                          <div class="xxzl">
+                            <span>学习资料</span>
+                            <a href="https://www.amazon.cn/s?ie=UTF8&search-type=ss&index=books&field-keywords=python%D1%A7%CF%B0%CA%D6%B2%E1&tag=baiduiclickcn-23&ref=pz_ic_Book_1731_208" target="_blank">《python学习手册》</a>
+                            <a href="http://www.imooc.com/course/list?c=python" target="_blank">慕课网python教程</a>
+                          </div> 
+                          <div class="xxbj">
+                            <span>学习笔记</span>
+                            <a href="note-page.html" class="user-note-entrance" target="_blank">我的pyhton学习笔记</a>
+                          </div>              
                         </div>
-                        <div class="collection-count">
-                          <span class="fa fa-bookmark"></span>
-                          <span>665</span>
-                        </div> 
-                        <div class="share-count">
-                          <span class="glyphicon glyphicon-share"></span>
-                          <span>665</span>
+                        <div class="act-info">
+                          <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            <span>124</span>
+                          </div>
+                          <div class="like-count">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <span>543</span>
+                          </div>
+                          <div class="share-count">
+                            <span class="glyphicon glyphicon-share"></span>
+                            <span>665</span>
+                          </div>                      
+                        </div>
+                      </li>
+                      <li class="box" id="hot-act-002">
+                        <div class="user-info">
+                          <div class="user-avatar">
+                            <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                            <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
+                            <span> - </span>
+                            <span class="user-act-time">2017.7.3 20:30:30</span>
+                          </div>
+                          <div class="user-mood">
+                            <span>心情</span>
+                            <span>无奈的</span>
+                          </div>
+                        </div>
+                        <div class="user-act">
+                          今天本来想学习二叉搜索树的编码的，但是发觉很难懂啊，研究了一天都啥进展，明天继续努力！
+                        </div>
+                        <div class="user-library">
+                          <div class="xxzl">
+                            <span>学习资料</span>
+                            <a href="https://www.amazon.cn/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA-Thomas-H-Cormen/dp/B00AK7BYJY/ref=sr_1_1?s=books&ie=UTF8&qid=1502002841&sr=1-1&keywords=%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA" target="_blank">《算法导论》</a>
+                          </div> 
+                          <div class="xxbj">
+                            <span>学习笔记</span>
+                            <span>无</span>   
+                          </div>              
+                        </div>
+                        <div class="act-info">
+                          <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            <span>124</span>
+                          </div>
+                          <div class="like-count">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <span>543</span>
+                          </div>
+                          <div class="share-count">
+                            <span class="glyphicon glyphicon-share"></span>
+                            <span>665</span>
+                          </div>                      
+                        </div>
+                      </li>
+                    </ul>
+                    <button class="btn btn-green load-more load-more-act">加载更多</button> 
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="hot-note">
+                    <ul>
+                      <li class="box" id="hot-note-001">
+                        <div class="user-info">
+                          <div class="user-avatar">
+                            <a href="personal-page.html" target="_blank"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                            <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
+                            <span> - </span>
+                            <span class="user-act-time">2017.7.3 20:30:30</span>
+                          </div>
+                        </div>  
+                        <a href="note-page.html" target="_blank" class="note-title-sm">Today I Learn</a>
+                        <p class="note-content">
+                          This week, Washington state became the fifth state in the country to provide paid family and medical leave to workers – and it’s one of the best plans yet. Employees will get 12 weeks of paid family leave when they have a baby and 12 weeks of medical leave to care for themselves or sick family members. 
+                        </p>
+                        <a href="note-page.html" target="_blank" class="more-detail-btn">详细内容 > </a>
+                        <div class="act-info">
+                          <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            <span>124</span>
+                          </div>
+                          <div class="like-count">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <span>543</span>
+                          </div>
+                          <div class="collection-count">
+                            <span class="fa fa-bookmark"></span>
+                            <span>665</span>
+                          </div> 
+                          <div class="share-count">
+                            <span class="glyphicon glyphicon-share"></span>
+                            <span>665</span>
+                          </div>                      
                         </div>                      
-                      </div>                      
-                    </li>
-                    <li class="box" id="hot-note-002">
-                      <div class="user-info">
-                        <div class="user-avatar">
-                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
-                          <span> - </span>
-                          <span class="user-act-time">2017.7.3 20:30:30</span>
-                        </div>
-                      </div> 
-                      <a href="note-page.html" target="_blank" class="note-title-sm">我只是一个测试标题</a>
-                      <p class="note-content">
-                        我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章 
-                      </p>
-                      <a href="note-page.html" target="_blank" class="more-detail-btn">详细内容 > </a>
-                      <div class="act-info">
-                        <div class="comments-count"  data-toggle="modal" data-target="#comment-modal">
-                          <span class="glyphicon glyphicon-comment"></span>
-                          <span>124</span>
-                        </div>
-                        <div class="like-count">
-                          <span class="glyphicon glyphicon-heart"></span>
-                          <span>543</span>
-                        </div>
-                        <div class="collection-count">
-                          <span class="fa fa-bookmark"></span>
-                          <span>665</span>
+                      </li>
+                      <li class="box" id="hot-note-002">
+                        <div class="user-info">
+                          <div class="user-avatar">
+                            <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                            <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
+                            <span> - </span>
+                            <span class="user-act-time">2017.7.3 20:30:30</span>
+                          </div>
                         </div> 
-                        <div class="share-count">
-                          <span class="glyphicon glyphicon-share"></span>
-                          <span>665</span>
-                        </div>                      
-                      </div>                                         
-                    </li>
-                  </ul>
-                  <button class="btn btn-green load-more load-more-note">加载更多</button> 
+                        <a href="note-page.html" target="_blank" class="note-title-sm">我只是一个测试标题</a>
+                        <p class="note-content">
+                          我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章我是一篇测试文章 
+                        </p>
+                        <a href="note-page.html" target="_blank" class="more-detail-btn">详细内容 > </a>
+                        <div class="act-info">
+                          <div class="comments-count"  data-toggle="modal" data-target="#comment-modal">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            <span>124</span>
+                          </div>
+                          <div class="like-count">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <span>543</span>
+                          </div>
+                          <div class="collection-count">
+                            <span class="fa fa-bookmark"></span>
+                            <span>665</span>
+                          </div> 
+                          <div class="share-count">
+                            <span class="glyphicon glyphicon-share"></span>
+                            <span>665</span>
+                          </div>                      
+                        </div>                                         
+                      </li>
+                    </ul>
+                    <button class="btn btn-green load-more load-more-note">加载更多</button> 
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="hot-map">
+                    <ul>
+                      <li class="box" id="hot-map-001">
+                        <div class="user-info">
+                          <div class="user-avatar">
+                            <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                            <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
+                            <span> - </span>
+                            <span class="user-act-time">2017.7.3 20:30:30</span>
+                          </div>
+                        </div>
+                        <a href="user-mindmap.html" target="_blank" class="map-title-sm">python学习重点知识谱图</a>
+                        <div class="map-keyword">
+                          <span><span class="fa fa-tags fa-fw"></span>关键词</span>
+                          <a href="topic-page.html" class="keyword" target="_blank">后端</a>
+                          <a href="topic-page.html" class="keyword" target="_blank">python</a>
+                          <a href="topic-page.html" class="keyword" target="_blank">爬虫</a>
+                          <a href="topic-page.html" class="keyword" target="_blank">数据分析</a>
+                          <span>...</span>
+                        </div>
+                        <div class="act-info">
+                          <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            <span>124</span>
+                          </div>
+                          <div class="like-count">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <span>543</span>
+                          </div>
+                          <div class="collection-count">
+                            <span class="fa fa-bookmark"></span>
+                            <span>665</span>
+                          </div>                       
+                        </div>
+                      </li>
+                      <li class="box" id="hot-map-002">
+                        <div class="user-info">
+                          <div class="user-avatar">
+                            <a href="personal-page.html" target="_blank"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+                            <a href="personal-page.html" class="user-name" target="_blank">嘉顿饼干</a>
+                            <span> - </span>
+                            <span class="user-act-time">2017.7.3 20:30:30</span>
+                          </div>
+                        </div>
+                        <a href="user-mindmap.html" target="_blank" class="map-title-sm">前端知识谱图</a>
+                        <div class="map-keyword">
+                          <span><span class="fa fa-tags fa-fw"></span>关键词</span>
+                          <a href="topic-page.html" class="keyword" target="_blank">前端</a>
+                          <a href="topic-page.html" class="keyword" target="_blank">html</a>
+                          <a href="topic-page.html" class="keyword" target="_blank">css</a>
+                          <a href="topic-page.html" class="keyword" target="_blank">javascript</a>
+                          <span>...</span>
+                        </div>
+                        <div class="act-info">
+                          <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            <span>124</span>
+                          </div>
+                          <div class="like-count">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <span>543</span>
+                          </div>
+                          <div class="collection-count">
+                            <span class="fa fa-bookmark"></span>
+                            <span>665</span>
+                          </div>                       
+                        </div>
+                      </li>                    
+                    </ul>
+                    <button class="btn btn-green load-more load-more-map">加载更多</button> 
+                  </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="hot-map">
-                  <ul>
-                    <li class="box" id="hot-map-001">
-                      <div class="user-info">
-                        <div class="user-avatar">
-                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="personal-page.html" class="user-name" target="_blank">飞翔的便便</a>
-                          <span> - </span>
-                          <span class="user-act-time">2017.7.3 20:30:30</span>
-                        </div>
-                      </div>
-                      <a href="user-mindmap.html" target="_blank" class="map-title-sm">python学习重点知识谱图</a>
-                      <div class="map-keyword">
-                        <span><span class="fa fa-tags fa-fw"></span>关键词</span>
-                        <a href="topic-page.html" class="keyword" target="_blank">后端</a>
-                        <a href="topic-page.html" class="keyword" target="_blank">python</a>
-                        <a href="topic-page.html" class="keyword" target="_blank">爬虫</a>
-                        <a href="topic-page.html" class="keyword" target="_blank">数据分析</a>
-                        <span>...</span>
-                      </div>
-                      <div class="act-info">
-                        <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
-                          <span class="glyphicon glyphicon-comment"></span>
-                          <span>124</span>
-                        </div>
-                        <div class="like-count">
-                          <span class="glyphicon glyphicon-heart"></span>
-                          <span>543</span>
-                        </div>
-                        <div class="collection-count">
-                          <span class="fa fa-bookmark"></span>
-                          <span>665</span>
-                        </div>                       
-                      </div>
-                    </li>
-                    <li class="box" id="hot-map-002">
-                      <div class="user-info">
-                        <div class="user-avatar">
-                          <a href="personal-page.html" target="_blank"><img src="image/user-avatar3.jpg" alt="用户头像-sm" class="avatar-sm"></a>
-                          <a href="personal-page.html" class="user-name" target="_blank">嘉顿饼干</a>
-                          <span> - </span>
-                          <span class="user-act-time">2017.7.3 20:30:30</span>
-                        </div>
-                      </div>
-                      <a href="user-mindmap.html" target="_blank" class="map-title-sm">前端知识谱图</a>
-                      <div class="map-keyword">
-                        <span><span class="fa fa-tags fa-fw"></span>关键词</span>
-                        <a href="topic-page.html" class="keyword" target="_blank">前端</a>
-                        <a href="topic-page.html" class="keyword" target="_blank">html</a>
-                        <a href="topic-page.html" class="keyword" target="_blank">css</a>
-                        <a href="topic-page.html" class="keyword" target="_blank">javascript</a>
-                        <span>...</span>
-                      </div>
-                      <div class="act-info">
-                        <div class="comments-count" data-toggle="modal" data-target="#comment-modal">
-                          <span class="glyphicon glyphicon-comment"></span>
-                          <span>124</span>
-                        </div>
-                        <div class="like-count">
-                          <span class="glyphicon glyphicon-heart"></span>
-                          <span>543</span>
-                        </div>
-                        <div class="collection-count">
-                          <span class="fa fa-bookmark"></span>
-                          <span>665</span>
-                        </div>                       
-                      </div>
-                    </li>                    
-                  </ul>
-                  <button class="btn btn-green load-more load-more-map">加载更多</button> 
-                </div>
-              </div>
-            </div><!-- 中间主要内容栏end -->
+              </div><!-- 中间主要内容栏end -->
+              <div class="col-md-3"></div>              
+            </div>
+          </div>
+          <div class="col-md-1"></div>
         </div>
     </div>
 
