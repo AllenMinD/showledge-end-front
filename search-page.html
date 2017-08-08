@@ -273,11 +273,77 @@
       </div>
     </div>
 
+    <!-- 评论窗口模态框 -->
+    <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">评论<span>(10)</span></h4>
+          </div>
+          <div class="modal-body">
+            <a href="personal-page.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-sm"></a>
+            <textarea name="comment-box" id="comment-box" class="form-control" rows="4"></textarea>
+            <button class="btn btn-green comment-enter">评论</button>
+          </div>
+          <div class="modal-footer" style="text-align:left;">
+            <ul class="comment-list">
+              <li id="comment-001">
+                <div class="user-info">
+                  <a href="personal-page.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="personal-page.html" class="user-name">飞翔的便便</a>
+                  <span> - </span>
+                  <span class="user-act-time">2017.7.3 20:30:30</span>
+                </div>
+                <p class="comment-content">
+                  加油！
+                </p>
+                <div class="comment-info">
+                  <span class="glyphicon glyphicon-thumbs-up">123</span>
+                </div>
+              </li>
+              <li id="comment-002">
+                <div class="user-info">
+                  <a href="personal-page.html"><img src="image/user-avatar2.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="personal-page.html" class="user-name">飞翔的便便</a>
+                  <span> - </span>
+                  <span class="user-act-time">2017.7.3 20:30:30</span>
+                </div>
+                <p class="comment-content">
+                  加油！
+                </p>
+                <div class="comment-info">
+                  <span class="glyphicon glyphicon-thumbs-up">123</span>
+                </div>                
+              </li>
+              <li id="comment-003">
+                <div class="user-info">
+                  <a href="personal-page.html"><img src="image/user-avatar1.jpg" alt="用户头像-sm" class="avatar-ssm"></a>
+                  <a href="personal-page.html" class="user-name">飞翔的便便</a>
+                  <span> - </span>
+                  <span class="user-act-time">2017.7.3 20:30:30</span>
+                </div>
+                <p class="comment-content">
+                  加油！
+                </p>
+                <div class="comment-info">
+                  <span class="glyphicon glyphicon-thumbs-up">123</span>
+                </div>                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>    
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- counts-active.js -->
+    <script src="js/counts-active.js"></script>
+    <!-- commit-enter.js -->
+    <script src="js/comment-enter.js"></script>
 
-    <script src="script/search.js"></script>
   </body>
 </html>

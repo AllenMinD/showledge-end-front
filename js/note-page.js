@@ -6,6 +6,15 @@
  */
 
 jQuery(document).ready(function($) {
+  /* --------------主回复框的“提交评论”按钮事件-------------- */
+  $(".send-comment-btn").click(function(event) {
+    if ($("#input-comment-area").val() == "") alert("评论不能为空");
+    else {
+      alert("评论提交成功");
+      $("#input-comment-area").val("");
+    }
+  });
+
   /* --------------回复弹框事件-------------- */
   /*点击回复按钮*/
   $(".reply-btn").click(function(event) {
@@ -25,8 +34,13 @@ jQuery(document).ready(function($) {
   });
   /*点击提交回复按钮*/
   $(".send-reply-btn").click(function(event) {
-    $(this).parents("li").find("div.reply-block").css('display', 'none');
-    alert("回复提交成功");
+    if ($("#reply-comment-area").val() == "") alert("回复不能为空");
+    else {
+      $(this).parents("li").find("div.reply-block").css('display', 'none');
+      alert("回复提交成功");   
+      $("#reply-comment-area").val("");   
+    }
+
   });
 
   /* --------------评论点赞事件-------------- */

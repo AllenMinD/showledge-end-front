@@ -180,24 +180,8 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <!-- 回复按钮切换 -->
-    <script>
-      jQuery(document).ready(function($) {
-        /*点击回复按钮*/
-        $(".reply-btn").click(function(event) {
-          $(this).parent().children(".reply-block").slideToggle();
-        });
-        /*点击取消按钮*/
-        $(".cancel-reply-btn").click(function(event) {
-          $(this).parents("li").children(".reply-block").slideToggle();
-        });
-        /*点击提交回复按钮*/
-        $(".send-reply-btn").click(function(event) {
-          $(this).parents("li").children(".reply-block").css('display', 'none');
-          alert("回复提交成功");
-        });
-      });
-    </script>
+    <!-- message-page.js -->
+    <script src="js/message-page.js"></script>
 
   </body>
 </html>
